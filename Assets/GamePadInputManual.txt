@@ -1,0 +1,15 @@
+PlayStation Classic GamePad Input
+
+X - Joystick Button 2
+O - Jostick Button 1
+Square - Jostick Button 3
+Triangle - Jostick Button 0
+
+R1 - Jostick Button 7
+R2 - Jostick Button 5
+
+L1 - Jostick Button 6
+L2 - Jostick Button 4
+
+Start - Jostick Button 9
+Select - Jostick Button 8

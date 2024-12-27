@@ -22,4 +22,6 @@ public class WaypointPath : MonoBehaviour
         return nextWaypointIndex;
     }
 
+   
+
 }

@@ -234,7 +234,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96486
+  m_Name: pb_Mesh116742
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -398,7 +398,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96854
+  m_Name: pb_Mesh117202
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -935,7 +935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 0}
+  m_AnchoredPosition: {x: 75, y: -10}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &122411925
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 171599181}
   - component: {fileID: 171599180}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Apple_Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 0}
+  m_AnchoredPosition: {x: 25, y: -10}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &171599180
@@ -4480,7 +4480,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96786
+  m_Name: pb_Mesh117090
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4662,7 +4662,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908104052}
-  m_LocalRotation: {x: -0.0021518506, y: -3.7072217e-17, z: -5.3217078e-20, w: 0.9999977}
+  m_LocalRotation: {x: -0.002151854, y: 2.4018584e-10, z: 5.168466e-13, w: 0.9999977}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5575,7 +5575,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96532
+  m_Name: pb_Mesh116792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6482,7 +6482,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-76148
+  m_Name: pb_Mesh117164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7414,7 +7414,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96602
+  m_Name: pb_Mesh116870
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7578,7 +7578,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96730
+  m_Name: pb_Mesh117024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7742,7 +7742,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96616
+  m_Name: pb_Mesh116884
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7906,7 +7906,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96472
+  m_Name: pb_Mesh116712
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8099,7 +8099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -0}
+  m_AnchoredPosition: {x: 10, y: -10}
   m_SizeDelta: {x: 265, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1508895417
@@ -8223,7 +8223,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96706
+  m_Name: pb_Mesh116982
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10145,10 +10145,10 @@ RectTransform:
   m_Father: {fileID: 43230454}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -37.5}
+  m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1983300661
 GameObject:
@@ -10502,7 +10502,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96546
+  m_Name: pb_Mesh116806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

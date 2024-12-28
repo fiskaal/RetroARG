@@ -193,6 +193,7 @@ namespace Platformer
         void SmoothSpeed(float value)
         {
             currentSpeed=  Mathf.SmoothDamp(currentSpeed, value, ref velocity, smoothTime);
+            
         }
     }
 

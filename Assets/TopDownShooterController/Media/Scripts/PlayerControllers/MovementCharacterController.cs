@@ -102,7 +102,7 @@ namespace TopDownShooter
         private bool _shooting;
 
         //get direction for the camera
-        private Transform _cameraTransform;
+        [SerializeField]private Transform _cameraTransform;
         private Vector3 _forward;
         private Vector3 _right;
 

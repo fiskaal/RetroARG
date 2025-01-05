@@ -1,0 +1,129 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
+namespace TopDownShooter
+{
+    public class HealthManager : MonoBehaviour
+    {
+        public float MaxHealth = 100;
+        public float CurrentHealth = 0;
+        public float Heal = 10;
+        [SerializeField] private GameObject HealthPack;
+
+        [Header("PopUpText Settings")]
+        [Tooltip("PopUpText prefab")]
+        public GameObject PopUpPrefab;
+
+        [Tooltip("PopUpText Color")] public Color PopUpTextColor = Color.red;
+        [Tooltip("PopUpText fade time")] public float FadeTime = 0.5f;
+
+        public Image CurrentHitPointImage;
+        public FlashOnDamage FlashOnDamage;
+
+        private float _hitRatio;
+
+        private void Awake()
+        {
+            CurrentHealth = MaxHealth;
+        }
+
+        public void ApplyDamage(float amount)
+        {
+            CurrentHealth -= amount;
+            UpdatePointsBars();
+
+            //if flash component exit start damage flash
+            if (FlashOnDamage)
+            {
+                FlashOnDamage.StartDamageFlash();
+            }
+
+            //if pop up component exist instantiate pop up text
+            if (PopUpPrefab)
+            {
+                InstancePopUp(amount.ToString(CultureInfo.InvariantCulture));
+            }
+
+            //if current hit point is <= 0 kill the player
+            if (CurrentHealth <= 0)
+            {
+                CurrentHealth = 0;
+                Dead();
+            }
+        }
+
+        public void AddHealth(float amount)
+        {
+            CurrentHealth += amount;
+            UpdatePointsBars();
+
+            if (CurrentHealth >= MaxHealth) 
+            { 
+             
+            }
+
+        }
+
+        private void UpdatePointsBars()
+        {
+            _hitRatio = CurrentHealth / MaxHealth;
+            CurrentHitPointImage.rectTransform.localScale = new Vector3(_hitRatio, 1, 1);
+        }
+
+        //instance the popUp text (demo only)
+        //You can change this to text mesh pro or another GUI solutions.
+        private void InstancePopUp(string popUpText)
+        {
+            var poPupText =
+                Instantiate(PopUpPrefab, transform.position + Random.insideUnitSphere * 0.4f,
+                    transform.rotation);
+            Destroy(poPupText, FadeTime);
+            poPupText.transform.GetChild(0).GetComponent<TextMesh>().text = popUpText;
+            poPupText.transform.GetChild(0).GetComponent<TextMesh>().color = PopUpTextColor;
+        }
+
+        private void Dead()
+        {
+            //you can add dead animation on this place
+            Destroy(gameObject, 0);
+        }
+
+        //use this for collision bullets
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.transform.GetComponent<Damage>())
+            {
+                ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
+            }
+        }
+
+        //use this for triggers bullets
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.transform.GetComponent<Damage>())
+            {
+                ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
+            }
+
+            if (other.gameObject.CompareTag("Trap"))
+            {
+                ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
+            }
+
+            if (other.gameObject.CompareTag("heal") && CurrentHealth<=90)
+            {
+                other.gameObject.SetActive(false);
+                CurrentHealth += Heal;
+
+            }
+        }
+
+
+
+    }
+}

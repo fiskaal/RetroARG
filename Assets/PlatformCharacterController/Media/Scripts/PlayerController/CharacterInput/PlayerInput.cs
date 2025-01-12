@@ -19,27 +19,27 @@ namespace PlatformCharacterController
 
         public override bool Jump()
         {
-            return Input.GetKeyDown(KeyCode.Space);
+            return Input.GetButtonDown("Jump");
         }
 
         public override bool Dash()
         {
-            return Input.GetKeyDown(KeyCode.F);
+            return Input.GetButtonDown("Dash");
         }
 
         public override bool JetPack()
         {
-            return Input.GetKey(KeyCode.X);
+            return Input.GetButton("JetPack");
         }
 
         public override bool Parachute()
         {
-            return Input.GetKeyDown(KeyCode.R);
+            return Input.GetButtonDown("Parachute");
         }
 
         public override bool DropCarryItem()
         {
-            return Input.GetKeyDown(KeyCode.K);
+            return Input.GetButtonDown("PickUp");
         }
     }
 }

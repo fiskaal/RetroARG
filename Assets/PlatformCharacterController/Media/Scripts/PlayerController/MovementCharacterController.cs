@@ -117,7 +117,7 @@ namespace PlatformCharacterController
         private bool _slowFall;
 
         //get direction for the camera
-        private Transform _cameraTransform;
+        [SerializeField]private Transform _cameraTransform;
         private Vector3 _forward;
         private Vector3 _right;
 
@@ -157,8 +157,8 @@ namespace PlatformCharacterController
             _vertical = PlayerInputs.GetVertical();
             _jump = PlayerInputs.Jump();
             _dash = PlayerInputs.Dash();
-            _flyJetPack = PlayerInputs.JetPack();
-            _activeFall = PlayerInputs.Parachute();
+            //_flyJetPack = PlayerInputs.JetPack();
+            //_activeFall = PlayerInputs.Parachute();
 
             //this invert controls 
             if (_invertedControl)

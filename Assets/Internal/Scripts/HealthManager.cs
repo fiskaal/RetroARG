@@ -23,7 +23,7 @@ namespace TopDownShooter
         [Tooltip("PopUpText fade time")] public float FadeTime = 0.5f;
 
         public Image CurrentHitPointImage;
-        public FlashOnDamage FlashOnDamage;
+        //public FlashOnDamage FlashOnDamage;
 
         private float _hitRatio;
 
@@ -38,10 +38,10 @@ namespace TopDownShooter
             UpdatePointsBars();
 
             //if flash component exit start damage flash
-            if (FlashOnDamage)
-            {
-                FlashOnDamage.StartDamageFlash();
-            }
+            //if (FlashOnDamage)
+            //{
+            //    FlashOnDamage.StartDamageFlash();
+            //}
 
             //if pop up component exist instantiate pop up text
             if (PopUpPrefab)
@@ -96,31 +96,31 @@ namespace TopDownShooter
         //use this for collision bullets
         private void OnCollisionEnter(Collision other)
         {
-            if (other.transform.GetComponent<Damage>())
-            {
-                ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
-            }
+            //if (other.transform.GetComponent<Damage>())
+            //{
+            //    ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
+            //}
         }
 
         //use this for triggers bullets
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.GetComponent<Damage>())
-            {
-                ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
-            }
+            //if (other.transform.GetComponent<Damage>())
+            //{
+            //    ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
+            //}
 
-            if (other.gameObject.CompareTag("Trap"))
-            {
-                ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
-            }
+            //if (other.gameObject.CompareTag("Trap"))
+            //{
+            //    ApplyDamage(other.transform.GetComponent<Damage>().DamagePower);
+            //}
 
-            if (other.gameObject.CompareTag("heal") && CurrentHealth<=90)
-            {
-                other.gameObject.SetActive(false);
-                CurrentHealth += Heal;
+            //if (other.gameObject.CompareTag("heal") && CurrentHealth<=90)
+            //{
+            //    other.gameObject.SetActive(false);
+            //    CurrentHealth += Heal;
 
-            }
+            //}
         }
 
 

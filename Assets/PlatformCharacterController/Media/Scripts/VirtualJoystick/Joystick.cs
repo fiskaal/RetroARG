@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace TopDownShooter
+namespace PlatformCharacterController
 {
     public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
     {

@@ -6,12 +6,12 @@
  * new axis to the input manager.
  * */
 
-namespace TopDownShooter
+namespace PlatformCharacterController
 {
     public class PlayerController : MonoBehaviour
     {
         [Header("Scripts reference")] public MovementCharacterController MovCharController;
-        public ShooterController ShooterController;
+        //public ShooterController ShooterController;
         public SwimmingController SwimmingController;
 
         [Header("Use mouse to shoot and rotate player")]

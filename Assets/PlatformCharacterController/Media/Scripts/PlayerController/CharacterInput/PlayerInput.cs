@@ -41,5 +41,15 @@ namespace PlatformCharacterController
         {
             return Input.GetButtonDown("PickUp");
         }
+
+        public override bool SubmitButton()
+        {
+            return Input.GetButtonDown("Submit");
+        }
+
+        public override bool CancelButton()
+        {
+            return Input.GetButtonDown("Cancel");
+        }
     }
 }

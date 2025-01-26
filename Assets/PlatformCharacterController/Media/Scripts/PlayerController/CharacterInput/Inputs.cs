@@ -16,4 +16,8 @@ public abstract class Inputs : MonoBehaviour
 
     public abstract bool Parachute();
     public abstract bool DropCarryItem();
+
+    public abstract bool SubmitButton();
+
+    public abstract bool CancelButton();
 }

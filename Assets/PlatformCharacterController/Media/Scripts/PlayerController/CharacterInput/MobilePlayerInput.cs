@@ -79,5 +79,16 @@ namespace PlatformCharacterController
             _parachute = active;
         }
 
+        
+
+        public override bool SubmitButton()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override bool CancelButton()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

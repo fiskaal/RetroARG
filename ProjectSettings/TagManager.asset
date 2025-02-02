@@ -10,6 +10,7 @@ TagManager:
   - CinemachineTarget
   - Platform
   - Water
+  - Enemy
   layers:
   - Default
   - TransparentFX

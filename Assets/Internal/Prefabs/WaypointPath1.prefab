@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3752996295424230903}
   - component: {fileID: 3752996295424230900}
+  - component: {fileID: 1980219170472038875}
   m_Layer: 0
   m_Name: WaypointPath1
   m_TagString: Untagged
@@ -77,6 +78,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f417cb15045f784685502b7d9843117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1980219170472038875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752996295424230901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09187bc2c27873a499f7814256770c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 3752996296398852096}
+  - {fileID: 3752996295317543594}
+  gizmoColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &3752996296398852097
 GameObject:
   m_ObjectHideFlags: 0

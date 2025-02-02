@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33253243558922508}
   - component: {fileID: 23363714592162624}
   - component: {fileID: 1850142385928460745}
+  - component: {fileID: 7461244930372320360}
   m_Layer: 0
   m_Name: apple
   m_TagString: Untagged
@@ -104,3 +105,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7461244930372320360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829371231341652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7285b99ae446c4ea7d5b2fdafd9fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 0}

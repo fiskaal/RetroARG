@@ -84,6 +84,12 @@ namespace PlatformCharacterController
         public Animator PlayerAnimator;
 
 
+        [Header("Knock back settings:")]
+        //public float knockBackForce;
+        //public float knockBackTime;
+        //public float knockBack;
+
+
         [Header("Effects")] [Tooltip("This position is in the character feet and is use to instantiate effects.")]
         public Transform LowZonePosition;
 

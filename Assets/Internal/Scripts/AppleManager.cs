@@ -10,7 +10,7 @@ public class AppleManager : MonoBehaviour
     [SerializeField] private int appleCount;
     [SerializeField] private int maxAppleCount = 3;
     [SerializeField] private AudioSource appleSound;
-    [SerializeField] private ParticleSystem ps;
+    //[SerializeField] private ParticleSystem ps;
     [SerializeField] private GameObject portal;
 
 
@@ -36,6 +36,7 @@ public class AppleManager : MonoBehaviour
             other.gameObject.SetActive(false);
             appleCount++;
             //ps.Play();
+            //Instantiate(ps, transform.position, transform.rotation);
             appleSound.Play();
         }
     }

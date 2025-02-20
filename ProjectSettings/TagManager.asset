@@ -12,6 +12,7 @@ TagManager:
   - Water
   - Enemy
   - CarryObject
+  - Ladder
   layers:
   - Default
   - TransparentFX

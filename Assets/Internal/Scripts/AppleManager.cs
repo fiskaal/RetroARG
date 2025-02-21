@@ -33,11 +33,13 @@ public class AppleManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Fruit"))
         {
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
+            other.transform.parent.gameObject.SetActive(false);
             appleCount++;
             //ps.Play();
             //Instantiate(ps, transform.position, transform.rotation);
             appleSound.Play();
+
         }
     }
     

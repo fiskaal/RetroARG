@@ -13,6 +13,8 @@ TagManager:
   - Enemy
   - CarryObject
   - Ladder
+  - Checkpoint
+  - Heal
   layers:
   - Default
   - TransparentFX

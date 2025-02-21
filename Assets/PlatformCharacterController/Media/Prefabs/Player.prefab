@@ -5433,7 +5433,6 @@ MonoBehaviour:
   appleCount: 0
   maxAppleCount: 3
   appleSound: {fileID: 0}
-  ps: {fileID: 0}
   portal: {fileID: 0}
 --- !u!1 &1411909238960990
 GameObject:

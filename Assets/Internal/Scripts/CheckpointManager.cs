@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class CheckpointManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Transform defaultCheckpoint;
+    [SerializeField] Transform checkpointSetter;
+    [SerializeField] GameObject checkpointObject;
+    [SerializeField] Animator animatorCheckpoint;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            defaultCheckpoint.position = checkpointSetter.position;
+            animatorCheckpoint.PlayInFixedTime("NotificationAnimation", -1, 0f);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            checkpointObject.SetActive(false);
+        }
     }
 }

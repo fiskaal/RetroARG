@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.Rendering.Universal;
 
 public class HM2 : MonoBehaviour
 {
 
-    public int maxHealth;
-    public int currentHealth;
+    public int maxHealth = 5;
+    public int currentHealth = 3;
+    [SerializeField] TMP_Text lifeText;
     public bool isDead = false;
     public GameObject gameOverScreen;
     public GameObject selectedGameOverButton;
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
         gameOverScreen.SetActive(false);
     }
 
@@ -23,6 +26,7 @@ public class HM2 : MonoBehaviour
     void Update()
     {
         PlayerDied();
+        lifeText.text = currentHealth.ToString() + ("/5");
     }
 
     public void HurtPlayer(int damage)

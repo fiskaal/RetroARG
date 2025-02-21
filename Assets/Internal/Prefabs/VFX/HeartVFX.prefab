@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2193453811726652109}
   - component: {fileID: 3188009300373568959}
   m_Layer: 0
-  m_Name: PickUpVFX
+  m_Name: HeartVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,8 +287,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 4
+      scalar: 1.5
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4830,7 +4830,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e51aa658d4002424d839b03e273210b1, type: 2}
+  - {fileID: 2100000, guid: 442356e11b60fd246802345b10acb07d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

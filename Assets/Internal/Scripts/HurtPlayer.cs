@@ -9,7 +9,7 @@ public class HurtPlayer : MonoBehaviour
 
     public int dealDamage = 1;
     [SerializeField] public HM2 hm2;
-    [SerializeField] Animator animator;
+    [SerializeField] Animator animatorHurt;
     [SerializeField] Animator animatorImage;
 
 
@@ -50,10 +50,10 @@ public class HurtPlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            animator.Play("NotificationAnimation");
+            animatorHurt.Play("NotificationAnimation");
             hm2.currentHealth -= dealDamage;
             Debug.Log("HURT!");
-            animator.PlayInFixedTime("NotificationAnimation", -1, 0f);
+            animatorHurt.PlayInFixedTime("NotificationAnimation", -1, 0f);
             animatorImage.PlayInFixedTime("ImageFadeInOut", -1, 0f);
 
             StartCoroutine(other.GetComponent<MovementCharacterController>()

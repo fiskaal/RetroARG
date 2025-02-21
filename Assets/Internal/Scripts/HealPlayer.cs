@@ -18,7 +18,7 @@ public class HealPlayer : MonoBehaviour
             hm2.currentHealth += healAmount;
             Debug.Log("HEAL!");
             animatorHeal.PlayInFixedTime("NotificationAnimation", -1, 0f);
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
             other.transform.parent.gameObject.SetActive(false);
             healSound.Play();
 

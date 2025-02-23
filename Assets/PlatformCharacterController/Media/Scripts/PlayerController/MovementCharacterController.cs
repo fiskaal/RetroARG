@@ -118,8 +118,8 @@ namespace PlatformCharacterController
         private float _vertical;
 
         private bool _jump;
-        private bool _dash;
-        private bool _flyJetPack;
+        private bool _dash = false;
+        private bool _flyJetPack = false;
         private bool _slowFall;
 
         //get direction for the camera
@@ -330,6 +330,11 @@ namespace PlatformCharacterController
             }
 
             SetGroundedState();
+        }
+
+        public void isControlable(bool _value)
+        {
+            CanControl = _value;
         }
 
         public void Jump(float jumpHeight)

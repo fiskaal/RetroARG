@@ -19,6 +19,12 @@ public class NoteController : MonoBehaviour
     [SerializeField] private GameObject openButton;
     [SerializeField] private GameObject closeButton;
 
+
+    [Header("Events")]
+    public UnityEvent startReadingEvent;
+    public UnityEvent stopReading;
+    
+
     [Space(10)]
     [SerializeField] [TextArea] private string noteText;
 
@@ -62,10 +68,12 @@ public class NoteController : MonoBehaviour
         openButton.gameObject.SetActive(false);
         closeButton.gameObject.SetActive(true);
         Time.timeScale = .0f;
+        startReadingEvent.Invoke();
     }
 
     void HideNote()
     {
+        stopReading.Invoke();
         noteCanvas.gameObject.SetActive(false);
         isOpen = false;
         openButton.gameObject.SetActive(true);
@@ -85,6 +93,7 @@ public class NoteController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
             {
+
             inTrigger = true;
             if (!isOpen)
             {

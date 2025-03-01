@@ -121,6 +121,7 @@ namespace PlatformCharacterController
         private bool _dash = false;
         private bool _flyJetPack = false;
         private bool _slowFall;
+        private bool _attack;
 
         //get direction for the camera
         [SerializeField]private Transform _cameraTransform;
@@ -397,6 +398,11 @@ namespace PlatformCharacterController
             _velocity += Vector3.Scale(transform.forward,
                 DashForce * new Vector3((Mathf.Log(1f / (Time.deltaTime * DragForce.x + 1)) / -Time.deltaTime),
                     0, (Mathf.Log(1f / (Time.deltaTime * DragForce.z + 1)) / -Time.deltaTime)));
+        }
+
+        public void Attack()
+        {
+
         }
 
         private void FlyByJetPack()

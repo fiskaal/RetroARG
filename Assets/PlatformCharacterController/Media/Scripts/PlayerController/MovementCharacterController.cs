@@ -80,6 +80,9 @@ namespace PlatformCharacterController
         [Tooltip("Player Status: Swimming")]
         public bool Swimming;
 
+        [Tooltip("Player Status: Climbing")]
+        public bool Climbing;
+
         [Tooltip("This is the animator for you character.")]
         public Animator PlayerAnimator;
 
@@ -111,7 +114,7 @@ namespace PlatformCharacterController
 
         //private vars
         private CharacterController _controller;
-        private Vector3 _velocity;
+        public Vector3 _velocity;
 
         //Input.
         private float _horizontal;
@@ -322,6 +325,11 @@ namespace PlatformCharacterController
                 _velocity.y = 0;
             }
 
+            //if (Climbing)
+            //{
+            //    _velocity.x = 0;
+            //}
+
             _velocity.x /= 1 + DragForce.x * Time.deltaTime;
             _velocity.y /= 1 + DragForce.y * Time.deltaTime;
             _velocity.z /= 1 + DragForce.z * Time.deltaTime;
@@ -401,6 +409,11 @@ namespace PlatformCharacterController
         }
 
         public void Attack()
+        {
+
+        }
+
+        public void Climb()
         {
 
         }
@@ -596,6 +609,11 @@ namespace PlatformCharacterController
         {
             PlayerAnimator.SetTrigger("Jump");
         }
+
+        //private void SetClimbAnimation()
+        //{
+        //    PlayerAnimator.SetTrigger("Climb");
+        //}
 
         private void SetDashAnimation()
         {

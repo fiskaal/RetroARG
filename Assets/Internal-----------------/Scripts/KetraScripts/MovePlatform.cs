@@ -54,6 +54,7 @@ public class MovePlatform : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             other.transform.SetParent(transform);
+            Debug.Log("ON PLATFORM!");
         }
         
         

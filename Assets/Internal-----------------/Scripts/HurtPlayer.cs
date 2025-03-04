@@ -50,15 +50,20 @@ public class HurtPlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            animatorHurt.Play("NotificationAnimation");
-            hm2.currentHealth -= dealDamage;
-            Debug.Log("HURT!");
-            animatorHurt.PlayInFixedTime("NotificationAnimation", -1, 0f);
-            animatorImage.PlayInFixedTime("ImageFadeInOut", -1, 0f);
-
-            StartCoroutine(other.GetComponent<MovementCharacterController>()
-                    .DeactivatePlayerControlByTime(TimeToControlPlayer));
-            StartCoroutine(TeleportPlayer(other.transform));
+            DamagePlayer();
         }
+    }
+
+    public void DamagePlayer()
+    {
+        animatorHurt.Play("NotificationAnimation");
+        hm2.currentHealth -= dealDamage;
+        Debug.Log("HURT!");
+        animatorHurt.PlayInFixedTime("NotificationAnimation", -1, 0f);
+        animatorImage.PlayInFixedTime("ImageFadeInOut", -1, 0f);
+
+        StartCoroutine(GetComponent<MovementCharacterController>()
+                .DeactivatePlayerControlByTime(TimeToControlPlayer));
+        StartCoroutine(TeleportPlayer(transform));
     }
 }

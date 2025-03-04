@@ -14,6 +14,7 @@ namespace PlatformCharacterController
         private float yPos;
         [SerializeField] private MovementCharacterController mcc;
         [SerializeField] public CustomTrigger ct;
+        [SerializeField] public HurtPlayer hp;
 
         public enum EnemyState
         { idle, partolling, chasing, returning };
@@ -37,6 +38,10 @@ namespace PlatformCharacterController
         public float waitToChase;
         private float chaseWaitCounter;
 
+        public float waitBeforeDie = .5f;
+        private float dieCounter;
+        public float squashSpeed;
+
         private void Start()
         {
             foreach (Transform pp in patrolPoints)
@@ -50,43 +55,60 @@ namespace PlatformCharacterController
 
         private void Update()
         {
-
-            switch (currentState)
+            if (dieCounter > 0)
             {
-                case EnemyState.idle:
+                dieCounter -= Time.deltaTime;
+                rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
 
-                    OnIdle();
+                transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1.25f, .5f, 1.25f), squashSpeed * Time.deltaTime);
 
-                    break;
-                case EnemyState.partolling:
-
-                    OnPatrol();
-
-                    break;
-                case EnemyState.chasing:
-
-                    OnChase();
-
-                    break;
-                case EnemyState.returning:
-
-                    OnReturn();
-
-                    break;
-            }
-            if (currentState != EnemyState.chasing)
-            {
-                if (Vector3.Distance(mcc.transform.position, transform.position) < chaseDistance)
+                if (dieCounter <= 0)
                 {
-                    currentState = EnemyState.chasing;
-
-                    rb.velocity = Vector3.up * hopForce;
-                    chaseWaitCounter = waitToChase;
+                    Destroy(gameObject);
                 }
             }
-            lookTarget.y = transform.position.y;
-            //transform.LookAt(lookTarget);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookTarget - transform.position), turnSpeed * Time.deltaTime);
+            else
+            {
+
+
+
+                switch (currentState)
+                {
+                    case EnemyState.idle:
+
+                        OnIdle();
+
+                        break;
+                    case EnemyState.partolling:
+
+                        OnPatrol();
+
+                        break;
+                    case EnemyState.chasing:
+
+                        OnChase();
+
+                        break;
+                    case EnemyState.returning:
+
+                        OnReturn();
+
+                        break;
+                }
+                if (currentState != EnemyState.chasing)
+                {
+                    if (Vector3.Distance(mcc.transform.position, transform.position) < chaseDistance)
+                    {
+                        currentState = EnemyState.chasing;
+
+                        rb.velocity = Vector3.up * hopForce;
+                        chaseWaitCounter = waitToChase;
+                    }
+                }
+                lookTarget.y = transform.position.y;
+                //transform.LookAt(lookTarget);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookTarget - transform.position), turnSpeed * Time.deltaTime);
+            }
         }
 
 
@@ -168,7 +190,7 @@ namespace PlatformCharacterController
                 rb.velocity = moveDir * chaseSpeed;
                 rb.velocity = new Vector3(rb.velocity.x, yPos, rb.velocity.z);
             }
-            if (Vector3.Distance(mcc.transform.position, transform.position) > looseDistance )
+            if (Vector3.Distance(mcc.transform.position, transform.position) > looseDistance)
             {
                 currentState = EnemyState.returning;
 
@@ -190,6 +212,27 @@ namespace PlatformCharacterController
             }
 
 
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player") && dieCounter == 0)
+            {
+                hp.DamagePlayer();
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "Player")
+            {
+                //Destroy(gameObject);
+
+                dieCounter = waitBeforeDie;
+
+                //thePlayer.Bounce();
+
+            }
         }
 
 

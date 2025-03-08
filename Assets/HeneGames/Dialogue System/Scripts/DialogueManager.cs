@@ -46,7 +46,7 @@ namespace HeneGames.DialogueSystem
            
 
             //Start dialogue by input
-            if (Input.GetKeyDown(DialogueUI.instance.actionInput) && dialogueTrigger != null && !dialogueIsOn)
+            if (Input.GetButtonDown("Submit") && dialogueTrigger != null && !dialogueIsOn)
             {
                 //Trigger event inside DialogueTrigger component
                 if (dialogueTrigger != null)

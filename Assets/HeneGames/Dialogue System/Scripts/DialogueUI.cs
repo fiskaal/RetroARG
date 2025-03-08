@@ -49,8 +49,8 @@ namespace HeneGames.DialogueSystem
         [Range(0.1f, 1f)]
         [SerializeField] private float textAnimationSpeed = 0.5f;
 
-        [Header("Next sentence input")]
-        public KeyCode actionInput = KeyCode.Space;
+        //[Header("Next sentence input")]
+        //public KeyCode actionInput = KeyCode.Space;
 
         private void Update()
         {
@@ -66,7 +66,7 @@ namespace HeneGames.DialogueSystem
         public virtual void InputUpdate()
         {
             //Next dialogue input
-            if (Input.GetKeyDown(actionInput))
+            if (Input.GetButtonDown("Submit"))
             {
                 NextSentenceSoft();
             }

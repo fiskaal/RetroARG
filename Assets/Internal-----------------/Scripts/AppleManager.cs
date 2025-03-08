@@ -12,6 +12,7 @@ public class AppleManager : MonoBehaviour
     [SerializeField] private AudioSource appleSound;
     //[SerializeField] private ParticleSystem ps;
     [SerializeField] private GameObject portal;
+    [SerializeField] private Animator animatorIcon;
 
 
     private void Awake()
@@ -36,6 +37,7 @@ public class AppleManager : MonoBehaviour
             //other.gameObject.SetActive(false);
             other.transform.parent.gameObject.SetActive(false);
             appleCount++;
+            animatorIcon.PlayInFixedTime("iconSizeUpDown", -1, 0f);
             //ps.Play();
             //Instantiate(ps, transform.position, transform.rotation);
             appleSound.Play();

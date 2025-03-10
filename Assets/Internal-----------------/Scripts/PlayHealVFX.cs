@@ -6,7 +6,7 @@ public class PlayHealVFX : MonoBehaviour
 {
 
     [SerializeField] private GameObject ps;
-    [SerializeField] public HM2 hm2;
+    [SerializeField] public HealthSystem hs;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class PlayHealVFX : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && hm2.currentHealth < 5)
+        if (other.gameObject.CompareTag("Player") && hs.currentHealth < 5)
         {
             Instantiate(ps, transform.position, transform.rotation);
         }

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,13 @@ public class PlayerController : MonoBehaviour
     {
         instance = this;
     }
-    public Transform checkpoint;
+    public Vector3 checkpoint;
 
     public float moveSpeed;
     public float jumpForce, gravityScale;
     private float yStore;
+
+    public GameObject player;
 
     public CharacterController charCon;
 
@@ -28,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
     //public GameObject jumpParticle, landingParticle;
     private bool lastGrounded;
+    public int jumpCount = 0;
+    public int maxJumps = 3;
 
     public float bounceForce;
 
@@ -40,8 +45,10 @@ public class PlayerController : MonoBehaviour
         cam = FindObjectOfType<CameraController>();
 
         lastGrounded = true;
+        //transform.position = checkpoint.position;
 
         charCon.Move(new Vector3(0f, Physics.gravity.y * gravityScale * Time.deltaTime, 0f));
+        maxJumps = 3;
     }
 
     private void FixedUpdate()
@@ -83,19 +90,25 @@ public class PlayerController : MonoBehaviour
             if (charCon.isGrounded)
             {
                 //jumpParticle.SetActive(false);
+                jumpCount = 0;
 
                 if (!lastGrounded)
                 {
+                    
                     //landingParticle.SetActive(true);
                 }
 
-                if (Input.GetButtonDown("Jump"))
+                if (Input.GetButtonDown("Jump") && jumpCount < maxJumps)
                 {
                     moveAmount.y = jumpForce;
+                    jumpCount++;
 
                     //jumpParticle.SetActive(true);
 
                     //AudioManager.instance.PlaySFXPitched(11);
+                }else if (Input.GetButtonDown("Attack"))
+                {
+                    anim.SetTrigger("isAttacking");
                 }
             }
 
@@ -123,7 +136,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            transform.position = checkpoint.position;
+            //transform.position = checkpoint.position;
+            charCon.Move(new Vector3(checkpoint.x, checkpoint.y, checkpoint.z));
         }
     }
 
@@ -131,7 +145,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            transform.position = checkpoint.position;
+            //transform.position = checkpoint.position;
         }
     }
 }

@@ -17,6 +17,9 @@ TagManager:
   - Heal
   - NPC
   - Destructible
+  - Kill
+  - Apple
+  - Killzone
   layers:
   - Default
   - TransparentFX
@@ -27,7 +30,7 @@ TagManager:
   - Ground
   - Player
   - CarryObject
-  - 
+  - Destructible
   - 
   - 
   - 

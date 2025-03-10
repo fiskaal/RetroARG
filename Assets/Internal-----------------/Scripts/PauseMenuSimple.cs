@@ -28,6 +28,7 @@ public class PauseMenuSimple : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         EventSystem.current.SetSelectedGameObject(selectedPauseButton);
+        EventSystem.current.firstSelectedGameObject = selectedPauseButton;
         Time.timeScale = 0;
     }
 

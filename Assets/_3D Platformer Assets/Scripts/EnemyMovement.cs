@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
     private float yPos;
     [SerializeField] private PlayerController pc;
     [SerializeField] public CustomTrigger ct;
-    [SerializeField] public HurtPlayer hp;
+    [SerializeField] public HealthSystem hs;
 
     public enum EnemyState
     { idle, partolling, chasing, returning };
@@ -217,8 +217,14 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && dieCounter == 0)
         {
-            hp.DamagePlayer();
+            //transform.position = other.transform.position;
+            hs.DamagePlayer();
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        
     }
 
     private void OnTriggerEnter(Collider other)

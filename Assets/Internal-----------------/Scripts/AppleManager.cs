@@ -1,38 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using UnityEditor.Rendering.LookDev;
+using UnityEngine;
 
 public class AppleManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text appleText;
-    [SerializeField] private int appleCount;
+    [SerializeField] private int appleCount = 0;
     [SerializeField] private int maxAppleCount = 3;
     [SerializeField] private AudioSource appleSound;
     //[SerializeField] private ParticleSystem ps;
     [SerializeField] private GameObject portal;
     [SerializeField] private Animator animatorIcon;
+    [SerializeField] private HealthSystem hs;
+    
 
 
     private void Awake()
     {
         portal.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        appleText.text = appleCount.ToString() + ("/3");
 
-        if (appleCount == maxAppleCount) 
-        { 
-        portal.gameObject.SetActive(true);
+        if (appleCount == maxAppleCount)
+        {
+            hs.currentHealth++;
+            appleCount = 0;
+        }
+
+        appleText.text = appleCount.ToString();
+
+        if (appleCount == maxAppleCount)
+        {
+            portal.gameObject.SetActive(true);
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Fruit"))
+        if (other.gameObject.CompareTag("Apple"))
         {
             //other.gameObject.SetActive(false);
             other.transform.parent.gameObject.SetActive(false);
@@ -44,5 +51,5 @@ public class AppleManager : MonoBehaviour
 
         }
     }
-    
+
 }

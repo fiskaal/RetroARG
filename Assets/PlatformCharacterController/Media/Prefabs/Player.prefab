@@ -5436,6 +5436,8 @@ MonoBehaviour:
   maxAppleCount: 3
   appleSound: {fileID: 0}
   portal: {fileID: 0}
+  animatorIcon: {fileID: 0}
+  hs: {fileID: 0}
 --- !u!1 &1411909238960990
 GameObject:
   m_ObjectHideFlags: 0
@@ -11382,7 +11384,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754263795998373989}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 4
   m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}

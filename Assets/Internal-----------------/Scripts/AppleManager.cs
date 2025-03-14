@@ -8,7 +8,7 @@ public class AppleManager : MonoBehaviour
     [SerializeField] private int maxAppleCount = 3;
     [SerializeField] private AudioSource appleSound;
     //[SerializeField] private ParticleSystem ps;
-    [SerializeField] private GameObject portal;
+    //[SerializeField] private GameObject portal;
     [SerializeField] private Animator animatorIcon;
     [SerializeField] private HealthSystem hs;
     
@@ -16,7 +16,7 @@ public class AppleManager : MonoBehaviour
 
     private void Awake()
     {
-        portal.gameObject.SetActive(false);
+        //portal.gameObject.SetActive(false);
 
     }
 
@@ -32,10 +32,10 @@ public class AppleManager : MonoBehaviour
 
         appleText.text = appleCount.ToString();
 
-        if (appleCount == maxAppleCount)
-        {
-            portal.gameObject.SetActive(true);
-        }
+        //if (appleCount == maxAppleCount)
+        //{
+        //    portal.gameObject.SetActive(true);
+        //}
     }
     private void OnTriggerEnter(Collider other)
     {

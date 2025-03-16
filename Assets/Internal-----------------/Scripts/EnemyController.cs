@@ -5,14 +5,15 @@ public class EnemyController : MonoBehaviour
 {
     enum AIState
     {
-        Idle, Patrolling, Chasing
+        Idle, Patrolling, Chasing, Attacking
     }
     [Header("Patrol")]
     [SerializeField] private Animator enemyAnim;
     [SerializeField] private Transform waypoints;
     [SerializeField] private float waitAtPoint = 2f;
-    [SerializeField] private Transform enemyObject;
-    
+    [SerializeField] private Transform enemyChase;
+    [SerializeField] private Transform enemyAttack;
+
     private int currentWaypoint;
     private float waitCounter;
 
@@ -25,8 +26,13 @@ public class EnemyController : MonoBehaviour
     [Header("Chasing")]
     [SerializeField] private float chaseRange;
 
+    [Header("Attacking")]
+    [SerializeField] private float attackRange = 2f;
+    [SerializeField] private float attackTime = 2f;
+    private float timeToAttck;
+
     [Header("Sus")]
-    [SerializeField] private float susTime;
+    [SerializeField] public float susTime = 0f;
     private float timeSinceLastSawplayer;
     [Header("Player")]
     [SerializeField] private GameObject player;
@@ -35,6 +41,7 @@ public class EnemyController : MonoBehaviour
     {
         waitCounter = waitAtPoint;
         timeSinceLastSawplayer = susTime;
+        timeToAttck = attackTime;
     }
 
     private void Update()
@@ -107,24 +114,48 @@ public class EnemyController : MonoBehaviour
                         //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                     }
                 }
+
+                if (distanceToplayer <= attackRange)
+                {
+                    currentState = AIState.Attacking;
+                    agent.velocity = Vector3.zero;
+                    agent.isStopped = true;
+                    //enemyAnim.CrossFadeInFixedTime("Bear_Strike1", .1f);
+                }
+
+                break;
+            case AIState.Attacking:
+                //enemyAnim.CrossFadeInFixedTime("Bear_Strike1", .1f);
+                transform.LookAt(player.transform.position, Vector3.up);
+                timeToAttck -= Time.deltaTime;
+
+                if (timeToAttck <= 0)
+                {
+                    enemyAnim.CrossFadeInFixedTime("Bear_Strike1", .1f);
+                    //enemyAnim.Play("Bear_Attack1");
+                    timeToAttck = attackTime;
+                }
+
+                if (distanceToplayer > attackRange)
+                {
+                    currentState = AIState.Chasing;
+                    agent.isStopped = false;
+                    enemyAnim.CrossFadeInFixedTime("Bear_Walk", .1f);
+                    //enemyAnim.Play("Bear_walk");
+                }
                 break;
 
-                //if (agent.remainingDistance <= .1f)
-                //{
-                //    //currentWaypoint = Random.Range(1,5);
-                //    currentWaypoint++;
-                //    if (currentWaypoint >= waypoints.childCount)
-                //    {
-                //        currentWaypoint = 0;
-                //    }
-                //    agent.SetDestination(waypoints.GetChild(currentWaypoint).position);
-                //}
+               
         }
 
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(enemyObject.position, chaseRange);
+        Gizmos.DrawWireSphere(enemyAttack.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(enemyChase.position, chaseRange);
+        
+        
     }
 }

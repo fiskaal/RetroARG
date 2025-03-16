@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health;
+    [SerializeField] private GameObject enemy;
     public Transform lootSpawnLocation;
     [Header("Loot")]
     public List<LootItem> LootTable = new List<LootItem>();
     // Start is called before the first frame update
-    
+
     public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
         {
-            this.gameObject.SetActive(false);
+            enemy.gameObject.SetActive(false);
             // spawn item
 
             foreach (LootItem lootItem in LootTable)
             {
-                if(Random.Range(0f, 100f) <= lootItem.dropChance)
+                if (Random.Range(0f, 100f) <= lootItem.dropChance)
                 {
                     InstantiateLoot(lootItem.itemPrefab);
                 }

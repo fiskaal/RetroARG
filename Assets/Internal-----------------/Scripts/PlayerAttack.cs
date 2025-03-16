@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private LayerMask targetLayer;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource chopSound;
+    //[SerializeField] private GameObject ps;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,15 +28,31 @@ public class PlayerAttack : MonoBehaviour
 
     
 
-    public void DetectHit()
+    public void DetectEnemyHit()
+    {
+        Collider[] hit = Physics.OverlapSphere(weaponHitPoint.position, weaponHitRadius, targetLayer);
+
+        if (hit.Length > 0)   
+        {
+            chopSound.Play();
+            //hit[0].GetComponent<BarrelHealth>().TakeDamage(damage);
+            hit[0].GetComponent<EnemyHealth>().TakeDamage(damage);
+            Instantiate(hitEffect.transform, hit[0].transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity);
+            //Instantiate(ps, transform.position, transform.rotation);
+        }
+    }
+
+    public void DetectBarrelHit()
     {
         Collider[] hit = Physics.OverlapSphere(weaponHitPoint.position, weaponHitRadius, targetLayer);
 
         if (hit.Length > 0)
         {
             chopSound.Play();
-            hit[0].GetComponent<Health>().TakeDamage(damage);
+            hit[0].GetComponent<BarrelHealth>().TakeDamage(damage);
+            //hit[0].GetComponent<EnemyHealth>().TakeDamage(damage);
             Instantiate(hitEffect.transform, hit[0].transform.position + new Vector3(0f, 1f, 0f), Quaternion.identity);
+            //Instantiate(ps, transform.position, transform.rotation);
         }
     }
 

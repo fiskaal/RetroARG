@@ -8,10 +8,15 @@ public class PlayHealVFX : MonoBehaviour
     [SerializeField] private GameObject ps;
     [SerializeField] public HealthSystem hs;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        hs = GetComponent<HealthSystem>();
     }
+    
+    // void Start()
+    // {
+    //     hs = GetComponent<HealthSystem>();
+    // }
 
     // Update is called once per frame
     void Update()

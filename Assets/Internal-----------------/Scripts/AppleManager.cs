@@ -17,6 +17,7 @@ public class AppleManager : MonoBehaviour
     private void Awake()
     {
         //portal.gameObject.SetActive(false);
+        appleCount = PlayerPrefs.GetInt("Apples");
 
     }
 
@@ -31,6 +32,7 @@ public class AppleManager : MonoBehaviour
         }
 
         appleText.text = appleCount.ToString();
+        
 
         //if (appleCount == maxAppleCount)
         //{
@@ -48,6 +50,8 @@ public class AppleManager : MonoBehaviour
             //ps.Play();
             //Instantiate(ps, transform.position, transform.rotation);
             appleSound.Play();
+            PlayerPrefs.SetInt("Apples", appleCount);
+
 
         }
     }

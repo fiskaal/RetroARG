@@ -6,11 +6,11 @@ public class PlayHealVFX : MonoBehaviour
 {
 
     [SerializeField] private GameObject ps;
-    [SerializeField] public HealthSystem hs;
+    [SerializeField] private HealthSystem hs;
     // Start is called before the first frame update
     void Awake()
     {
-        hs = GetComponent<HealthSystem>();
+        hs = FindObjectOfType<HealthSystem>();
     }
     
     // void Start()

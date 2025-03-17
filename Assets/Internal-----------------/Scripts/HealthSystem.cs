@@ -2,13 +2,14 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.Universal;
 
 public class HealthSystem : MonoBehaviour
 {
 
     public int dealDamage = 1;
     public int maxHealth = 5;
-    public int currentHealth = 3;
+    public int currentHealth;
     [SerializeField] TMP_Text lifeText;
     public bool isDead = false;
     public GameObject gameOverScreen;
@@ -28,7 +29,16 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         gameOverScreen.SetActive(false);
+        PlayerPrefs.SetInt("Hearts", 3);
         
+    }
+
+    private void Awake()
+    {
+        //currentHealth = PlayerPrefs.GetInt("Hearts", 3);
+        maxHealth = PlayerPrefs.GetInt("maxHealth", 5);
+        currentHealth = PlayerPrefs.GetInt("Hearts", currentHealth);
+
     }
 
     // Update is called once per frame
@@ -37,6 +47,8 @@ public class HealthSystem : MonoBehaviour
         checkpoint = spawnpoint.position;
         PlayerDied();
         lifeText.text = currentHealth.ToString();
+        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,6 +59,7 @@ public class HealthSystem : MonoBehaviour
             //other.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
             DamagePlayer();
             StartCoroutine(PauseCoroutine());
+            PlayerPrefs.SetInt("Hearts", currentHealth);
         }
 
         if (other.gameObject.tag == "Heal" && currentHealth < maxHealth)
@@ -59,6 +72,7 @@ public class HealthSystem : MonoBehaviour
             //other.gameObject.SetActive(false);
             other.transform.parent.gameObject.SetActive(false);
             healSound.Play();
+            PlayerPrefs.SetInt("Hearts", currentHealth);
 
         }
     }

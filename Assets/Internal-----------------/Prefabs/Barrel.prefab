@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b878be4e7a80864478ab5a7e6adff4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
   barrel: {fileID: 0}
   lootSpawnLocation: {fileID: 0}
   LootTable:

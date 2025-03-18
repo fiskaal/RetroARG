@@ -1,6 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime;
+using System.Collections;
 using UnityEngine;
 
 public class DialogueHolder : MonoBehaviour
@@ -11,6 +10,9 @@ public class DialogueHolder : MonoBehaviour
     [SerializeField] private bool inTrigger = false;
     [SerializeField] private GameObject openButton;
     [SerializeField] private GameObject closeButton;
+    public Animator npcAnim;
+
+    public string[] dialogueLines;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,48 +22,32 @@ public class DialogueHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inTrigger == true && Input.GetButton("Dialogue"))
-        {
-            dm.ShowWindow(dialogue);
-        }
-        if (Input.GetButtonDown("Cancel"))
-        {
-            dm.HideWindow(dialogue);
-        }
+
     }
 
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Player")) 
-    //    {
-    //        if (Input.GetButtonUp("Dialogue"))
-    //        {
-    //            dm.ShowWindow(dialogue);
-    //        }
-    //    }
-    //}
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            openButton.gameObject.SetActive(true);
 
+            if (Input.GetButtonDown("Dialogue"))
+            {
+
+                isDialogueOpen = true;
+
+                if (!dm.dialogueActive)
+                {
+                    dm.dialogueLines = dialogueLines;
+                    dm.currentLine = 0;
+                    dm.ShowDialogue();
+                    npcAnim.SetBool("isTalking", true);
+                }
+            }
             inTrigger = true;
-            if (!isDialogueOpen)
-            {
-                openButton.gameObject.SetActive(true);
-                if (Input.GetButtonDown("Dialogue"))
-                {
-                    dm.ShowWindow(dialogue);
-                }
-            }
-            else if (isDialogueOpen == true)
-            {
-                if (Input.GetButtonDown("Cancel"))
-                {
-                    dm.HideWindow(dialogue);
-                }
-            }
+
         }
     }
 
@@ -69,8 +55,11 @@ public class DialogueHolder : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            dm.HideWindow(dialogue);
             openButton.gameObject.SetActive(false);
             inTrigger = false;
+            isDialogueOpen = false;
+            npcAnim.SetBool("isTalking", false);
 
         }
     }

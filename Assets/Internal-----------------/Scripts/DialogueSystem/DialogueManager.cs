@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +10,9 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueActive = false;
 
+    public string[] dialogueLines;
+    public int currentLine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +22,21 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (dialogueActive && Input.GetButtonDown("Dialogue"))
-        //{
-        //    dialogueWindow.SetActive(false);
-        //    dialogueActive = false;
-        //}
+        if (dialogueActive && Input.GetButtonDown("Dialogue"))
+        {
+            
+            currentLine++;
+        }
+
+        if (currentLine >= dialogueLines.Length) 
+        {
+            dialogueWindow.SetActive(false);
+            dialogueActive = false;
+
+            currentLine = 0;
+        }
+
+        dialogueText.text = dialogueLines[currentLine];
     }
 
     public void ShowWindow(string dialogue)
@@ -33,7 +48,16 @@ public class DialogueManager : MonoBehaviour
     }
     public void HideWindow(string dialogue)
     {
+        dialogueActive = false;
         dialogueWindow.SetActive(false);
-        
+        dialogueText.text = dialogue;
+        currentLine = 0;
+
+    }
+
+    public void ShowDialogue()
+    {
+        dialogueActive=true;
+        dialogueWindow.SetActive(true);
     }
 }

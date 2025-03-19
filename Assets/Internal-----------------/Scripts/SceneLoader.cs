@@ -12,6 +12,8 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private Animator imageAnimator;
     public float waitTime = 1f;
     public string sceneName;
+    public GameObject actionButton;
+    public GameObject textInfo;
    
     
 
@@ -74,8 +76,14 @@ public class SceneLoader : MonoBehaviour
     {
         if (other.CompareTag("Player")) 
         {
-            imageAnimator.Play("ImageFadeIn");
-            StartCoroutine(WaitAndLoad(waitTime, sceneName));
+            actionButton.SetActive(true);
+            textInfo.SetActive(true);
+            if (Input.GetButtonDown("Dialogue")) 
+            {
+                imageAnimator.Play("ImageFadeIn");
+                StartCoroutine(WaitAndLoad(waitTime, sceneName));
+            }
+            
         }
 
         

@@ -11,6 +11,8 @@ public class QuestManager : MonoBehaviour
     public bool[] questCompleted;
 
     public DialogueManager dm;
+
+    public string itemCollected;
     // Start is called before the first frame update
     void Start()
     {

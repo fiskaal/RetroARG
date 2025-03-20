@@ -9,6 +9,9 @@ public class QuestObject : MonoBehaviour
 
     public string startQuestText;
     public string finishQuestText;
+
+    public bool isItemQuest;
+    public string targetItem;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,14 @@ public class QuestObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (isItemQuest) 
+        {
+            if (qm.itemCollected == targetItem)
+            {
+                qm.itemCollected = null;
+                FinishQuest();
+            }
+        }
     }
 
     public void StartQuest()

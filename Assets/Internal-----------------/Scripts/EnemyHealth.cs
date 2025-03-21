@@ -6,11 +6,19 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health;
     [SerializeField] private GameObject enemy;
+    public string enemyQuestName;
+    [SerializeField] private QuestManager qm;
     public Transform lootSpawnLocation;
     [Header("Loot")]
     public List<LootItem> LootTable = new List<LootItem>();
     // Start is called before the first frame update
-
+    private void Update()
+    {
+        if(health <= 0)
+        {
+            qm.enemyKilled = enemyQuestName;
+        }
+    }
     public void TakeDamage(int damage)
     {
         health -= damage;

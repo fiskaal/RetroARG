@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private LayerMask targetLayer;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource chopSound;
+    public int enemiesKilled;
     //[SerializeField] private GameObject ps;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (hit.Length > 0)   
         {
+            enemiesKilled++;
             chopSound.Play();
             //hit[0].GetComponent<BarrelHealth>().TakeDamage(damage);
             hit[0].GetComponent<EnemyHealth>().TakeDamage(damage);

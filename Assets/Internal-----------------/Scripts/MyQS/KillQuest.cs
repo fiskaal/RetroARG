@@ -14,19 +14,25 @@ public class KillQuest : Quest
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
-    private DialogueManager dm;
+    [SerializeField]private DialogueManager dm;
     public string[] dialogueLines;
     public string[] dialogueLinesStart;
     public string[] dialogueLinesActive;
     public string[] dialogueLinesCompleted;
+    public string[] dialogueLinesDefault;
+    public int arrayLenght;
+    public int currentIndex;
+    public PlayerAttack pa;
 
     [Header("Quest Details")]
     [SerializeField] private int enemiesToKill;
     [SerializeField] private int enemiesKilled;
+    [SerializeField] private GameObject rewardItem;
     // Start is called before the first frame update
     void Start()
     {
-        
+        arrayLenght = dialogueLinesStart.Length;
+        rewardItem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,14 +41,36 @@ public class KillQuest : Quest
         switch (currentState)
         {
             case QuestState.NotTaken:
-
+                dm.dialogueLines = dialogueLinesStart;
+                if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Dialogue"))
+                {
+                    Debug.Log("Kill quest started");
+                    currentState = QuestState.Active;
+                }
                 break;
 
             case QuestState.Active:
-
+                dm.dialogueLines = dialogueLinesActive;
+                if(pa.enemiesKilled > 0)
+                {
+                    currentState = QuestState.Completed;
+                    Debug.Log("Kill quest goal reached");
+                }
                 break;
 
             case QuestState.Completed:
+                dm.dialogueLines = dialogueLinesCompleted;
+                if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Dialogue"))
+                {
+                    Debug.Log("Kill quest complete");
+                    currentState = QuestState.Default;
+                    rewardItem.SetActive(true);
+                }
+
+                break;
+
+            case QuestState.Default:
+                dm.dialogueLines = dialogueLinesDefault;
 
                 break;
         }

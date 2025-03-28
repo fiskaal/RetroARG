@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce, gravityScale;
     private float yStore;
+    
 
     public GameObject player;
 
@@ -30,9 +31,9 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
 
     //public GameObject jumpParticle, landingParticle;
-    private bool lastGrounded;
+    [SerializeField] private bool lastGrounded;
     public int jumpCount = 0;
-    public int maxJumps = 3;
+    public int maxJumps = 2;
 
     public float bounceForce;
 
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour
                     //landingParticle.SetActive(true);
                 }
 
-                if (Input.GetButtonDown("Jump") && jumpCount < maxJumps)
+                if (Input.GetButtonDown("Jump") && jumpCount <= maxJumps)
                 {
                     moveAmount.y = jumpForce;
                     jumpCount++;

@@ -8,12 +8,12 @@ public class SceneLoader : MonoBehaviour
 {
     public Image image;
     
-    public GameObject image2;
+    //public GameObject image2;
     [SerializeField] private Animator imageAnimator;
     public float waitTime = 1f;
     public string sceneName;
     public GameObject actionButton;
-    public GameObject textInfo;
+    //public GameObject textInfo;
    
     
 
@@ -35,7 +35,7 @@ public class SceneLoader : MonoBehaviour
     {
         Time.timeScale = 1;
         image.raycastTarget = true;
-        image2.gameObject.SetActive(true);
+        //image2.gameObject.SetActive(true);
         imageAnimator.Play("ImageFadeIn", 0, .5f);
         StartCoroutine(WaitAndLoad(waitTime, sceneName));
     }
@@ -77,7 +77,7 @@ public class SceneLoader : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             actionButton.SetActive(true);
-            textInfo.SetActive(true);
+            //textInfo.SetActive(true);
             if (Input.GetButtonDown("Dialogue")) 
             {
                 imageAnimator.Play("ImageFadeIn");
@@ -88,5 +88,15 @@ public class SceneLoader : MonoBehaviour
 
         
 
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            actionButton.SetActive(false);
+            //textInfo.SetActive(true);
+            
+
+        }
     }
 }

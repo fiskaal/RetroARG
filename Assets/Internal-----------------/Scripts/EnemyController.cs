@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        float distanceToplayer = Vector3.Distance(transform.position, player.transform.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
         switch (currentState)
         {
@@ -65,7 +65,7 @@ public class EnemyController : MonoBehaviour
                     enemyAnim.CrossFadeInFixedTime("Bear_Walk", .2f);
                 }
 
-                if (distanceToplayer <= chaseRange)
+                if (distanceToPlayer <= chaseRange)
                 {
                     currentState = AIState.Chasing;
                     //enemyAnim.Play("Bear_Walk");
@@ -88,7 +88,7 @@ public class EnemyController : MonoBehaviour
                     enemyAnim.Play("Bear_Idle");
                     //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                 }
-                if (distanceToplayer <= chaseRange)
+                if (distanceToPlayer <= chaseRange)
                 {
                     currentState = AIState.Chasing;
                     //enemyAnim.Play("Bear_Walk");
@@ -97,7 +97,7 @@ public class EnemyController : MonoBehaviour
                 break;
             case AIState.Chasing:
                 agent.SetDestination(player.transform.position);
-                if (distanceToplayer > chaseRange)
+                if (distanceToPlayer > chaseRange)
                 {
                     agent.isStopped = true;
                     agent.velocity = Vector3.zero;
@@ -115,7 +115,7 @@ public class EnemyController : MonoBehaviour
                     }
                 }
 
-                if (distanceToplayer <= attackRange)
+                if (distanceToPlayer <= attackRange)
                 {
                     currentState = AIState.Attacking;
                     agent.velocity = Vector3.zero;
@@ -136,7 +136,7 @@ public class EnemyController : MonoBehaviour
                     timeToAttck = attackTime;
                 }
 
-                if (distanceToplayer > attackRange)
+                if (distanceToPlayer > attackRange)
                 {
                     currentState = AIState.Chasing;
                     agent.isStopped = false;

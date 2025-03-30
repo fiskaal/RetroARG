@@ -60,4 +60,10 @@ public class DialogueManager : MonoBehaviour
         dialogueActive=true;
         dialogueWindow.SetActive(true);
     }
+
+    public void HideDialogue()
+    {
+        dialogueActive = false;
+        dialogueWindow.SetActive(false);
+    }
 }

@@ -22,6 +22,8 @@ public class KillQuest : Quest
     public string[] dialogueLinesDefault;
     public int arrayLenght;
     public int currentIndex;
+    public bool isKillTrigger;
+    [Header("PLayer attack script")]
     public PlayerAttack pa;
 
     [Header("Quest Details")]
@@ -33,46 +35,50 @@ public class KillQuest : Quest
     {
         arrayLenght = dialogueLinesStart.Length;
         rewardItem.SetActive(false);
+        isKillTrigger = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (currentState)
+        if (isKillTrigger == true)
         {
-            case QuestState.NotTaken:
-                dm.dialogueLines = dialogueLinesStart;
-                if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Dialogue"))
-                {
-                    Debug.Log("Kill quest started");
-                    currentState = QuestState.Active;
-                }
-                break;
+            switch (currentState)
+            {
+                case QuestState.NotTaken:
+                    dm.dialogueLines = dialogueLinesStart;
+                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Dialogue"))
+                    {
+                        Debug.Log("Kill quest started");
+                        currentState = QuestState.Active;
+                    }
+                    break;
 
-            case QuestState.Active:
-                dm.dialogueLines = dialogueLinesActive;
-                if(pa.enemiesKilled > 0)
-                {
-                    currentState = QuestState.Completed;
-                    Debug.Log("Kill quest goal reached");
-                }
-                break;
+                case QuestState.Active:
+                    dm.dialogueLines = dialogueLinesActive;
+                    if (pa.enemiesKilled > 0)
+                    {
+                        currentState = QuestState.Completed;
+                        Debug.Log("Kill quest goal reached");
+                    }
+                    break;
 
-            case QuestState.Completed:
-                dm.dialogueLines = dialogueLinesCompleted;
-                if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Dialogue"))
-                {
-                    Debug.Log("Kill quest complete");
-                    currentState = QuestState.Default;
-                    rewardItem.SetActive(true);
-                }
+                case QuestState.Completed:
+                    dm.dialogueLines = dialogueLinesCompleted;
+                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Dialogue"))
+                    {
+                        Debug.Log("Kill quest complete");
+                        currentState = QuestState.Default;
+                        rewardItem.SetActive(true);
+                    }
 
-                break;
+                    break;
 
-            case QuestState.Default:
-                dm.dialogueLines = dialogueLinesDefault;
+                case QuestState.Default:
+                    dm.dialogueLines = dialogueLinesDefault;
 
-                break;
+                    break;
+            }
         }
     }
 
@@ -81,4 +87,20 @@ public class KillQuest : Quest
         Debug.Log("New process dialogue");
         //nastavit activated dialogue array
     }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("KillQuest"))
+        {
+            isKillTrigger = true;
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("KillQuest"))
+        {
+            isKillTrigger = false;
+        }
+    }
+
 }

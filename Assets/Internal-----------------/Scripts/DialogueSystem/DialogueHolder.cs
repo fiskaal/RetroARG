@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueHolder : MonoBehaviour
 {
     public string dialogue;
-    private DialogueManager dm;
+    [SerializeField]private DialogueManager dm;
     [SerializeField] private bool isDialogueOpen = false;
     [SerializeField] private bool inTrigger = false;
     [SerializeField] private GameObject openButton;
@@ -57,6 +57,7 @@ public class DialogueHolder : MonoBehaviour
         {
             dm.HideWindow(dialogue);
             openButton.gameObject.SetActive(false);
+            dm.HideDialogue();
             inTrigger = false;
             isDialogueOpen = false;
             npcAnim.SetBool("isTalking", false);

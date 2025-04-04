@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8100320773420232829, guid: b833ac745cc514540aa68d6090c7d865, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d0e66d350f90f84fbeeebb3c2ca090e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b833ac745cc514540aa68d6090c7d865, type: 3}
 --- !u!1 &1410250654282749109 stripped

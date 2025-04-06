@@ -86,8 +86,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Boolean_193028D2: 0
-    - Boolean_3F1A8DAB: 0
+    - Boolean_193028D2: 1
+    - Boolean_3F1A8DAB: 1
     - Boolean_43476D73: 1
     - Boolean_7165A49C: 1
     - Boolean_85059BBE: 1
@@ -130,7 +130,7 @@ Material:
     m_Colors:
     - Color_2E5415DE: {r: 0.67058825, g: 0.67058825, b: 0.67058825, a: 1}
     - Vector2_8044833E: {r: 1, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    - _BaseColor: {r: 0.67058825, g: 0.67058825, b: 0.67058825, a: 1}
     - _Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}

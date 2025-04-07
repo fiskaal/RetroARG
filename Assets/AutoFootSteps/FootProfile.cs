@@ -12,7 +12,7 @@ public class FootMaterialSpec
 {
     public string MaterialName;
     [Range(0, 1)]
-    public float VolumeMultiplier = 1;
+    public float VolumeMultiplier = 2;
     public string[] SimilarNames;
     public AudioClip[] SoftSteps;
     public AudioClip[] MediumSteps;

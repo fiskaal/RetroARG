@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace KetraScripts
@@ -8,7 +9,7 @@ namespace KetraScripts
         public float rotSpeed;
         public float jumpSpeed;
         public float ySpeed;
-        public float jumpButtonPressedPeriod;
+        public float jumpButtonGracePeriod;
         [SerializeField] private CharacterController characterController;
         [SerializeField] private Animator animator;
         private float originalStepOffset;
@@ -65,7 +66,8 @@ namespace KetraScripts
             characterController.stepOffset = characterController.isGrounded ? originalStepOffset : 0;
 
             Vector3 velocity = movementDirection * speed;
-            velocity.y = ySpeed;
+            velocity = AdjustVelocityToSlope(velocity);
+            velocity.y += ySpeed;
 
             characterController.Move(velocity * Time.deltaTime);
 
@@ -79,6 +81,23 @@ namespace KetraScripts
             {
                 animator.SetBool("isMoving", false);
             }
+        }
+
+        private Vector3 AdjustVelocityToSlope(Vector3 velocity) 
+        { 
+        var ray = new Ray(transform.position, Vector3.down);
+
+            if (Physics.Raycast(ray, out RaycastHit hitInfo, 0.2f)) 
+            { 
+            var slopeRotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                var adjustedVelocity = slopeRotation * velocity;
+
+                if (adjustedVelocity.y < 0) 
+                { 
+                return adjustedVelocity;
+                }
+            }
+            return velocity;
         }
     }
 }

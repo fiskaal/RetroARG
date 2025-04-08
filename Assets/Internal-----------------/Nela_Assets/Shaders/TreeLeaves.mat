@@ -87,11 +87,12 @@ Material:
     - _QueueOffset: 0
     - _SrcBlend: 1
     - _Surface: 0
+    - _VertexColorOpacity: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - Color_2E5415DE: {r: 1, g: 1, b: 1, a: 1}
     - Vector2_8044833E: {r: 1, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 0.33658165, g: 0.8396226, b: 0.31287822, a: 1}
+    - _BaseColor: {r: 0.57267237, g: 0.9433962, b: 0.493948, a: 1}
   m_BuildTextureStacks: []

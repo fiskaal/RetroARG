@@ -4,7 +4,7 @@ namespace KetraScripts
 {
     public class PlayerMovement : MonoBehaviour
     {
-        public float moveSpeed;
+        public float maxSpeed;
         public float rotSpeed;
         public float jumpSpeed;
         public float ySpeed;
@@ -30,7 +30,15 @@ namespace KetraScripts
             float verticalInput = Input.GetAxis("Vertical");
 
             Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-            float magnitude = Mathf.Clamp01(movementDirection.magnitude) * moveSpeed;
+            float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
+
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) 
+            {
+                inputMagnitude /= 2;
+            }
+
+            animator.SetFloat("InputMagnitude", inputMagnitude, .05f, Time.deltaTime);
+            float speed = inputMagnitude * maxSpeed;
             movementDirection.Normalize();
 
             ySpeed += Physics.gravity.y * Time.deltaTime;
@@ -56,20 +64,20 @@ namespace KetraScripts
 
             characterController.stepOffset = characterController.isGrounded ? originalStepOffset : 0;
 
-            Vector3 velocity = movementDirection * magnitude;
+            Vector3 velocity = movementDirection * speed;
             velocity.y = ySpeed;
 
             characterController.Move(velocity * Time.deltaTime);
 
             if (movementDirection != Vector3.zero)
             {
-                animator.SetBool("isRunning", true);
+                animator.SetBool("isMoving", true);
                 Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotSpeed * Time.deltaTime);
             }
             else
             {
-                animator.SetBool("isRunning", false);
+                animator.SetBool("isMoving", false);
             }
         }
     }

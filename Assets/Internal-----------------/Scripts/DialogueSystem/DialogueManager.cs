@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogueActive && Input.GetButtonDown("Dialogue"))
+        if (dialogueActive && Input.GetButtonDown("Interact"))
         {
             
             currentLine++;

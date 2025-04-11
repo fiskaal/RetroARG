@@ -1,7 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace KetraScripts
+namespace Ketra
 {
     public class PlayerMovement : MonoBehaviour
     {

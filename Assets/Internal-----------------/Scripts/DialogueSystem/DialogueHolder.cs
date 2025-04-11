@@ -33,7 +33,7 @@ public class DialogueHolder : MonoBehaviour
         {
             openButton.gameObject.SetActive(true);
 
-            if (Input.GetButtonDown("Dialogue"))
+            if (Input.GetButtonDown("Interact"))
             {
 
                 isDialogueOpen = true;

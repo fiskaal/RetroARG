@@ -78,7 +78,7 @@ public class SceneLoader : MonoBehaviour
         {
             actionButton.SetActive(true);
             //textInfo.SetActive(true);
-            if (Input.GetButtonDown("Dialogue")) 
+            if (Input.GetButtonDown("Interact")) 
             {
                 imageAnimator.Play("ImageFadeIn");
                 StartCoroutine(WaitAndLoad(waitTime, sceneName));

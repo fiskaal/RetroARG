@@ -47,7 +47,7 @@ public class KillQuest : Quest
             {
                 case QuestState.NotTaken:
                     dm.dialogueLines = dialogueLinesStart;
-                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Dialogue"))
+                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Interact"))
                     {
                         Debug.Log("Kill quest started");
                         currentState = QuestState.Active;
@@ -65,7 +65,7 @@ public class KillQuest : Quest
 
                 case QuestState.Completed:
                     dm.dialogueLines = dialogueLinesCompleted;
-                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Dialogue"))
+                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Interact"))
                     {
                         Debug.Log("Kill quest complete");
                         currentState = QuestState.Default;

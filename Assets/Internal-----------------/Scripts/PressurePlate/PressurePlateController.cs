@@ -8,7 +8,7 @@ public class PressurePlateController : MonoBehaviour
     [SerializeField] private Animator platformAnim;
     public bool isPressed;
     public bool isSlid;
-    public string[] tag;
+    public string tag;
     public Tags tags;
     
 
@@ -26,7 +26,7 @@ public class PressurePlateController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag(tags.tags[1]))
+        if (other.gameObject.CompareTag(tag))
         {
             isPressed = true;
             plateAnim.Play("PS_down");
@@ -41,7 +41,7 @@ public class PressurePlateController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag(tag[1]))
+        if (other.gameObject.CompareTag(tag))
         {
             isPressed = false;
             plateAnim.Play("PS_up");

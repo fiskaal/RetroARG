@@ -6,7 +6,7 @@ public class KillQuest : MonoBehaviour
 {
     private enum QuestState
     {
-        NotTaken, Active, Completed, Deafult
+        NotTaken, Active, Completed, Default
     }
     [Header("Quest States")]
     [SerializeField] private QuestState currentState;

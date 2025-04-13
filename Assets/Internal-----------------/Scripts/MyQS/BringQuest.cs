@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BringQuest : MonoBehaviour
 {
+    private enum QuestState
+    {
+        NotTaken, Active, Completed, Deafult
+    }
     // Start is called before the first frame update
     void Start()
     {

@@ -12,6 +12,7 @@ public class FollowerController : MonoBehaviour
     [SerializeField] private Animator followerAnim;
     [SerializeField] private Transform followerChase;
     [SerializeField] private Transform followerIdle;
+    public bool isFollowing;
     //[SerializeField] private Transform animalAttack;
 
     [Header("Components")]
@@ -35,14 +36,14 @@ public class FollowerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        isFollowing = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-
+        if (isFollowing) { 
         switch (currentState)
         {
             case FollowerState.Idle:
@@ -85,6 +86,14 @@ public class FollowerController : MonoBehaviour
                 }
 
                 break;
+        }
+        }
+        else if(!isFollowing)
+        {
+            currentState = FollowerState.Idle;
+            followerAnim.Play("Dog_idle");
+            agent.velocity = Vector3.zero;
+            agent.isStopped = true;
         }
     }
 

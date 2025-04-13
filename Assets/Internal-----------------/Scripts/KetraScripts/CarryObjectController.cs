@@ -20,6 +20,10 @@ namespace Ketra
         {
             actionButton.SetActive(false);
             cancelButton.SetActive(false);
+            //rb.constraints = RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezePositionX;
+            rb.constraints = RigidbodyConstraints.FreezePositionZ;
+            rb.freezeRotation = true;
         }
 
         // Update is called once per frame
@@ -38,8 +42,9 @@ namespace Ketra
                 rb.constraints = RigidbodyConstraints.FreezeRotation;
                 //rb.constraints = RigidbodyConstraints.FreezeRotationY;
                 //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
-                //rb.constraints = RigidbodyConstraints.FreezePositionX;
-                //rb.constraints = RigidbodyConstraints.FreezePositionZ;
+                rb.constraints = RigidbodyConstraints.FreezePositionX;
+                rb.constraints = RigidbodyConstraints.FreezePositionZ;
+                rb.freezeRotation = true;
             }
 
         }
@@ -53,7 +58,7 @@ namespace Ketra
                 {
                     isCarrying = true;
                     rb.useGravity = false;
-
+                    
 
                     rb.constraints = RigidbodyConstraints.FreezeAll;
                     carryObject.transform.position = carryPos.transform.position;

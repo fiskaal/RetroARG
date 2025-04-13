@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillQuest : Quest
+public class KillQuest : MonoBehaviour
 {
-    //enum QuestState
-    //{
-    //    NotTaken, Active, Completed
-    //}
-    //[Header("Quest States")]
-    //[SerializeField] private QuestState currentState;
+    private enum QuestState
+    {
+        NotTaken, Active, Completed, Deafult
+    }
+    [Header("Quest States")]
+    [SerializeField] private QuestState currentState;
 
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
@@ -23,6 +23,7 @@ public class KillQuest : Quest
     public int arrayLenght;
     public int currentIndex;
     public bool isKillTrigger;
+    public GameObject killQuestInfo;
     [Header("PLayer attack script")]
     public PlayerAttack pa;
 
@@ -36,6 +37,7 @@ public class KillQuest : Quest
         arrayLenght = dialogueLinesStart.Length;
         rewardItem.SetActive(false);
         isKillTrigger = false;
+        killQuestInfo.SetActive(false);
     }
 
     // Update is called once per frame
@@ -82,11 +84,7 @@ public class KillQuest : Quest
         }
     }
 
-    public override void ProcessDialogue()
-    {
-        Debug.Log("New process dialogue");
-        //nastavit activated dialogue array
-    }
+    
 
     public void OnTriggerStay(Collider other)
     {

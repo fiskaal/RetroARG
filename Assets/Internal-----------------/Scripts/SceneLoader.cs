@@ -13,6 +13,7 @@ public class SceneLoader : MonoBehaviour
     public float waitTime = 1f;
     public string sceneName;
     public GameObject actionButton;
+    public bool inTrigger = false;
     //public GameObject textInfo;
    
     
@@ -21,6 +22,18 @@ public class SceneLoader : MonoBehaviour
     {
         image.raycastTarget = false;
         //image2.gameObject.SetActive(false);
+    }
+
+    public void Update()
+    {
+        if (inTrigger)
+        {
+            if (Input.GetButtonDown("Interact"))
+            {
+                imageAnimator.Play("ImageFadeIn");
+                StartCoroutine(WaitAndLoad(waitTime, sceneName));
+            }
+        }
     }
 
     public void LoadGameScene(string sceneName)
@@ -78,11 +91,7 @@ public class SceneLoader : MonoBehaviour
         {
             actionButton.SetActive(true);
             //textInfo.SetActive(true);
-            if (Input.GetButtonDown("Interact")) 
-            {
-                imageAnimator.Play("ImageFadeIn");
-                StartCoroutine(WaitAndLoad(waitTime, sceneName));
-            }
+            inTrigger = true;
             
         }
 
@@ -95,7 +104,7 @@ public class SceneLoader : MonoBehaviour
         {
             actionButton.SetActive(false);
             //textInfo.SetActive(true);
-            
+            inTrigger = false;
 
         }
     }

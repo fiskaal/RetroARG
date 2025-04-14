@@ -3,7 +3,12 @@ guid: 0e65f495a465f324a8fb1c6dd71085ce
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fern
+    second: {fileID: 2100000, guid: 77c2a9b1371900d46be24f39369458ac, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

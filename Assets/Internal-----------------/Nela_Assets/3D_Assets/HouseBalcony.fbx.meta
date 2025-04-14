@@ -3,7 +3,12 @@ guid: 07495880b792c934ca71c6e810cc3949
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balcony
+    second: {fileID: 2100000, guid: 17f09fce48be6b543ba97ea8a7ce033e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

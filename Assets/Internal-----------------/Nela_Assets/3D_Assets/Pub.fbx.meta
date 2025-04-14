@@ -3,7 +3,37 @@ guid: 0cab2c2963839ae45957f7a02afa0896
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balcony
+    second: {fileID: 2100000, guid: 17f09fce48be6b543ba97ea8a7ce033e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BeerSign
+    second: {fileID: 2100000, guid: 1f967e50fb91cc94993bd10b3ed436e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Doors
+    second: {fileID: 2100000, guid: 26a783a450520104db93d4d3f1633279, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PubRoof
+    second: {fileID: 2100000, guid: e02980fe4a9df5e4887955b34b09b16f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pubmain
+    second: {fileID: 2100000, guid: dd61e4592b37be348a45722d0a622153, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: 78cca435110589342980a1102850f9a7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

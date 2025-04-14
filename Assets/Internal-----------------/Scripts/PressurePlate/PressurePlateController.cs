@@ -8,8 +8,10 @@ public class PressurePlateController : MonoBehaviour
     [SerializeField] private Animator platformAnim;
     public bool isPressed;
     public bool isSlid;
-    public string tag;
-    public Tags tags;
+    [Header("Max 2 tags for now")]
+    public string[] tags;
+    
+    //public Tags tags;
     
 
     // Start is called before the first frame update
@@ -21,12 +23,12 @@ public class PressurePlateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag(tag))
+        if (other.gameObject.CompareTag(tags[0]) || other.gameObject.CompareTag(tags[1]))
         {
             isPressed = true;
             plateAnim.Play("PS_down");
@@ -41,7 +43,7 @@ public class PressurePlateController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag(tag))
+        if (other.gameObject.CompareTag(tags[0]) || other.gameObject.CompareTag(tags[1]))
         {
             isPressed = false;
             plateAnim.Play("PS_up");

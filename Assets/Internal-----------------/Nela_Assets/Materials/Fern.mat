@@ -95,9 +95,9 @@ Material:
     - Boolean_85059BBE: 1
     - Boolean_8BBF99CD: 0
     - Boolean_D258FF8E: 1
-    - Vector1_21C41D02: 256
+    - Vector1_21C41D02: 64
     - Vector1_6F288C5B: 0
-    - Vector1_B2CC132F: 16
+    - Vector1_B2CC132F: 32
     - Vector1_B9994903: 11
     - Vector1_E8746023: 16
     - _AlphaClip: 1
@@ -106,7 +106,7 @@ Material:
     - _CastShadows: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Cull: 2
+    - _Cull: 0
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1

@@ -100,14 +100,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Boolean_193028D2: 1
+    - Boolean_193028D2: 0
     - Boolean_3F1A8DAB: 1
     - Boolean_43476D73: 1
     - Boolean_7165A49C: 1
     - Boolean_85059BBE: 1
     - Boolean_8BBF99CD: 0
     - Boolean_D258FF8E: 0
-    - Vector1_21C41D02: 64
+    - Vector1_21C41D02: 128
     - Vector1_6F288C5B: 0
     - Vector1_B2CC132F: 32
     - Vector1_B9994903: 11
@@ -140,6 +140,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
+    - _VertexColorOpacity: 0
     - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1

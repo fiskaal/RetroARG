@@ -6,36 +6,34 @@ public class PressurePlateController : MonoBehaviour
 {
     [SerializeField] private Animator plateAnim;
     [SerializeField] private Animator platformAnim;
+    
+    [SerializeField] private AudioSource plateSound;
     public bool isPressed;
     public bool isSlid;
     [Header("Max 2 tags for now")]
     public string[] tags;
-    
-    //public Tags tags;
-    
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-
+        if (other.gameObject.CompareTag(tags[0]) || other.gameObject.CompareTag(tags[1]))
+        {
+            plateSound.Play();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag(tags[0]) || other.gameObject.CompareTag(tags[1]))
         {
             isPressed = true;
             plateAnim.Play("PS_down");
+            
+            
             if (isPressed)
             {
                 isSlid = true;
+               
                 platformAnim.Play("SlideOutMP");
+                
                
             }
         }
@@ -47,10 +45,12 @@ public class PressurePlateController : MonoBehaviour
         {
             isPressed = false;
             plateAnim.Play("PS_up");
+            plateSound.Play();
             if (!isPressed)
             {
                 isSlid=false;
                 platformAnim.Play("SlideInMP");
+               
             }
 
         }

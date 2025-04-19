@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class SceneLoader : MonoBehaviour
     public string sceneName;
     public GameObject actionButton;
     public bool inTrigger = false;
+    public KeyManager km;
+    public GameObject notification;
+    public TMP_Text notifText;
+    public Animator notifAnim;
+
     //public GameObject textInfo;
    
     
@@ -21,18 +28,26 @@ public class SceneLoader : MonoBehaviour
     public void Awake()
     {
         image.raycastTarget = false;
+        
         //image2.gameObject.SetActive(false);
     }
 
     public void Update()
     {
+        
         if (inTrigger)
         {
-            if (Input.GetButtonDown("Interact"))
+            notifText.text = km.keyCount + "/" + km.maxKeyCount + " keys found.";
+
+            if (Input.GetButtonDown("Interact") && km.keyCount >= km.maxKeyCount)
             {
                 imageAnimator.Play("ImageFadeIn");
                 StartCoroutine(WaitAndLoad(waitTime, sceneName));
+            }else if (Input.GetButtonDown("Interact") && km.keyCount < km.maxKeyCount)
+            {
+                notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
             }
+           
         }
     }
 
@@ -91,6 +106,7 @@ public class SceneLoader : MonoBehaviour
         {
             actionButton.SetActive(true);
             //textInfo.SetActive(true);
+            
             inTrigger = true;
             
         }

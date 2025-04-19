@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class KillQuest : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class KillQuest : MonoBehaviour
     }
     [Header("Quest States")]
     [SerializeField] private QuestState currentState;
-
+    //[SerializeField] private GameObject notification;
+    [SerializeField] private Animator notifAnim;
+    [SerializeField] private TMP_Text notifText;
+    [SerializeField] private string notifStartedText;
+    [SerializeField] private string notifCompleteText;
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
@@ -24,7 +29,7 @@ public class KillQuest : MonoBehaviour
     public int currentIndex;
     public bool isKillTrigger;
     public GameObject killQuestInfo;
-    [Header("PLayer attack script")]
+    [Header("Player attack script")]
     public PlayerAttack pa;
 
     [Header("Quest Details")]
@@ -49,9 +54,12 @@ public class KillQuest : MonoBehaviour
             {
                 case QuestState.NotTaken:
                     dm.dialogueLines = dialogueLinesStart;
+                    notifText.text = notifStartedText;
                     if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Interact"))
                     {
                         Debug.Log("Kill quest started");
+                        
+                        notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                         currentState = QuestState.Active;
                     }
                     break;
@@ -67,10 +75,12 @@ public class KillQuest : MonoBehaviour
 
                 case QuestState.Completed:
                     dm.dialogueLines = dialogueLinesCompleted;
+                    notifText.text = notifStartedText;
                     if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Interact"))
                     {
                         Debug.Log("Kill quest complete");
                         currentState = QuestState.Default;
+                        notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                         rewardItem.SetActive(true);
                     }
 

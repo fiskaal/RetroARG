@@ -9,9 +9,7 @@ public class NoteController : MonoBehaviour
     [SerializeField] private GameObject noteCanvas;
     [SerializeField] private TMP_Text noteTextAreaUI;
     [SerializeField] private GameObject openButton;
-    [SerializeField] private TMP_Text openText;
     [SerializeField] private GameObject closeButton;
-    [SerializeField] private TMP_Text closeText;
 
     [Space(10)]
     [SerializeField][TextArea] private string noteText;
@@ -56,7 +54,6 @@ public class NoteController : MonoBehaviour
         noteTextAreaUI.text = noteText;
         openButton.gameObject.SetActive(false);
         closeButton.gameObject.SetActive(true);
-        closeText.text = "CLOSE";
         //Time.timeScale = 0f;
     }
 
@@ -96,7 +93,6 @@ public class NoteController : MonoBehaviour
         {
             inTrigger = true;
             openButton.gameObject.SetActive(true);
-            openText.text= "OPEN";
 
             
         }

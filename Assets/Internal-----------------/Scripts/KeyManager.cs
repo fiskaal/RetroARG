@@ -7,8 +7,8 @@ using UnityEngine.Rendering.Universal;
 public class KeyManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text keyText;
-    [SerializeField] public int keyCount = 0;
-    [SerializeField] public int maxKeyCount = 3;
+    [SerializeField] private int keyCount = 0;
+    [SerializeField] private int maxKeyCount = 3;
     [SerializeField] private AudioSource keySound;
     //[SerializeField] private ParticleSystem ps;
     //[SerializeField] private GameObject portal;

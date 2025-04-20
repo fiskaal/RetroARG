@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 
 namespace Ketra
 {
@@ -10,9 +9,7 @@ namespace Ketra
         public Animator animator;
         public bool isCarrying;
         public GameObject actionButton;
-        public TMP_Text carryText;
         public GameObject cancelButton;
-        public TMP_Text dropText;
         public GameObject weapon;
         public GameObject carryObject;
         public Rigidbody rb;
@@ -47,9 +44,7 @@ namespace Ketra
                 //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
                 //rb.constraints = RigidbodyConstraints.FreezePositionX;
                 //rb.constraints = RigidbodyConstraints.FreezePositionZ;
-                rb.freezeRotation = true;
-                rb.isKinematic = false;
-                
+                rb.freezeRotation = false;
             }
 
         }
@@ -59,20 +54,15 @@ namespace Ketra
             if (other.gameObject.CompareTag("CarryObject"))
             {
                 actionButton.SetActive(true);
-                carryText.text = "CARRY";
                 if (Input.GetButton("Interact") && !isCarrying)
                 {
                     isCarrying = true;
                     rb.useGravity = false;
-                    rb.isKinematic = true;
 
                     rb.freezeRotation = true;
                     //rb.constraints = RigidbodyConstraints.FreezeAll;
-                    carryObject.transform.localPosition = carryPos.transform.position;
-                    carryObject.transform.SetParent(carryPos);
-                    carryObject.transform.localPosition = Vector3.zero;
-                    carryObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                    carryObject.transform.localScale = Vector3.one;
+                    carryObject.transform.position = carryPos.transform.position;
+                    carryObject.transform.SetParent(carryPos.transform);
                     Debug.Log("IS CARRYING!");
                     weapon.SetActive(false);
                     animator.SetBool("isCarrying", true);
@@ -83,7 +73,6 @@ namespace Ketra
                 {
                     actionButton.SetActive(false);
                     cancelButton.SetActive(true);
-                    dropText.text = "DROP";
                 }
 
             }

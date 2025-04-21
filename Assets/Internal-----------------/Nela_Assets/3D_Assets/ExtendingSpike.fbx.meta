@@ -3,7 +3,12 @@ guid: 23f89b0ae69d6b04c8c7cac69ae380e2
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpikeTrapAndButton
+    second: {fileID: 2100000, guid: 4bb517f3b92af8a40843e928548cd6a0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

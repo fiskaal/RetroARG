@@ -3,7 +3,12 @@ guid: c63aa4c54316fb24b908bb847cf4c60b
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrewMachine
+    second: {fileID: 2100000, guid: f78a314d6d8fc3f479dd4c4d527cd039, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

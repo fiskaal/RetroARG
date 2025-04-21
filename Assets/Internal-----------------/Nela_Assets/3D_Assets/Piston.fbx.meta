@@ -18,7 +18,12 @@ ModelImporter:
   - first:
       74: -901275358237061702
     second: Cube.038|shishka_lowAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Traps
+    second: {fileID: 2100000, guid: 09c815f80a1f1794793f7c76a2b3a16e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

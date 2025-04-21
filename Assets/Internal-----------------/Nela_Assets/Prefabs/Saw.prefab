@@ -210,6 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4547827559110147027}
+  - component: {fileID: 586415650}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -234,6 +235,20 @@ Transform:
   m_Father: {fileID: 9174365007093047945}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -179.3586, z: 89.999985}
+--- !u!114 &586415650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958438387889387158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebae50e78db7346448b33430480aa8b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 30
+  useLocalRotation: 1
 --- !u!1 &5208190355978331276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,7 +1514,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2708
+  m_VersionIndex: 2711
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

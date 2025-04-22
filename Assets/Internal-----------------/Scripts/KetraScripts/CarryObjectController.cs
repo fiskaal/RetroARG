@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+
 namespace Ketra
 {
     public class CarryObjectController : MonoBehaviour
@@ -16,6 +17,7 @@ namespace Ketra
         public GameObject weapon;
         public GameObject carryObject;
         public Rigidbody rb;
+        public 
 
 
         // Start is called before the first frame update
@@ -32,7 +34,7 @@ namespace Ketra
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetButtonDown("Cancel") && isCarrying)
+            if (Input.GetButtonDown("Circle") && isCarrying)
             {
                 isCarrying = false;
                 //carryObject.gameObject.transform.position = transform.position;
@@ -60,7 +62,7 @@ namespace Ketra
             {
                 actionButton.SetActive(true);
                 carryText.text = "CARRY";
-                if (Input.GetButton("Interact") && !isCarrying)
+                if (Input.GetButton("Triangle") && !isCarrying)
                 {
                     isCarrying = true;
                     rb.useGravity = false;

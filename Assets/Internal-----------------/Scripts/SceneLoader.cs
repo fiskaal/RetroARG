@@ -39,11 +39,11 @@ public class SceneLoader : MonoBehaviour
         {
             notifText.text = km.keyCount + "/" + km.maxKeyCount + " keys found.";
 
-            if (Input.GetButtonDown("Interact") && km.keyCount >= km.maxKeyCount)
+            if (Input.GetButtonDown("Triangle") && km.keyCount >= km.maxKeyCount)
             {
                 imageAnimator.Play("ImageFadeIn");
                 StartCoroutine(WaitAndLoad(waitTime, sceneName));
-            }else if (Input.GetButtonDown("Interact") && km.keyCount < km.maxKeyCount)
+            }else if (Input.GetButtonDown("Triangle") && km.keyCount < km.maxKeyCount)
             {
                 notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
             }

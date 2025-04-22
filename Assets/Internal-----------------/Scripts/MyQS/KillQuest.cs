@@ -55,7 +55,7 @@ public class KillQuest : MonoBehaviour
                 case QuestState.NotTaken:
                     dm.dialogueLines = dialogueLinesStart;
                     notifText.text = notifStartedText;
-                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Interact"))
+                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Triangle"))
                     {
                         Debug.Log("Kill quest started");
                         

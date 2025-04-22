@@ -8,6 +8,7 @@ public class PauseMenuSimple : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject selectedPauseButton;
+    public bool isPaused;
 
     void Update()
     {
@@ -26,14 +27,20 @@ public class PauseMenuSimple : MonoBehaviour
 
     public void Pause()
     {
+        isPaused = true;
         pauseMenuUI.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(selectedPauseButton);
-        EventSystem.current.firstSelectedGameObject = selectedPauseButton;
         Time.timeScale = 0;
+        if (isPaused)
+        {
+            EventSystem.current.SetSelectedGameObject(selectedPauseButton);
+            EventSystem.current.firstSelectedGameObject = selectedPauseButton;
+        }
+        
     }
 
     public void Resume()
     {
+        isPaused = false;
         pauseMenuUI.SetActive(false);
 
         Time.timeScale = 1;

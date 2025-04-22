@@ -33,7 +33,7 @@ public class NoteController : MonoBehaviour
     }
     private void Update()
     {
-        if (inTrigger && Input.GetButtonDown("Interact"))
+        if (inTrigger && Input.GetButtonDown("Triangle"))
         {
             isOpen = true;
             ShowNote();

@@ -37,7 +37,7 @@ public class DialogueHolder : MonoBehaviour
             openButton.gameObject.SetActive(true);
             speakText.text = "SPEAK";
 
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Triangle"))
             {
 
                 isDialogueOpen = true;

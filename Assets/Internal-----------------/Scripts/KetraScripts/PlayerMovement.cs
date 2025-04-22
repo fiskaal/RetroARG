@@ -49,7 +49,7 @@ namespace Ketra
 
             float gravity = Physics.gravity.y * gravityMultiplier;
 
-            if (isJumping && ySpeed > 0 && Input.GetButton("Jump") == false)
+            if (isJumping && ySpeed > 0 && Input.GetButton("Cross") == false)
             {
                 gravity *= 2;
             }
@@ -79,7 +79,7 @@ namespace Ketra
                 }
             }
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Cross"))
             {
                 jumpButtonPressedTime = Time.time;
 
@@ -93,7 +93,7 @@ namespace Ketra
                     lastGroundedTime = null;
                 }
             }
-            if(Input.GetButtonDown("Attack") && isGrounded)
+            if(Input.GetButtonDown("Circle") && isGrounded)
             {
                 
                 animator.SetTrigger("Attacking");

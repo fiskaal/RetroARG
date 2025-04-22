@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Attack"))
+        if (Input.GetButtonDown("Circle"))
         {
             animator.SetTrigger("isAttacking");
         }

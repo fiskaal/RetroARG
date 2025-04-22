@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.Universal;
 
 public class HealthSystem : MonoBehaviour
@@ -23,6 +24,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] public Animator animatorHeal;
     [SerializeField] public Animator animatorIcon;
     [SerializeField] private AudioSource healSound;
+    [SerializeField] private AudioSource damageSound;
     public float respawnTime = 2f;
 
     // Start is called before the first frame update
@@ -82,6 +84,7 @@ public class HealthSystem : MonoBehaviour
         player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
         
         currentHealth -= dealDamage;
+        damageSound.Play();
         Debug.Log("HURT!");
         animatorHurt.PlayInFixedTime("NotificationAnimation", -1, 0f);
         animatorImage.PlayInFixedTime("ImageFadeInOut", -1, 0f);
@@ -101,6 +104,9 @@ public class HealthSystem : MonoBehaviour
         if (currentHealth <= 0)
         {
             EventSystem.current.SetSelectedGameObject(selectedGameOverButton);
+
+            
+
             EventSystem.current.firstSelectedGameObject = selectedGameOverButton;
             isDead = true;
             Time.timeScale = 0;

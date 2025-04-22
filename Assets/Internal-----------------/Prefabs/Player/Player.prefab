@@ -1018,6 +1018,7 @@ MonoBehaviour:
   animatorHeal: {fileID: 0}
   animatorIcon: {fileID: 0}
   healSound: {fileID: 0}
+  damageSound: {fileID: 0}
   respawnTime: 1
 --- !u!114 &8975902021114453171
 MonoBehaviour:

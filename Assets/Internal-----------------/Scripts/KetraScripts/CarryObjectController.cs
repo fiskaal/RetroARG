@@ -7,7 +7,7 @@ namespace Ketra
     public class CarryObjectController : MonoBehaviour
     {
         public Transform carryPos;
-        public PlayerMovement pm;
+        //public PlayerMovement pm;
         public Animator animator;
         public bool isCarrying;
         public GameObject actionButton;

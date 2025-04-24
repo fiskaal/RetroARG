@@ -62266,15 +62266,15 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.9166667
-    functionName: AttackEnemy
+  - time: 0.875
+    functionName: AttackBarrel
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.9166667
-    functionName: AttackBarrel
+  - time: 0.875
+    functionName: AttackEnemy
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

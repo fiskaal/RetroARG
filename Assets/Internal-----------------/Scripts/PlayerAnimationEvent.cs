@@ -1,38 +1,40 @@
 using UnityEngine;
-
-public class PlayerAnimationEvent : MonoBehaviour
+namespace Ketra
 {
-    // Start is called before the first frame update
-    [SerializeField] PlayerAttack pa;
-    [SerializeField] EnemyAttack ea;
-    [SerializeField] AudioSource swoosh;
-    void Start()
+    public class PlayerAnimationEvent : MonoBehaviour
     {
+        // Start is called before the first frame update
+        [SerializeField] PlayerAttack pa;
+        [SerializeField] EnemyAttack ea;
+        [SerializeField] AudioSource swoosh;
+        void Start()
+        {
 
-    }
+        }
 
-    // Update is called once per frame
-    private void AttackEnemy()
-    {
-        pa.DetectEnemyHit();
-        
-    }
+        // Update is called once per frame
+        private void AttackEnemy()
+        {
+            pa.DetectEnemyHit();
 
-    private void AttackBarrel()
-    {
-        
-        pa.DetectBarrelHit();
-    }
+        }
 
-    private void AttackPlayer()
-    {
+        private void AttackBarrel()
+        {
 
-        
-        ea.DetectPlayerHit();
-    }
+            pa.DetectBarrelHit();
+        }
 
-    private void SwordSound()
-    {
-        swoosh.Play();
+        private void AttackPlayer()
+        {
+
+
+            ea.DetectPlayerHit();
+        }
+
+        private void SwordSound()
+        {
+            swoosh.Play();
+        }
     }
 }

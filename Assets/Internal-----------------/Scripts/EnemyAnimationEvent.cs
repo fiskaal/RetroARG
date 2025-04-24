@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimationEvent : MonoBehaviour
+namespace Ketra
 {
-    // Start is called before the first frame update
-    [SerializeField] EnemyAttack ea;
-    private void AttackPlayer()
+    public class EnemyAnimationEvent : MonoBehaviour
     {
-        ea.DetectPlayerHit();
+        // Start is called before the first frame update
+        [SerializeField] EnemyAttack ea;
+        private void AttackPlayer()
+        {
+            ea.DetectPlayerHit();
+        }
     }
 }

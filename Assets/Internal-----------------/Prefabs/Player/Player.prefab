@@ -1145,6 +1145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryPos: {fileID: 8975902020776340103}
+  pm: {fileID: 8975902021114453198}
   animator: {fileID: 8975902019876252420}
   isCarrying: 0
   actionButton: {fileID: 0}

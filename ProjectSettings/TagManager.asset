@@ -23,6 +23,7 @@ TagManager:
   - Key
   - KillQuest
   - Pressure
+  - Metal
   layers:
   - Default
   - TransparentFX
@@ -34,8 +35,8 @@ TagManager:
   - Player
   - CarryObject
   - Destructible
-  - 
-  - 
+  - Weapon
+  - Metal
   - 
   - 
   - 

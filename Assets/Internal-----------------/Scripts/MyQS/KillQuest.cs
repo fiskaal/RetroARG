@@ -29,7 +29,6 @@ public class KillQuest : MonoBehaviour
     public int currentIndex;
     public bool isKillTrigger;
     public GameObject killQuestInfo;
-    public GameObject enemy;
     [Header("Player attack script")]
     public PlayerAttack pa;
 
@@ -44,7 +43,6 @@ public class KillQuest : MonoBehaviour
         rewardItem.SetActive(false);
         isKillTrigger = false;
         killQuestInfo.SetActive(false);
-        pa.enemiesKilled = enemiesKilled;
     }
 
     // Update is called once per frame
@@ -68,7 +66,6 @@ public class KillQuest : MonoBehaviour
 
                 case QuestState.Active:
                     dm.dialogueLines = dialogueLinesActive;
-                    enemy.SetActive(true);
                     if (pa.enemiesKilled > 0)
                     {
                         currentState = QuestState.Completed;
@@ -79,7 +76,7 @@ public class KillQuest : MonoBehaviour
                 case QuestState.Completed:
                     dm.dialogueLines = dialogueLinesCompleted;
                     notifText.text = notifStartedText;
-                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Triangle"))
+                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Interact"))
                     {
                         Debug.Log("Kill quest complete");
                         currentState = QuestState.Default;

@@ -15111,7 +15111,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
-  chopSound: {fileID: 0}
+  chopSound: {fileID: 1835291544}
   hs: {fileID: 741448124}
 --- !u!114 &301548563
 MonoBehaviour:
@@ -129177,15 +129177,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120421371701, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12422063
+      value: 0.124220625
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120421371701, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000029571494
+      value: 3.4976798e-15
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120421371701, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000037020633
+      value: -4.385515e-16
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120662226328, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.x

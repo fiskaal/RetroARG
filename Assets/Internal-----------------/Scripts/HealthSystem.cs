@@ -83,7 +83,7 @@ namespace Ketra
         public void DamagePlayer()
         {
             player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
-
+            //player.transform.position = spawnpoint.position;
             currentHealth -= dealDamage;
             damageSound.Play();
             Debug.Log("HURT!");

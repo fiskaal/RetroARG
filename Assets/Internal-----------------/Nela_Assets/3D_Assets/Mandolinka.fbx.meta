@@ -87,7 +87,12 @@ ModelImporter:
   - first:
       74: 5893965261234051625
     second: Mandolinka|wha
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mandolinka
+    second: {fileID: 2100000, guid: cb1914980aa006644ae204d12f15391e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -36,11 +36,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 146763bbe95e7404ba144405abb1e428, type: 3}
     - {fileID: 8300000, guid: 218704fe714ba5540a025b84226883d4, type: 3}
     MediumSteps:
-    - {fileID: 8300000, guid: ce3f9a4b74f2f7447b8c6adfabedef41, type: 3}
-    - {fileID: 8300000, guid: 20be303d0de0f854e8c7aefa7c7a383b, type: 3}
     - {fileID: 8300000, guid: 3f49f964c0180e74b8ff85bcc5f50278, type: 3}
+    - {fileID: 8300000, guid: ce3f9a4b74f2f7447b8c6adfabedef41, type: 3}
     - {fileID: 8300000, guid: 6bb4c9ee2372f3a46bafd983af018fe7, type: 3}
     - {fileID: 8300000, guid: 4931ca1b4b6b6d24fbf68b2cbb81bd51, type: 3}
+    - {fileID: 8300000, guid: 20be303d0de0f854e8c7aefa7c7a383b, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: 148bd6f372c0f7c4ab0c6053f3ab32cb, type: 3}
     - {fileID: 8300000, guid: 882865a2d8d8f074c9a8099efa30e3b0, type: 3}
@@ -74,23 +74,24 @@ MonoBehaviour:
     - Terrazzo
     - Masonry
     - Grid
+    - Ground
     SoftSteps:
     - {fileID: 8300000, guid: 0e177e03d5e598346b55a7b5b338308d, type: 3}
-    - {fileID: 8300000, guid: ad067f9a92288174f8feef9b6a16fd77, type: 3}
-    - {fileID: 8300000, guid: 91907eb07a9a90e40817537ee84ba98c, type: 3}
     - {fileID: 8300000, guid: 6fd161b3f607de248a3b6a37b9b9f60f, type: 3}
+    - {fileID: 8300000, guid: 91907eb07a9a90e40817537ee84ba98c, type: 3}
+    - {fileID: 8300000, guid: ad067f9a92288174f8feef9b6a16fd77, type: 3}
     - {fileID: 8300000, guid: 006fd0ef608d5004ca9752070e7a9421, type: 3}
     MediumSteps:
     - {fileID: 8300000, guid: 2dc25fa946cbf0f419c13b9fa1fba674, type: 3}
-    - {fileID: 8300000, guid: 0d606a27abee80548b405ade20115e12, type: 3}
-    - {fileID: 8300000, guid: 93d040c6acb16764f8fff9ec9417451d, type: 3}
     - {fileID: 8300000, guid: 98032f1f583fba94ca68e490463188f5, type: 3}
+    - {fileID: 8300000, guid: 93d040c6acb16764f8fff9ec9417451d, type: 3}
     - {fileID: 8300000, guid: 2801a1017e974254cbb158957ab0d308, type: 3}
+    - {fileID: 8300000, guid: 0d606a27abee80548b405ade20115e12, type: 3}
     HardSteps:
-    - {fileID: 8300000, guid: a970a80f11261d04a8b2f870447157d9, type: 3}
     - {fileID: 8300000, guid: c6a68aed5289e364f8b5c85e68e02642, type: 3}
-    - {fileID: 8300000, guid: 1bce76496a9e95c49b57dca3da94e923, type: 3}
     - {fileID: 8300000, guid: 397c1bbb1485a9a4a880e8352cc1eb69, type: 3}
+    - {fileID: 8300000, guid: a970a80f11261d04a8b2f870447157d9, type: 3}
+    - {fileID: 8300000, guid: 1bce76496a9e95c49b57dca3da94e923, type: 3}
     - {fileID: 8300000, guid: 28861c8eecebad74e879d87f99fd5d07, type: 3}
     Scuffs:
     - {fileID: 8300000, guid: 511b2c2b2554f404587352f7dda05a7b, type: 3}
@@ -129,10 +130,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 553c3d4b839fdd345ad3ebaacb4ffc7e, type: 3}
     - {fileID: 8300000, guid: 8dbf7c8d0280725419dac198f56af721, type: 3}
     MediumSteps:
-    - {fileID: 8300000, guid: 91232e4896d0dd64b9c2f8eecc11560f, type: 3}
     - {fileID: 8300000, guid: 43bf3ef544f36f44581d0d79f058bf03, type: 3}
     - {fileID: 8300000, guid: d5eb16f5cc4cece4cab21ab3c29cb564, type: 3}
     - {fileID: 8300000, guid: b287d79501675d242abddf7fc188cef0, type: 3}
+    - {fileID: 8300000, guid: 91232e4896d0dd64b9c2f8eecc11560f, type: 3}
     - {fileID: 8300000, guid: cc1f147c64ea76f46a95170bb2302476, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: df810f0dbc417424982283a32b6c2228, type: 3}
@@ -165,10 +166,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 162a5d3c97ea84a4ab5e4037d655b669, type: 3}
     MediumSteps:
     - {fileID: 8300000, guid: cab363f66a92e9645b6c3ac7c0e98a24, type: 3}
-    - {fileID: 8300000, guid: 165db2ba8daa62145a0065b98f45dbb2, type: 3}
     - {fileID: 8300000, guid: a3d428e35fa2e6a46a3b6ad44744f8fb, type: 3}
-    - {fileID: 8300000, guid: 6c8c81063fe6523418a3d075f3db22fb, type: 3}
     - {fileID: 8300000, guid: 9c20102096e240644abbdfd148b3fa14, type: 3}
+    - {fileID: 8300000, guid: 165db2ba8daa62145a0065b98f45dbb2, type: 3}
+    - {fileID: 8300000, guid: 6c8c81063fe6523418a3d075f3db22fb, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: 62b3d2c6991141449b693e6c95cc149d, type: 3}
     - {fileID: 8300000, guid: b545ec02d6dba174b991a3f182a22772, type: 3}
@@ -201,10 +202,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2f51ab2c67e90f847aea9e4d1d9f06d4, type: 3}
     MediumSteps:
     - {fileID: 8300000, guid: df9e0e2b9bbe56740a3f80fbdf348ac7, type: 3}
-    - {fileID: 8300000, guid: a1c2649eac6e5d6478e93af5d98fc3b0, type: 3}
-    - {fileID: 8300000, guid: 6dcc51188da0a08459b3d2eaa216b02a, type: 3}
-    - {fileID: 8300000, guid: 59cd1549ee467234ca8c7b664f42704b, type: 3}
     - {fileID: 8300000, guid: 1b2991e2c9b3e95499112431d3b8506b, type: 3}
+    - {fileID: 8300000, guid: 59cd1549ee467234ca8c7b664f42704b, type: 3}
+    - {fileID: 8300000, guid: 6dcc51188da0a08459b3d2eaa216b02a, type: 3}
+    - {fileID: 8300000, guid: a1c2649eac6e5d6478e93af5d98fc3b0, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: 5cac5f2f93b72e141a24def8fa2888c6, type: 3}
     - {fileID: 8300000, guid: 7707ab35e6b9be14a8940ce0588c3c44, type: 3}
@@ -231,16 +232,16 @@ MonoBehaviour:
     - Glacier
     - Flurry
     SoftSteps:
-    - {fileID: 8300000, guid: 9f66c52a41ef62947aecedb05aa0542e, type: 3}
     - {fileID: 8300000, guid: a4a5e62dacbc04644b70f2b40301c39b, type: 3}
-    - {fileID: 8300000, guid: 2a8a3494e82ee2241a58e7555f2f575a, type: 3}
+    - {fileID: 8300000, guid: 9f66c52a41ef62947aecedb05aa0542e, type: 3}
     - {fileID: 8300000, guid: bdc9abcc301eafb4ca64577051eb8513, type: 3}
     - {fileID: 8300000, guid: 7fa30f3926f8dad49989f600825319ad, type: 3}
+    - {fileID: 8300000, guid: 2a8a3494e82ee2241a58e7555f2f575a, type: 3}
     MediumSteps:
-    - {fileID: 8300000, guid: a32af24dc69947145ac2f22659e0fff6, type: 3}
-    - {fileID: 8300000, guid: ff3e6910d7d935b49b8c1115f683e0d1, type: 3}
-    - {fileID: 8300000, guid: 34b130d2b6d4637479c08679e15addc2, type: 3}
     - {fileID: 8300000, guid: de876fc4c65af2243b6e5f760e838ef4, type: 3}
+    - {fileID: 8300000, guid: ff3e6910d7d935b49b8c1115f683e0d1, type: 3}
+    - {fileID: 8300000, guid: a32af24dc69947145ac2f22659e0fff6, type: 3}
+    - {fileID: 8300000, guid: 34b130d2b6d4637479c08679e15addc2, type: 3}
     - {fileID: 8300000, guid: 87cfdcf51f25e5543a1c4e0429a5735f, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: 7940bfb6b8151f34690f32f69861d17c, type: 3}
@@ -281,9 +282,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49eab6c4265fa044abbedf418044d195, type: 3}
     MediumSteps:
     - {fileID: 8300000, guid: e116b650cf5eb6942b3bc641ce86c01a, type: 3}
-    - {fileID: 8300000, guid: ce1a1025a75463e4f9312fb60f0c0ba3, type: 3}
     - {fileID: 8300000, guid: a3c399d34c90ecd459044b61556cb26d, type: 3}
     - {fileID: 8300000, guid: cacb31a381fbed94fa6247f4ebe557fb, type: 3}
+    - {fileID: 8300000, guid: ce1a1025a75463e4f9312fb60f0c0ba3, type: 3}
     - {fileID: 8300000, guid: 61d03bcc708164e409283ea540f11d98, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: 2f25fec1ea9de7842be22130c331aefb, type: 3}
@@ -326,10 +327,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: cc6221465c377c243b7c3620d6dade11, type: 3}
     MediumSteps:
     - {fileID: 8300000, guid: 54d370f8c40620849a5b65779150ca8e, type: 3}
-    - {fileID: 8300000, guid: 10edf43182b5a2544910f9b8c96f3b1e, type: 3}
-    - {fileID: 8300000, guid: ecc0bdd46b18c6f44a3a2c1e2cd76271, type: 3}
-    - {fileID: 8300000, guid: abd7b5c1badaab048adde61538dc65f2, type: 3}
     - {fileID: 8300000, guid: 6c023a7f493395541947bf55a2bcabf6, type: 3}
+    - {fileID: 8300000, guid: ecc0bdd46b18c6f44a3a2c1e2cd76271, type: 3}
+    - {fileID: 8300000, guid: 10edf43182b5a2544910f9b8c96f3b1e, type: 3}
+    - {fileID: 8300000, guid: abd7b5c1badaab048adde61538dc65f2, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: b809b26d584792d4db67f64a4b07f743, type: 3}
     - {fileID: 8300000, guid: 2b700dd3e3f04a74bb0a47b386bbccf3, type: 3}
@@ -365,10 +366,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: cff22d9ce2643d14bb101040a5bc2248, type: 3}
     MediumSteps:
     - {fileID: 8300000, guid: db80d6cd2b02da847b308d41f7370531, type: 3}
+    - {fileID: 8300000, guid: 6dc6b913f8c9b7645be3a7ab4ccbdfa7, type: 3}
     - {fileID: 8300000, guid: f455567554cb36843b33a7892546cea9, type: 3}
     - {fileID: 8300000, guid: e114fe4cb53cf9c4c866abd0a7aed009, type: 3}
     - {fileID: 8300000, guid: da8e3052b9ae66943be92651e09d4171, type: 3}
-    - {fileID: 8300000, guid: 6dc6b913f8c9b7645be3a7ab4ccbdfa7, type: 3}
     HardSteps:
     - {fileID: 8300000, guid: 392eee5d9266bf440a0851a552f392d9, type: 3}
     - {fileID: 8300000, guid: 3b65d3d01fb7fac42940472232d3f6b3, type: 3}

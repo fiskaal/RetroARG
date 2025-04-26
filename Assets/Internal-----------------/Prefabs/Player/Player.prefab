@@ -904,7 +904,8 @@ GameObject:
   - component: {fileID: 8975902021114453168}
   - component: {fileID: 8975902021114453169}
   - component: {fileID: 8975902021114453198}
-  - component: {fileID: 8975902021114453199}
+  - component: {fileID: 2492367027506221289}
+  - component: {fileID: 656765668806240398}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1034,14 +1035,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponHitRadius: 0.3
   weaponHitPoint: {fileID: 8975902020199176948}
-  damage: 1
   hitEffect: {fileID: 613490626776560955, guid: 494ddfa4d4713e447abb58870d24f85c, type: 3}
   targetLayer:
-    serializedVersion: 2
-    m_Bits: 67109376
+  - serializedVersion: 2
+    m_Bits: 0
+  - serializedVersion: 2
+    m_Bits: 0
   animator: {fileID: 8975902019876252420}
   chopSound: {fileID: 0}
+  killSound: {fileID: 0}
   enemiesKilled: 0
+  damage: 1
 --- !u!114 &8975902021114453168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,6 +1082,7 @@ MonoBehaviour:
   notifCompleteText: 
   dh: {fileID: 0}
   dialogue: 
+  dialogueIcon: {fileID: 0}
   dm: {fileID: 0}
   dialogueLines: []
   dialogueLinesStart:
@@ -1132,7 +1137,7 @@ MonoBehaviour:
   maxJumps: 2
   isJumping: 0
   isGrounded: 0
---- !u!114 &8975902021114453199
+--- !u!114 &2492367027506221289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1141,19 +1146,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 8975902021114453180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a09c680729ea94e8db258bac0af89b, type: 3}
+  m_Script: {fileID: 11500000, guid: e91296a317e56f24ebecd8f21aa32e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carryPos: {fileID: 8975902020776340103}
-  animator: {fileID: 8975902019876252420}
-  isCarrying: 0
-  actionButton: {fileID: 0}
-  carryText: {fileID: 0}
-  cancelButton: {fileID: 0}
-  dropText: {fileID: 0}
-  weapon: {fileID: 8975902020199176951}
-  carryObject: {fileID: 0}
   rb: {fileID: 0}
+  coll: {fileID: 0}
+  player: {fileID: 8975902021114453176}
+  carryPos: {fileID: 8975902020776340103}
+  fpsCam: {fileID: 0}
+  carryObject: {fileID: 0}
+  anim: {fileID: 8975902019876252420}
+  actionButton: {fileID: 0}
+  actionTMP: {fileID: 0}
+  cancelButton: {fileID: 0}
+  cancelTMP: {fileID: 0}
+  actionText: CARRY
+  cancelText: DROP
+  dropForwardForce: 1
+  dropUpwardForce: 1
+  isCarrying: 0
+  inTrigger: 0
+--- !u!81 &656765668806240398
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8975902021114453180}
+  m_Enabled: 1
 --- !u!1 &8975902021120960976
 GameObject:
   m_ObjectHideFlags: 0

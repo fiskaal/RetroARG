@@ -5,7 +5,7 @@ public class EnemyController : MonoBehaviour
 {
     enum AIState
     {
-        Idle, Patrolling, Chasing, Attacking
+        Idle, Patrolling, Chasing, Attacking, Dead
     }
     [Header("Patrol")]
     [SerializeField] private Animator enemyAnim;
@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
                 if (waitCounter > 0)
                 {
                     waitCounter -= Time.deltaTime;
-                    enemyAnim.Play("Bear_Idle");
+                    enemyAnim.Play("Idle");
                     //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                 }
                 else
@@ -62,14 +62,14 @@ public class EnemyController : MonoBehaviour
                     currentState = AIState.Patrolling;
                     agent.SetDestination(waypoints.GetChild(currentWaypoint).position);
                     //enemyAnim.Play("Bear_Walk");
-                    enemyAnim.CrossFadeInFixedTime("Bear_Walk", .2f);
+                    enemyAnim.CrossFadeInFixedTime("Walk", .2f);
                 }
 
                 if (distanceToPlayer <= chaseRange)
                 {
                     currentState = AIState.Chasing;
                     //enemyAnim.Play("Bear_Walk");
-                    enemyAnim.CrossFadeInFixedTime("Bear_Walk", .2f);
+                    enemyAnim.CrossFadeInFixedTime("Walk", .2f);
                 }
                 break;
 
@@ -77,7 +77,7 @@ public class EnemyController : MonoBehaviour
                 if (agent.remainingDistance <= .2f)
                 {
                     //enemyAnim.Play("Bear_Walk");
-                    enemyAnim.CrossFadeInFixedTime("Bear_Walk", .2f);
+                    enemyAnim.CrossFadeInFixedTime("Walk", .2f);
                     currentWaypoint++;
                     if (currentWaypoint >= waypoints.childCount)
                     {
@@ -85,14 +85,14 @@ public class EnemyController : MonoBehaviour
                     }
                     currentState = AIState.Idle;
                     waitCounter = waitAtPoint;
-                    enemyAnim.Play("Bear_Idle");
+                    enemyAnim.Play("Idle");
                     //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                 }
                 if (distanceToPlayer <= chaseRange)
                 {
                     currentState = AIState.Chasing;
                     //enemyAnim.Play("Bear_Walk");
-                    enemyAnim.CrossFadeInFixedTime("Bear_Walk", .2f);
+                    enemyAnim.CrossFadeInFixedTime("Walk", .2f);
                 }
                 break;
             case AIState.Chasing:
@@ -102,7 +102,7 @@ public class EnemyController : MonoBehaviour
                     agent.isStopped = true;
                     agent.velocity = Vector3.zero;
                     timeSinceLastSawplayer -= Time.deltaTime;
-                    enemyAnim.Play("Bear_Idle");
+                    enemyAnim.Play("Idle");
                     //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
 
                     if (timeSinceLastSawplayer <= 0)
@@ -110,7 +110,7 @@ public class EnemyController : MonoBehaviour
                         currentState = AIState.Idle;
                         timeSinceLastSawplayer = susTime;
                         agent.isStopped = false;
-                        enemyAnim.Play("Bear_Idle");
+                        enemyAnim.Play("Idle");
                         //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                     }
                 }
@@ -131,7 +131,7 @@ public class EnemyController : MonoBehaviour
 
                 if (timeToAttck <= 0)
                 {
-                    enemyAnim.CrossFadeInFixedTime("Bear_Strike1", .1f);
+                    enemyAnim.CrossFadeInFixedTime("Attack", .1f);
                     //enemyAnim.Play("Bear_Attack1");
                     timeToAttck = attackTime;
                 }
@@ -140,9 +140,12 @@ public class EnemyController : MonoBehaviour
                 {
                     currentState = AIState.Chasing;
                     agent.isStopped = false;
-                    enemyAnim.CrossFadeInFixedTime("Bear_Walk", .1f);
+                    enemyAnim.CrossFadeInFixedTime("Walk", .1f);
                     //enemyAnim.Play("Bear_walk");
                 }
+                break;
+            case AIState.Dead:
+                enemyAnim.CrossFadeInFixedTime("Dead", .1f);
                 break;
 
                

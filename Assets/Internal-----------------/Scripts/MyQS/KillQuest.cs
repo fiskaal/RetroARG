@@ -19,6 +19,7 @@ public class KillQuest : MonoBehaviour
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
+    public GameObject dialogueIcon;
     [SerializeField]private DialogueManager dm;
     public string[] dialogueLines;
     public string[] dialogueLinesStart;
@@ -43,13 +44,16 @@ public class KillQuest : MonoBehaviour
         rewardItem.SetActive(false);
         isKillTrigger = false;
         killQuestInfo.SetActive(false);
+        dialogueIcon.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isKillTrigger == true)
+        if (isKillTrigger)
         {
+            dm.dialogueIcon = dialogueIcon;
             switch (currentState)
             {
                 case QuestState.NotTaken:
@@ -76,7 +80,7 @@ public class KillQuest : MonoBehaviour
                 case QuestState.Completed:
                     dm.dialogueLines = dialogueLinesCompleted;
                     notifText.text = notifStartedText;
-                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Interact"))
+                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Triangle"))
                     {
                         Debug.Log("Kill quest complete");
                         currentState = QuestState.Default;
@@ -91,6 +95,10 @@ public class KillQuest : MonoBehaviour
 
                     break;
             }
+        }
+        else
+        {
+            dm.dialogueIcon = dm.defaultIcon;
         }
     }
 

@@ -7,6 +7,8 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueWindow;
     public TMP_Text dialogueText;
+    public GameObject? dialogueIcon;
+    public GameObject defaultIcon;
 
     public bool dialogueActive = false;
 
@@ -17,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueWindow.SetActive(false);
+        dialogueIcon.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueWindow.SetActive(false);
             dialogueActive = false;
+            dialogueIcon.SetActive(false);
 
             currentLine = 0;
         }
@@ -43,6 +47,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueActive=true;
         dialogueWindow.SetActive(true);
+        dialogueIcon.SetActive(true);
         dialogueText.text = dialogue;
         
     }
@@ -50,6 +55,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueActive = false;
         dialogueWindow.SetActive(false);
+        dialogueIcon.SetActive(false);
         dialogueText.text = dialogue;
         currentLine = 0;
 
@@ -59,11 +65,13 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueActive=true;
         dialogueWindow.SetActive(true);
+        dialogueIcon.SetActive(true);
     }
 
     public void HideDialogue()
     {
         dialogueActive = false;
         dialogueWindow.SetActive(false);
+        dialogueIcon.SetActive(false);
     }
 }

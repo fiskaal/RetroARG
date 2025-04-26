@@ -57,7 +57,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (other.gameObject.tag == "Kill")
         {
-
+            player.transform.position = spawnpoint.position;
             //other.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
             DamagePlayer();
             StartCoroutine(PauseCoroutine());
@@ -81,7 +81,7 @@ public class HealthSystem : MonoBehaviour
 
     public void DamagePlayer()
     {
-        player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
+        //player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
         
         currentHealth -= dealDamage;
         damageSound.Play();
@@ -92,7 +92,7 @@ public class HealthSystem : MonoBehaviour
         
         
         //player.gameObject.SetActive(true);
-        player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
+        //player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
     }
 
 

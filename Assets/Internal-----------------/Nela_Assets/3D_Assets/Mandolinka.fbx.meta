@@ -90,6 +90,9 @@ ModelImporter:
   - first:
       74: -5957609437553267671
     second: Mand-Death (1)
+  - first:
+      74: 9220815157450383409
+    second: Mand-Attack (1)
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -225,12 +228,12 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000

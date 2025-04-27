@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     }
     [Header("Patrol")]
     [SerializeField] private Animator enemyAnim;
+    [SerializeField] private GameObject enemy;
     [SerializeField] private Transform waypoints;
     [SerializeField] private float waitAtPoint = 2f;
     [SerializeField] private Transform enemyChase;
@@ -34,8 +35,13 @@ public class EnemyController : MonoBehaviour
     [Header("Sus")]
     [SerializeField] public float susTime = 0f;
     private float timeSinceLastSawplayer;
+
+    [Header("Dead")]
+    public float dieTime = .5f;
+    private float dieCounter;
     [Header("Player")]
     [SerializeField] private GameObject player;
+    private Vector3 lookTarget;
 
     private void Start()
     {
@@ -47,6 +53,8 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        lookTarget = player.transform.position;
+        lookTarget.y = transform.position.y;
 
         switch (currentState)
         {
@@ -126,7 +134,9 @@ public class EnemyController : MonoBehaviour
                 break;
             case AIState.Attacking:
                 //enemyAnim.CrossFadeInFixedTime("Bear_Strike1", .1f);
-                transform.LookAt(player.transform.position, Vector3.up);
+                transform.LookAt(lookTarget);
+                //agent.SetDestination(player.transform.position, Vector3.zero);
+                
                 timeToAttck -= Time.deltaTime;
 
                 if (timeToAttck <= 0)
@@ -160,5 +170,14 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(enemyChase.position, chaseRange);
         
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            //enemy.SetActive(false);
+            //dieCounter = dieTime;
+        }
     }
 }

@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.49985164, g: 0.6521026, b: 0.7830189, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.02
@@ -8044,7 +8044,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6884
+  m_Name: pb_Mesh-9454
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31081,6 +31081,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!82 &654388588 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2051427686452596889, guid: d27b775ecefcb214f9bf292887220f46, type: 3}
+  m_PrefabInstance: {fileID: 3624339465143661188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &655610040
 GameObject:
   m_ObjectHideFlags: 0
@@ -45550,6 +45555,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!82 &810656640 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2021664531645119206, guid: d27b775ecefcb214f9bf292887220f46, type: 3}
+  m_PrefabInstance: {fileID: 3624339465143661188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &814580599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96670,6 +96680,8 @@ MonoBehaviour:
   notifText: {fileID: 0}
   notifStartedText: 
   notifCompleteText: 
+  questStart: {fileID: 0}
+  questComplete: {fileID: 0}
   dh: {fileID: 1340421477}
   dialogue: 
   dialogueIcon: {fileID: 0}
@@ -128601,7 +128613,7 @@ PrefabInstance:
       objectReference: {fileID: 164841444}
     - target: {fileID: 8975902020199176945, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: m_VersionIndex
-      value: 1255
+      value: 1261
       objectReference: {fileID: 0}
     - target: {fileID: 8975902020199176946, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: m_Mesh
@@ -128648,6 +128660,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 19178266}
     - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
+      propertyPath: questStart
+      value: 
+      objectReference: {fileID: 810656640}
+    - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: rewardItem
       value: 
       objectReference: {fileID: 2806500810405565028}
@@ -128659,6 +128675,10 @@ PrefabInstance:
       propertyPath: killQuestInfo
       value: 
       objectReference: {fileID: 1514351143}
+    - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
+      propertyPath: questComplete
+      value: 
+      objectReference: {fileID: 654388588}
     - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: notifStartedText
       value: Quest started!

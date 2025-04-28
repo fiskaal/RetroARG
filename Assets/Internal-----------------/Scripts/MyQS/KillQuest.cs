@@ -16,6 +16,8 @@ public class KillQuest : MonoBehaviour
     [SerializeField] private TMP_Text notifText;
     [SerializeField] private string notifStartedText;
     [SerializeField] private string notifCompleteText;
+    [SerializeField] private AudioSource questStart;
+    [SerializeField] private AudioSource questComplete;
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
@@ -64,6 +66,7 @@ public class KillQuest : MonoBehaviour
                         Debug.Log("Kill quest started");
                         
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
+                        questStart.Play();
                         currentState = QuestState.Active;
                     }
                     break;
@@ -85,6 +88,7 @@ public class KillQuest : MonoBehaviour
                         Debug.Log("Kill quest complete");
                         currentState = QuestState.Default;
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
+                        questComplete.Play();
                         rewardItem.SetActive(true);
                     }
 

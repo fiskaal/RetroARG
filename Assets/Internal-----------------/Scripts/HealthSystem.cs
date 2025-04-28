@@ -31,15 +31,15 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         gameOverScreen.SetActive(false);
-        PlayerPrefs.SetInt("Hearts", 3);
+        //PlayerPrefs.SetInt("Hearts", 3);
         
     }
 
     private void Awake()
     {
         //currentHealth = PlayerPrefs.GetInt("Hearts", 3);
-        maxHealth = PlayerPrefs.GetInt("maxHealth", 5);
-        currentHealth = PlayerPrefs.GetInt("Hearts", currentHealth);
+        //maxHealth = PlayerPrefs.GetInt("maxHealth", 5);
+        //currentHealth = PlayerPrefs.GetInt("Hearts", currentHealth);
 
     }
 
@@ -61,7 +61,7 @@ public class HealthSystem : MonoBehaviour
             //other.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
             DamagePlayer();
             StartCoroutine(PauseCoroutine());
-            PlayerPrefs.SetInt("Hearts", currentHealth);
+            //PlayerPrefs.SetInt("Hearts", currentHealth);
         }
 
         if (other.gameObject.tag == "Heal" && currentHealth < maxHealth)
@@ -74,7 +74,7 @@ public class HealthSystem : MonoBehaviour
             //other.gameObject.SetActive(false);
             other.transform.parent.gameObject.SetActive(false);
             healSound.Play();
-            PlayerPrefs.SetInt("Hearts", currentHealth);
+            //PlayerPrefs.SetInt("Hearts", currentHealth);
 
         }
     }

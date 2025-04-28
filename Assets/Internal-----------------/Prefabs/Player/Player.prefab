@@ -1080,6 +1080,8 @@ MonoBehaviour:
   notifText: {fileID: 0}
   notifStartedText: 
   notifCompleteText: 
+  questStart: {fileID: 0}
+  questComplete: {fileID: 0}
   dh: {fileID: 0}
   dialogue: 
   dialogueIcon: {fileID: 0}

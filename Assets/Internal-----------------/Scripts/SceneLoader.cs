@@ -20,6 +20,8 @@ public class SceneLoader : MonoBehaviour
     public GameObject notification;
     public TMP_Text notifText;
     public Animator notifAnim;
+    public AudioSource alertSound;
+    public AudioSource travelSound;
 
     //public GameObject textInfo;
    
@@ -42,10 +44,12 @@ public class SceneLoader : MonoBehaviour
             if (Input.GetButtonDown("Triangle") && km.keyCount >= km.maxKeyCount)
             {
                 imageAnimator.Play("ImageFadeIn");
+                travelSound.Play();
                 StartCoroutine(WaitAndLoad(waitTime, sceneName));
             }else if (Input.GetButtonDown("Triangle") && km.keyCount < km.maxKeyCount)
             {
                 notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
+                alertSound.Play();
             }
            
         }

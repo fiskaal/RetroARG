@@ -39,6 +39,7 @@ public class KillQuest : MonoBehaviour
     [SerializeField] private int enemiesToKill;
     [SerializeField] private int enemiesKilled;
     [SerializeField] private GameObject rewardItem;
+    [SerializeField] private GameObject enemyToKill;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class KillQuest : MonoBehaviour
         isKillTrigger = false;
         killQuestInfo.SetActive(false);
         dialogueIcon.SetActive(false);
+        enemyToKill.SetActive(false);
         
     }
 
@@ -67,6 +69,7 @@ public class KillQuest : MonoBehaviour
                         
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                         questStart.Play();
+                        enemyToKill.SetActive(true);
                         currentState = QuestState.Active;
                     }
                     break;

@@ -7898,7 +7898,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh137430
+  m_Name: pb_Mesh83456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -96188,6 +96188,7 @@ MonoBehaviour:
   enemiesToKill: 0
   enemiesKilled: 0
   rewardItem: {fileID: 2806500810405565028}
+  enemyToKill: {fileID: 0}
 --- !u!43 &1392024194
 Mesh:
   m_ObjectHideFlags: 0
@@ -125905,11 +125906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120421371701, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000029571494
+      value: 0.000000029571494
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120421371701, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000037020633
+      value: -0.0000000037020633
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120662226328, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -125921,15 +125922,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120662226328, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16018225
+      value: 0.16018224
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120662226328, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 9.829661e-15
+      value: -0.00000003288976
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120662226328, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.6380253e-15
+      value: 0.000000005337273
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120800485515, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_FollowOffset.y
@@ -125964,7 +125965,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1098760555}
     - target: {fileID: 5659690121396614899, guid: 7ac464a624537994c96247a91d08869e, type: 3}
+      propertyPath: m_XAxis.m_MaxSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659690121396614899, guid: 7ac464a624537994c96247a91d08869e, type: 3}
+      propertyPath: m_YAxisRecentering.m_enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659690121396614899, guid: 7ac464a624537994c96247a91d08869e, type: 3}
+      propertyPath: m_YAxisRecentering.m_WaitTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659690121396614899, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_RecenterToTargetHeading.m_WaitTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659690121396614899, guid: 7ac464a624537994c96247a91d08869e, type: 3}
+      propertyPath: m_YAxisRecentering.m_RecenteringTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659690121396614899, guid: 7ac464a624537994c96247a91d08869e, type: 3}
+      propertyPath: m_RecenterToTargetHeading.m_RecenteringTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5659690121514251230, guid: 7ac464a624537994c96247a91d08869e, type: 3}
@@ -128049,7 +128070,7 @@ PrefabInstance:
       objectReference: {fileID: 164841444}
     - target: {fileID: 8975902020199176945, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: m_VersionIndex
-      value: 1258
+      value: 1261
       objectReference: {fileID: 0}
     - target: {fileID: 8975902020199176946, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: m_Mesh
@@ -128104,9 +128125,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2806500810405565028}
     - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
+      propertyPath: enemyToKill
+      value: 
+      objectReference: {fileID: 1773723545}
+    - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: dialogueIcon
       value: 
       objectReference: {fileID: 307016754}
+    - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
+      propertyPath: enemiesToKill
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8975902021114453169, guid: e91a8938df95e834d8e99fd9fcebd229, type: 3}
       propertyPath: killQuestInfo
       value: 

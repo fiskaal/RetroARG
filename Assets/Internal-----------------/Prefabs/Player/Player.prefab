@@ -1114,6 +1114,7 @@ MonoBehaviour:
   enemiesToKill: 0
   enemiesKilled: 0
   rewardItem: {fileID: 0}
+  enemyToKill: {fileID: 0}
 --- !u!114 &8975902021114453198
 MonoBehaviour:
   m_ObjectHideFlags: 0

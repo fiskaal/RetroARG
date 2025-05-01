@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3371285548825614205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3703876691626631817}
+  - component: {fileID: 5142454569049804742}
+  m_Layer: 0
+  m_Name: PauseMenuController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3703876691626631817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3371285548825614205}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4704552377806690812}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5142454569049804742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3371285548825614205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6802d0f81df668d438c0a93ea6f600b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  index: 0
+  pms: {fileID: 4704552378233698097}
 --- !u!1 &4704552376896901418
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +225,7 @@ Transform:
   - {fileID: 4704552378973307280}
   - {fileID: 4704552377358254426}
   - {fileID: 4704552378233698098}
+  - {fileID: 3703876691626631817}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -224,6 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   selectedPauseButton: {fileID: 0}
+  isPaused: 0
 --- !u!1 &4704552378452737807
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +326,12 @@ MonoBehaviour:
   sceneName: Scene2
   actionButton: {fileID: 0}
   inTrigger: 0
+  km: {fileID: 0}
+  notification: {fileID: 0}
+  notifText: {fileID: 0}
+  notifAnim: {fileID: 0}
+  alertSound: {fileID: 0}
+  travelSound: {fileID: 0}
 --- !u!1 &4704552378844387602
 GameObject:
   m_ObjectHideFlags: 0

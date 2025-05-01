@@ -23,6 +23,8 @@ TagManager:
   - Key
   - KillQuest
   - Pressure
+  - CollectQuest
+  - CollectObject
   layers:
   - Default
   - TransparentFX

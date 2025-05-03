@@ -22,7 +22,7 @@ public class BringQuest : MonoBehaviour
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
-    public GameObject dialogueIcon;
+    [SerializeField] private GameObject dialogueIcon;
     [SerializeField] private DialogueManager dm;
     public string[] dialogueLines;
     public string[] dialogueLinesStart;
@@ -97,6 +97,7 @@ public class BringQuest : MonoBehaviour
 
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                         questStart.Play();
+                        collectQuestInfo.SetActive(true);
                         objectToBring.SetActive(true);
                         currentState = QuestState.Active;
                     }

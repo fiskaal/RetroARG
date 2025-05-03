@@ -5,6 +5,7 @@ public class PMcontroller : MonoBehaviour
     public GameObject[] objects;
     public int index = 0;
     public PauseMenuSimple pms;
+    public AudioSource buttonSound;
 
     void Start()
     {
@@ -18,12 +19,14 @@ public class PMcontroller : MonoBehaviour
         {
             if (Input.GetButtonDown("R1"))
             {
+                buttonSound.Play();
                 index = (index + 1) % objects.Length;
                 ShowOnlyCurrent(index);
             }
 
             if (Input.GetButtonDown("L1"))
             {
+                buttonSound.Play();
                 index = (index - 1 + objects.Length) % objects.Length;
                 ShowOnlyCurrent(index);
             }

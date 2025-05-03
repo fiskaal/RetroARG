@@ -21,7 +21,7 @@ public class KillQuest : MonoBehaviour
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
-    public GameObject dialogueIcon;
+    [SerializeField] private GameObject dialogueIcon;
     [SerializeField]private DialogueManager dm;
     public string[] dialogueLines;
     public string[] dialogueLinesStart;
@@ -70,6 +70,7 @@ public class KillQuest : MonoBehaviour
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                         questStart.Play();
                         enemyToKill.SetActive(true);
+                        killQuestInfo.SetActive(true);
                         currentState = QuestState.Active;
                     }
                     break;

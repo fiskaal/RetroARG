@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: 481b5261899f21c459f15a03a97c8b23
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -1046613908811524185
+    second: NPCTalk
+  - first:
+      74: -8990057824541093389
+    second: NPCIdle.001
+  - first:
+      74: 622891638843719649
+    second: rigNPC|BeerBottleAction
+  - first:
+      74: 8635059044502513847
+    second: rigNPC|Camera.001|Take 001|Layer 001
+  - first:
+      74: 1628356151923765922
+    second: rigNPC|Cube.035Action
+  - first:
+      74: 3485399809631243406
+    second: rigNPC|Cube.038Action
+  - first:
+      74: -7761394028233312720
+    second: rigNPC|Cube.039Action
+  - first:
+      74: 5239179969134475992
+    second: rigNPC|Cube.042Action
+  - first:
+      74: 3685028998808258693
+    second: rigNPC|Cube.042Action.001
+  - first:
+      74: -6191071266811854611
+    second: rigNPC|Directional Light|Take 001|Layer 001
+  - first:
+      74: -6814195935882931948
+    second: rigNPC|Empty.006Action.001
+  - first:
+      74: -7199264895291022321
+    second: rigNPC|Empty.007Action
+  - first:
+      74: 7526223391956353428
+    second: rigNPC|Empty.008Action.001
+  - first:
+      74: 7989010109329488389
+    second: rigNPC|Empty.009Action.001
+  - first:
+      74: 8002057787465092696
+    second: rigNPC|GARRAFA|Take 001|Layer 001
+  - first:
+      74: 607770286100503906
+    second: rigNPC|NPCIdle
+  - first:
+      74: 5803456779882918064
+    second: rigNPC|NPCTalk
+  - first:
+      74: 975350842881640631
+    second: rigNPC|NPCTalk.001
+  - first:
+      74: -3748763197967070156
+    second: rigNPC|Plane.009Action
+  - first:
+      74: -6402580014526312946
+    second: rigNPC|rigNPCAction
+  - first:
+      74: -6003167692552042061
+    second: rigNPC|shishka_lowAction
+  - first:
+      74: 922024756800264832
+    second: rigNPC|wha
+  - first:
+      74: 1296332830361120010
+    second: rigNPC_deform|BeerBottleAction
+  - first:
+      74: 8245104441367088290
+    second: rigNPC_deform|Camera.001|Take 001|Layer 001
+  - first:
+      74: 6461790075203033290
+    second: rigNPC_deform|Cube.035Action
+  - first:
+      74: -8895887254973409739
+    second: rigNPC_deform|Cube.038Action
+  - first:
+      74: -178388385819356945
+    second: rigNPC_deform|Cube.039Action
+  - first:
+      74: -5353462818255470788
+    second: rigNPC_deform|Cube.042Action
+  - first:
+      74: -5083975984217943813
+    second: rigNPC_deform|Cube.042Action.001
+  - first:
+      74: -2537474348092895152
+    second: rigNPC_deform|Directional Light|Take 001|Layer 001
+  - first:
+      74: -9177870821512539454
+    second: rigNPC_deform|Empty.006Action.001
+  - first:
+      74: 2443460568799139368
+    second: rigNPC_deform|Empty.007Action
+  - first:
+      74: 7807375766638335442
+    second: rigNPC_deform|Empty.008Action.001
+  - first:
+      74: -6727829645774576535
+    second: rigNPC_deform|Empty.009Action.001
+  - first:
+      74: -4401040177110851783
+    second: rigNPC_deform|GARRAFA|Take 001|Layer 001
+  - first:
+      74: 5009092747607042592
+    second: rigNPC_deform|NPCTalk.001
+  - first:
+      74: 1623907182702379730
+    second: rigNPC_deform|Plane.009Action
+  - first:
+      74: 1811287557869144464
+    second: rigNPC_deform|rigNPCAction
+  - first:
+      74: -1164900527946420776
+    second: rigNPC_deform|shishka_lowAction
+  - first:
+      74: -4101032206948598585
+    second: rigNPC_deform|wha
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: NPCTalk
+      takeName: NPCTalk
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 99
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NPCIdle.001
+      takeName: NPCIdle.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 99
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

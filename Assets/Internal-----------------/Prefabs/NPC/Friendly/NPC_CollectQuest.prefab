@@ -3122,7 +3122,7 @@ MonoBehaviour:
   questComplete: {fileID: 0}
   dh: {fileID: 7224177834312552328}
   dialogue: 
-  dialogueIcon: {fileID: 0}
+  questIcon: {fileID: 0}
   dm: {fileID: 0}
   dialogueLines:
   - 

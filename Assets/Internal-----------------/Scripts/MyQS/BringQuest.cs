@@ -22,7 +22,7 @@ public class BringQuest : MonoBehaviour
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
-    [SerializeField] private GameObject dialogueIcon;
+    [SerializeField] private GameObject questIcon;
     [SerializeField] private DialogueManager dm;
     public string[] dialogueLines;
     public string[] dialogueLinesStart;
@@ -61,8 +61,8 @@ public class BringQuest : MonoBehaviour
         rewardItem.SetActive(false);
         isCollectTrigger = false;
         collectQuestInfo.SetActive(false);
-        dialogueIcon.SetActive(false);
-        objectToBring.SetActive(false);
+        questIcon.SetActive(false);
+        objectToBring.SetActive(true);
 
         //Setup
         if (!isCarryingObject)
@@ -85,7 +85,7 @@ public class BringQuest : MonoBehaviour
     {
         if (isCollectTrigger)
         {
-            dm.dialogueIcon = dialogueIcon;
+            dm.dialogueIcon = questIcon;
             switch (currentState)
             {
                 case QuestState.NotTaken:
@@ -107,8 +107,8 @@ public class BringQuest : MonoBehaviour
                     dm.dialogueLines = dialogueLinesActive;
                     if (isCarryingObject && isCollectTrigger)
                     {
-                        objectToBring.SetActive(false);
-                        anim.SetBool("isCarrying", false);
+                        //objectToBring.SetActive(false);
+                        
                         currentState = QuestState.Completed;
                         Debug.Log("Collect quest goal collected");
                     }
@@ -120,6 +120,9 @@ public class BringQuest : MonoBehaviour
                     if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Triangle"))
                     {
                         Debug.Log("Collect quest complete");
+                        objectToBring.SetActive(false);
+                        anim.SetBool("isCarrying", false);
+                        cancelButton.SetActive(false);
                         currentState = QuestState.Default;
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                         questComplete.Play();
@@ -130,7 +133,7 @@ public class BringQuest : MonoBehaviour
 
                 case QuestState.Default:
                     dm.dialogueLines = dialogueLinesDefault;
-
+                    cancelButton.SetActive(false);
                     break;
             }
         }
@@ -215,7 +218,7 @@ public class BringQuest : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("CarryObject"))
+        if (other.gameObject.CompareTag("CollectObject"))
         {
             actionButton.SetActive(true);
             cancelButton.SetActive(false);
@@ -230,22 +233,24 @@ public class BringQuest : MonoBehaviour
         }
 
 
-        if (other.CompareTag("CollectQuest"))
+        if (other.gameObject.CompareTag("CollectQuest"))
         {
             isCollectTrigger = true;
+            
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("CarryObject"))
+        if (other.gameObject.CompareTag("CollectObject"))
         {
             actionButton.SetActive(false);
 
             inTrigger = false;
         }
 
-        if (other.CompareTag("CollectQuest"))
+        if (other.gameObject.CompareTag("CollectQuest"))
         {
+            questIcon.SetActive(false);
             isCollectTrigger = false;
         }
     }

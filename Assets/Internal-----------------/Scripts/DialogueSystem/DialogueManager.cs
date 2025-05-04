@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueWindow;
     public TMP_Text dialogueText;
-    public GameObject? dialogueIcon;
+    public GameObject? dialogueIcon = null;
     public GameObject defaultIcon;
 
     public bool dialogueActive = false;
@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
             dialogueWindow.SetActive(false);
             dialogueActive = false;
             dialogueIcon.SetActive(false);
+            defaultIcon.SetActive(false);
 
             currentLine = 0;
         }
@@ -49,7 +50,9 @@ public class DialogueManager : MonoBehaviour
         dialogueWindow.SetActive(true);
         dialogueIcon.SetActive(true);
         dialogueText.text = dialogue;
-        
+        defaultIcon.SetActive(true);
+
+
     }
     public void HideWindow(string dialogue)
     {
@@ -58,6 +61,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIcon.SetActive(false);
         dialogueText.text = dialogue;
         currentLine = 0;
+        defaultIcon.SetActive(false);
 
     }
 
@@ -66,6 +70,7 @@ public class DialogueManager : MonoBehaviour
         dialogueActive=true;
         dialogueWindow.SetActive(true);
         dialogueIcon.SetActive(true);
+        defaultIcon.SetActive(true);
     }
 
     public void HideDialogue()
@@ -73,5 +78,6 @@ public class DialogueManager : MonoBehaviour
         dialogueActive = false;
         dialogueWindow.SetActive(false);
         dialogueIcon.SetActive(false);
+        defaultIcon.SetActive(false);
     }
 }

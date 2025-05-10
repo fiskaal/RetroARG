@@ -4,13 +4,13 @@ using UnityEngine.AI;
 public class PigController : MonoBehaviour
 {
 
-    enum AIState
+    public enum AIState
     {
         Idle, Walking, Escaping, Carried
     }
 
     [Header("Walking")]
-    //[SerializeField] private Animator pigAnim;
+    [SerializeField] private Animator pigAnim;
     [SerializeField] private GameObject pig;
     [SerializeField] private Transform waypoints;
     [SerializeField] private float waitAtPoint = 2f;
@@ -26,7 +26,7 @@ public class PigController : MonoBehaviour
     public BringQuest bq;
 
     [Header("AI States")]
-    [SerializeField] private AIState currentState;
+    [SerializeField] public AIState currentState;
 
     //[Header("Running")]
     //[SerializeField] private float runRange;
@@ -64,33 +64,23 @@ public class PigController : MonoBehaviour
         switch (currentState)
         {
             case AIState.Idle:
-                if (waitCounter > 0)
-                {
-                    waitCounter -= Time.deltaTime;
-                    //pigAnim.Play("Idle");
-                    //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
-                }
-                else
-                {
-                    currentState = AIState.Walking;
-                    agent.SetDestination(waypoints.GetChild(currentWaypoint).position);
-                    //enemyAnim.Play("Bear_Walk");
-                    //pigAnim.CrossFadeInFixedTime("Walk", .2f);
-                }
+
+                pigAnim.SetBool("isIdle", true);
+               
 
                 if (distanceToPlayer <= escapeRange)
                 {
                     currentState = AIState.Walking;
-                    //enemyAnim.Play("Bear_Walk");
-                    //pigAnim.CrossFadeInFixedTime("Walk", .2f);
+                    agent.SetDestination(waypoints.GetChild(currentWaypoint).position);
+                    pigAnim.CrossFadeInFixedTime("Run", .2f);
                 }
                 break;
 
             case AIState.Walking:
                 if (agent.remainingDistance <= .2f)
                 {
-                    //enemyAnim.Play("Bear_Walk");
-                    //pigAnim.CrossFadeInFixedTime("Walk", .2f);
+                    
+                    pigAnim.CrossFadeInFixedTime("Run", .2f);
                     currentWaypoint++;
                     if (currentWaypoint >= waypoints.childCount)
                     {
@@ -98,43 +88,19 @@ public class PigController : MonoBehaviour
                     }
                     currentState = AIState.Idle;
                     waitCounter = waitAtPoint;
-                    //pigAnim.Play("Idle");
-                    //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
-                }
-                if (distanceToPlayer <= escapeRange)
-                {
-                    currentState = AIState.Escaping;
-                    //enemyAnim.Play("Bear_Walk");
-                    //pigAnim.CrossFadeInFixedTime("Walk", .2f);
-                }
-                break;
-            case AIState.Escaping:
-                agent.speed = 12;
-                waitAtPoint = .1f;
-                if (agent.remainingDistance <= .2f)
-                {
-                    //enemyAnim.Play("Bear_Walk");
-                    //pigAnim.CrossFadeInFixedTime("Walk", .2f);
-                    currentWaypoint++;
-                    if (currentWaypoint >= waypoints.childCount)
-                    {
-                        currentWaypoint = 0;
-                    }
+                    pigAnim.Play("Idle");
                     
-                    //pigAnim.Play("Idle");
-                    //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                 }
                 if (distanceToPlayer > escapeRange)
                 {
-                    currentState = AIState.Walking;
-                    //enemyAnim.Play("Bear_Walk");
-                    //pigAnim.CrossFadeInFixedTime("Walk", .2f);
+                    currentState = AIState.Idle;
+                    
+                    pigAnim.CrossFadeInFixedTime("Run", .2f);
                 }
-
                 break;
             
             case AIState.Carried:
-                //pigAnim.CrossFadeInFixedTime("Dead", .1f);
+                pigAnim.SetBool("isIdle", true);
                 break;
 
 

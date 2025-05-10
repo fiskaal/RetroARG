@@ -147,7 +147,12 @@ ModelImporter:
   - first:
       74: 8720089295164584255
     second: rig.pig|wha
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pig
+    second: {fileID: 2100000, guid: f39d163d2ee7b0c4eb82041fac348557, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

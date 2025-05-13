@@ -42,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleReflectedCubemap_5e482212ceaa47d5821f50824671dfb8_Cube_1:
-        m_Texture: {fileID: 8900000, guid: 8e68a257ac6ba1446bb6d4ad7bcf7d92, type: 3}
+        m_Texture: {fileID: 8900000, guid: 1b942d17cb2b2e440abc5930581e8788, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleReflectedCubemap_931d343d6d774d33ace030c87666fc19_Cube_1:

@@ -13,6 +13,7 @@ public class FollowerController : MonoBehaviour
     [SerializeField] private Transform followerChase;
     [SerializeField] private Transform followerIdle;
     public bool isFollowing;
+    public AudioSource goatSound;
     //[SerializeField] private Transform animalAttack;
 
     [Header("Components")]
@@ -52,7 +53,7 @@ public class FollowerController : MonoBehaviour
                 {
                     currentState = FollowerState.Following;
                     agent.isStopped = false;
-                    followerAnim.CrossFadeInFixedTime("Dog_run", .5f);
+                    followerAnim.CrossFadeInFixedTime("Walk", .1f);
                     //enemyAnim.Play("Bear_walk");
                 }
 
@@ -65,7 +66,7 @@ public class FollowerController : MonoBehaviour
                 else
                 {
                     currentState = FollowerState.Idle;
-                    followerAnim.Play("Dog_idle");
+                    followerAnim.Play("Idle");
                     agent.velocity = Vector3.zero;
                     agent.isStopped = true;
                 }
@@ -74,12 +75,12 @@ public class FollowerController : MonoBehaviour
                 break;
             case FollowerState.Following:
                 agent.SetDestination(player.transform.position);
-                
+                goatSound.Play();
 
                 if (distanceToPlayer <= idleRange)
                 {
                     currentState = FollowerState.Idle;
-                    followerAnim.CrossFadeInFixedTime("Dog_idle", .5f);
+                    followerAnim.CrossFadeInFixedTime("Idle", .1f);
                     agent.velocity = Vector3.zero;
                     agent.isStopped = true;
                     
@@ -91,7 +92,7 @@ public class FollowerController : MonoBehaviour
         else if(!isFollowing)
         {
             currentState = FollowerState.Idle;
-            followerAnim.Play("Dog_idle");
+            followerAnim.Play("Idle");
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
         }

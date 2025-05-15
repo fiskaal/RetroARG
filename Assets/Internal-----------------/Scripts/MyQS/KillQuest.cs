@@ -21,7 +21,7 @@ public class KillQuest : MonoBehaviour
     [Header("Dialogue Details")]
     [SerializeField] private DialogueHolder dh;
     public string dialogue;
-    [SerializeField] private GameObject questIcon;
+    [SerializeField] private GameObject killQuestIcon;
     [SerializeField]private DialogueManager dm;
     public string[] dialogueLines;
     public string[] dialogueLinesStart;
@@ -45,9 +45,9 @@ public class KillQuest : MonoBehaviour
     {
         arrayLenght = dialogueLinesStart.Length;
         rewardItem.SetActive(false);
-        isKillTrigger = false;
+        //isKillTrigger = false;
         killQuestInfo.SetActive(false);
-        questIcon.SetActive(false);
+        killQuestIcon.SetActive(false);
         enemyToKill.SetActive(false);
         
     }
@@ -57,9 +57,10 @@ public class KillQuest : MonoBehaviour
     {
         if (isKillTrigger)
         {
-            dm.dialogueIcon = questIcon;
+            dm.dialogueIcon = killQuestIcon;
             switch (currentState)
             {
+
                 case QuestState.NotTaken:
                     dm.dialogueLines = dialogueLinesStart;
                     notifText.text = notifStartedText;
@@ -117,7 +118,9 @@ public class KillQuest : MonoBehaviour
         if (other.gameObject.CompareTag("KillQuest"))
         {
             isKillTrigger = true;
-            
+            //killQuestIcon.SetActive(true);
+            dm.dialogueIcon = killQuestIcon;
+
         }
     }
     public void OnTriggerExit(Collider other)
@@ -125,7 +128,7 @@ public class KillQuest : MonoBehaviour
         if (other.gameObject.CompareTag("KillQuest"))
         {
             isKillTrigger = false;
-            questIcon.SetActive(false);
+            killQuestIcon.SetActive(false);
         }
     }
 

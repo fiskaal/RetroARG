@@ -236,7 +236,8 @@ public class BringQuest : MonoBehaviour
         if (other.gameObject.CompareTag("CollectQuest"))
         {
             isCollectTrigger = true;
-            
+            //dm.dialogueIcon = questIcon;
+
         }
     }
     private void OnTriggerExit(Collider other)

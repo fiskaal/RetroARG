@@ -1272,7 +1272,6 @@ GameObject:
   - component: {fileID: 3585086757329462576}
   - component: {fileID: 3585086757329462579}
   - component: {fileID: 3585086757329462578}
-  - component: {fileID: 3585086757329462583}
   m_Layer: 0
   m_Name: QuestTrigger (1)
   m_TagString: KillQuest
@@ -1602,61 +1601,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.75, z: 3}
   m_Center: {x: 1, y: 1.375, z: -1.5}
---- !u!114 &3585086757329462583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3585086757329462543}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e7967770ac1f94c8bc47e3c2625e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  notifAnim: {fileID: 0}
-  notifText: {fileID: 0}
-  notifStartedText: 
-  notifCompleteText: 
-  questStart: {fileID: 0}
-  questComplete: {fileID: 0}
-  dh: {fileID: 3585086757783337463}
-  dialogue: 
-  dialogueIcon: {fileID: 0}
-  dm: {fileID: 0}
-  dialogueLines:
-  - 
-  dialogueLinesStart:
-  - 
-  - hey
-  - would you help me with those bad boys
-  - i will give you this
-  - deal ?
-  dialogueLinesActive:
-  - 
-  - first do the job
-  - and i will give you what i promised
-  - ...
-  dialogueLinesCompleted:
-  - 
-  - thank you so much
-  - you are so brave
-  - here is your reward
-  dialogueLinesDefault:
-  - 
-  - thank you so much again
-  - i hope you will find you friend
-  - see you
-  arrayLenght: 0
-  currentIndex: 0
-  isKillTrigger: 0
-  killQuestInfo: {fileID: 0}
-  pa: {fileID: 0}
-  enemiesToKill: 0
-  enemiesKilled: 0
-  rewardItem: {fileID: 0}
-  enemyToKill: {fileID: 0}
 --- !u!1 &3585086757343842878
 GameObject:
   m_ObjectHideFlags: 0

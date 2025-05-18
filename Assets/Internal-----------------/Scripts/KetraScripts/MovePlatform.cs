@@ -8,6 +8,8 @@ public class MovePlatform : MonoBehaviour
 
     [SerializeField] private WaypointPath _waypointPath;
     [SerializeField] private float _speed;
+    [SerializeField] private float _waitTimeAtWaypoint = 1f;
+
     private int _targetWaypointIndex;
 
     private Transform _previousWaypoint;
@@ -15,15 +17,18 @@ public class MovePlatform : MonoBehaviour
 
     private float _timeToWaypoint;
     private float _elapsedTime;
-    // Start is called before the first frame update
+
+    private bool _isWaiting;
+
     void Start()
     {
         TargetNextWaypoint();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
+        if (_isWaiting) return;
+
         _elapsedTime += Time.deltaTime;
 
         float elapsedPercentage = _elapsedTime / _timeToWaypoint;
@@ -31,10 +36,18 @@ public class MovePlatform : MonoBehaviour
         transform.position = Vector3.Lerp(_previousWaypoint.position, _targetWaypoint.position, elapsedPercentage);
         transform.rotation = Quaternion.Lerp(_previousWaypoint.rotation, _targetWaypoint.rotation, elapsedPercentage);
 
-        if (elapsedPercentage >= 1)
+        if (elapsedPercentage >= 1f)
         {
-            TargetNextWaypoint();
+            StartCoroutine(WaitAtWaypoint());
         }
+    }
+
+    private IEnumerator WaitAtWaypoint()
+    {
+        _isWaiting = true;
+        yield return new WaitForSeconds(_waitTimeAtWaypoint);
+        TargetNextWaypoint();
+        _isWaiting = false;
     }
 
     private void TargetNextWaypoint()
@@ -43,8 +56,7 @@ public class MovePlatform : MonoBehaviour
         _targetWaypointIndex = _waypointPath.GetNextWaypointIndex(_targetWaypointIndex);
         _targetWaypoint = _waypointPath.GetWaypoint(_targetWaypointIndex);
 
-        _elapsedTime = 0;
-
+        _elapsedTime = 0f;
         float distanceToWaypoint = Vector3.Distance(_previousWaypoint.position, _targetWaypoint.position);
         _timeToWaypoint = distanceToWaypoint / _speed;
     }

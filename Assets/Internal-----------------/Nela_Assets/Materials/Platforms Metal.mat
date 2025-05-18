@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Platforms 2
+  m_Name: Platforms Metal
   m_Shader: {fileID: -6465566751694194690, guid: 9811a975b6d99df45b93bb716dacc497, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -35,7 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4450AB74:
-        m_Texture: {fileID: 2800000, guid: c9660aeb2de8af54e98e72c34307d702, type: 3}
+        m_Texture: {fileID: 2800000, guid: c256dd248f5f01040ba22f9701574ce5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Alpha:

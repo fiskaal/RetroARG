@@ -42,7 +42,12 @@ ModelImporter:
   - first:
       74: -565153407308627900
     second: rig.001|wha
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Goat
+    second: {fileID: 2100000, guid: f336c7dcb9a18b24dabf50195773563f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

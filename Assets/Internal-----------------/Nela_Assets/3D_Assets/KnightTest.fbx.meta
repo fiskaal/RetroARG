@@ -141,7 +141,27 @@ ModelImporter:
   - first:
       74: 1181264403819532011
     second: RunBetter (1)
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knight1
+    second: {fileID: 2100000, guid: 72340f6304a362a44a5a41df1d99c478, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knight2
+    second: {fileID: 2100000, guid: 036f8633a11b11744ab4c261a7cb1063, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Knight3
+    second: {fileID: 2100000, guid: b6c44c608d08e684eae1108715890071, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sword
+    second: {fileID: 2100000, guid: 62a5cd7fcbcc5634c851aea809ae00f9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
-    public Transform target; // Assign the player's transform in the inspector
-
+    public GameObject cameras;
+    
+    public Transform target;
+    // Assign the player's transform in the inspector
+    private void Awake()
+    {
+        cameras = GameObject.Find("Cameras");
+        target = cameras.transform.Find("Camera"); 
+    }
+   
     void Update()
     {
+        
         if (target == null)
         {
             Debug.LogWarning("Billboard: No target assigned!");

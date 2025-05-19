@@ -44,52 +44,54 @@ public class FollowerController : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if (isFollowing) { 
-        switch (currentState)
+        if (isFollowing)
         {
-            case FollowerState.Idle:
+            switch (currentState)
+            {
+                case FollowerState.Idle:
 
-                if (distanceToPlayer > followRange)
-                {
-                    currentState = FollowerState.Following;
-                    agent.isStopped = false;
-                    followerAnim.CrossFadeInFixedTime("Walk", .1f);
-                    //enemyAnim.Play("Bear_walk");
-                }
+                    if (distanceToPlayer > followRange)
+                    {
+                        currentState = FollowerState.Following;
+                        agent.isStopped = false;
+                        followerAnim.CrossFadeInFixedTime("Walk", .1f);
+                        //enemyAnim.Play("Bear_walk");
+                    }
 
-                //if (distanceToPlayer <= followRange)
-                //{
-                //    currentState = FollowerState.Following;
-                //    //enemyAnim.Play("Bear_Walk");
-                //    followerAnim.CrossFadeInFixedTime("Dog_walk", .2f);
-                //}
-                else
-                {
-                    currentState = FollowerState.Idle;
-                    followerAnim.Play("Idle");
-                    agent.velocity = Vector3.zero;
-                    agent.isStopped = true;
-                }
+                    //if (distanceToPlayer <= followRange)
+                    //{
+                    //    currentState = FollowerState.Following;
+                    //    //enemyAnim.Play("Bear_Walk");
+                    //    followerAnim.CrossFadeInFixedTime("Dog_walk", .2f);
+                    //}
+                    else
+                    {
+                        currentState = FollowerState.Idle;
+                        followerAnim.Play("Idle");
+                        agent.velocity = Vector3.zero;
+                        agent.isStopped = true;
+                    }
 
 
-                break;
-            case FollowerState.Following:
-                agent.SetDestination(player.transform.position);
-                goatSound.Play();
+                    break;
+                case FollowerState.Following:
+                    agent.SetDestination(player.transform.position);
 
-                if (distanceToPlayer <= idleRange)
-                {
-                    currentState = FollowerState.Idle;
-                    followerAnim.CrossFadeInFixedTime("Idle", .1f);
-                    agent.velocity = Vector3.zero;
-                    agent.isStopped = true;
-                    
-                }
 
-                break;
+                    if (distanceToPlayer <= idleRange)
+                    {
+                        goatSound.Play();
+                        currentState = FollowerState.Idle;
+                        followerAnim.CrossFadeInFixedTime("Idle", .1f);
+                        agent.velocity = Vector3.zero;
+                        agent.isStopped = true;
+
+                    }
+
+                    break;
+            }
         }
-        }
-        else if(!isFollowing)
+        else if (!isFollowing)
         {
             currentState = FollowerState.Idle;
             followerAnim.Play("Idle");

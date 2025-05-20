@@ -30,7 +30,7 @@ public class KillQuest : MonoBehaviour
     public string[] dialogueLinesDefault;
     public int arrayLenght;
     public int currentIndex;
-    public bool isKillTrigger;
+    public bool isKillTrigger = false;
     public GameObject killQuestInfo;
     [Header("Player attack script")]
     public PlayerAttack pa;
@@ -107,7 +107,7 @@ public class KillQuest : MonoBehaviour
         }
         else
         {
-            dm.dialogueIcon = dm.defaultIcon;
+            
         }
     }
 
@@ -118,8 +118,9 @@ public class KillQuest : MonoBehaviour
         if (other.gameObject.CompareTag("KillQuest"))
         {
             isKillTrigger = true;
+            //if (isKillTrigger) { dm.dialogueIcon = killQuestIcon; }
             //killQuestIcon.SetActive(true);
-            dm.dialogueIcon = killQuestIcon;
+            
 
         }
     }
@@ -129,6 +130,7 @@ public class KillQuest : MonoBehaviour
         {
             isKillTrigger = false;
             killQuestIcon.SetActive(false);
+            dm.dialogueIcon = dm.defaultIcon;
         }
     }
 

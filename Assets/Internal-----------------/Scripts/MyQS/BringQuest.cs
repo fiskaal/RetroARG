@@ -31,7 +31,7 @@ public class BringQuest : MonoBehaviour
     public string[] dialogueLinesDefault;
     public int arrayLenght;
     public int currentIndex;
-    public bool isCollectTrigger;
+    public bool isCollectTrigger = false;
     public GameObject collectQuestInfo;
     [Header("Player attack script")]
     public PlayerAttack pa;
@@ -139,7 +139,7 @@ public class BringQuest : MonoBehaviour
         }
         else
         {
-            dm.dialogueIcon = dm.defaultIcon;
+            
         }
 
         if (inTrigger && Input.GetButtonDown("Triangle"))
@@ -236,7 +236,11 @@ public class BringQuest : MonoBehaviour
         if (other.gameObject.CompareTag("CollectQuest"))
         {
             isCollectTrigger = true;
-            //dm.dialogueIcon = questIcon;
+            if (isCollectTrigger) 
+            {
+                //dm.dialogueIcon = questIcon;
+            }
+            
 
         }
     }
@@ -253,6 +257,7 @@ public class BringQuest : MonoBehaviour
         {
             questIcon.SetActive(false);
             isCollectTrigger = false;
+            dm.dialogueIcon = dm.defaultIcon;
         }
     }
 }

@@ -123,6 +123,12 @@ ModelImporter:
   - first:
       74: -4101032206948598585
     second: rigNPC_deform|wha
+  - first:
+      74: -3040469499096600595
+    second: NPCIdle
+  - first:
+      74: 2710280539625269898
+    second: NPCIdle.001 (1)
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -153,8 +159,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: NPCTalk
-      takeName: NPCTalk
+      name: NPCIdle.001 (1)
+      takeName: NPCIdle.001
       internalID: 0
       firstFrame: 0
       lastFrame: 99
@@ -164,8 +170,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

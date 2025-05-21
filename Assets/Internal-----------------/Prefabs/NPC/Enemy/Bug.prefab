@@ -188,6 +188,11 @@ MonoBehaviour:
   attackTime: 2
   susTime: 0
   dieTime: 1
+  ps: {fileID: 6345683444464577328, guid: 6d98b9f5ad7da1a499c4950602d2d506, type: 3}
+  lootSpawnLocation: {fileID: 7392539496315472254}
+  LootTable:
+  - itemPrefab: {fileID: 164322763763490768, guid: 513a9670753c668428ae619a9b3d3ede, type: 3}
+    dropChance: 100
   player: {fileID: 0}
 --- !u!195 &4209528518150973010
 NavMeshAgent:
@@ -226,7 +231,7 @@ MonoBehaviour:
   weaponHitRadius: 0.5
   weaponHitPoint: {fileID: 7392539495927314127}
   damage: 1
-  hitEffect: {fileID: 9092887691537981270, guid: cc16dc6d17d5732429bf30e6854e6227, type: 3}
+  hitEffect: {fileID: 6345683444464577328, guid: 6d98b9f5ad7da1a499c4950602d2d506, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -249,6 +254,7 @@ MonoBehaviour:
   enemyQuestName: EnemyBug
   qm: {fileID: 0}
   lootSpawnLocation: {fileID: 7392539496315472254}
+  enemyController: {fileID: 4209528518150973011}
   LootTable:
   - itemPrefab: {fileID: 164322763763490768, guid: 513a9670753c668428ae619a9b3d3ede, type: 3}
     dropChance: 80.6
@@ -294,6 +300,8 @@ MonoBehaviour:
   hit: {fileID: 0}
   realease: {fileID: 0}
   die: {fileID: 0}
+  step: {fileID: 0}
+  step2: {fileID: 0}
 --- !u!1 &7392539495927314126
 GameObject:
   m_ObjectHideFlags: 0

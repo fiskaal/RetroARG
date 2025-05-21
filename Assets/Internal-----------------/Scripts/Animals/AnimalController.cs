@@ -19,6 +19,7 @@ public class AnimalController : MonoBehaviour
 
     [Header("Components")]
     public NavMeshAgent agent;
+    public AudioSource chickenSound;
 
     [Header("AI States")]
     [SerializeField] private AnimalState currentState;
@@ -56,6 +57,7 @@ public class AnimalController : MonoBehaviour
                 {
                     waitCounter -= Time.deltaTime;
                     chickenAnim.Play("Chicken_idle");
+                    
                     //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                 }
                 else
@@ -65,8 +67,8 @@ public class AnimalController : MonoBehaviour
                     //enemyAnim.Play("Bear_Walk");
                     chickenAnim.CrossFadeInFixedTime("Chicken_walk", .2f);
                 }
-
                 
+
                 break;
 
             case AnimalState.Patrolling:
@@ -82,30 +84,14 @@ public class AnimalController : MonoBehaviour
                     currentState = AnimalState.Idle;
                     waitCounter = waitAtPoint;
                     chickenAnim.Play("Chicken_idle");
+                    chickenSound.Play();
                     //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                 }
-                //if (distanceToPlayer <= runAwayRange)
-                //{
-                //    currentState = AnimalState.Running;
-                //    //enemyAnim.Play("Bear_Walk");
-                //    chickenAnim.CrossFadeInFixedTime("Chicken_run", .2f);
-                //}
 
                 break;
 
             case AnimalState.Running:
-                //currentWaypoint++;
-                //if (currentWaypoint >= waypoints.childCount)
-                //{
-                //    currentWaypoint = 0;
-                //}
-
-                //if (distanceToPlayer > runAwayRange)
-                //{
-                //    currentState = AnimalState.Patrolling;
-                //    //enemyAnim.Play("Bear_Walk");
-                //    chickenAnim.CrossFadeInFixedTime("Chicken_run", .2f);
-                //}
+                
                 break;
 
 

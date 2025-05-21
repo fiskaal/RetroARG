@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     enum AIState
     {
-        Idle, Patrolling, Chasing, Attacking, Dead
+        Idle, Patrolling, Chasing, Attacking, Killed, Dead
     }
     [Header("Patrol")]
     [SerializeField] private Animator enemyAnim;
@@ -40,6 +41,9 @@ public class EnemyController : MonoBehaviour
     [Header("Dead")]
     public float dieTime = .5f;
     private float dieCounter;
+    [SerializeField] private GameObject ps;
+    [SerializeField] private Transform lootSpawnLocation;
+    public List<LootItem> LootTable = new List<LootItem>();
     [Header("Player")]
     [SerializeField] private GameObject player;
     private Vector3 lookTarget;
@@ -133,11 +137,13 @@ public class EnemyController : MonoBehaviour
                 }
 
                 break;
+
+           
             case AIState.Attacking:
                 //enemyAnim.CrossFadeInFixedTime("Bear_Strike1", .1f);
                 transform.LookAt(lookTarget);
                 //agent.SetDestination(player.transform.position, Vector3.zero);
-                
+
                 timeToAttck -= Time.deltaTime;
 
                 if (timeToAttck <= 0)
@@ -155,11 +161,17 @@ public class EnemyController : MonoBehaviour
                     //enemyAnim.Play("Bear_walk");
                 }
                 break;
-            case AIState.Dead:
+            case AIState.Killed:
+                //bugKill.Play();
                 enemyAnim.CrossFadeInFixedTime("Dead", .1f);
+
                 break;
 
-               
+            case AIState.Dead:
+                //enemyAnim.CrossFadeInFixedTime("Dead", .1f);
+                break;
+
+
         }
 
     }
@@ -169,17 +181,39 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(enemyAttack.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(enemyChase.position, chaseRange);
-        
-        
+
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            enemy.SetActive(false);
-            bugKill.Play();
-            //dieCounter = dieTime;
+            EnemyKill();
+        }
+    }
+
+    void InstantiateLoot(GameObject loot)
+    {
+        if (loot)
+        {
+            GameObject droppedLoot = Instantiate(loot, lootSpawnLocation.position, Quaternion.identity);
+        }
+    }
+
+    public void EnemyKill()
+    {
+        enemy.SetActive(false);
+        bugKill.Play();
+        //dieCounter = dieTime;
+        Instantiate(ps, transform.position, transform.rotation);
+        currentState = AIState.Killed;
+        foreach (LootItem lootItem in LootTable)
+        {
+            if (Random.Range(0f, 100f) <= lootItem.dropChance)
+            {
+                InstantiateLoot(lootItem.itemPrefab);
+            }
         }
     }
 }

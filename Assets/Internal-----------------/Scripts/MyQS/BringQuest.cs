@@ -54,6 +54,7 @@ public class BringQuest : MonoBehaviour
     [SerializeField] private GameObject actionButton;
     [SerializeField] private GameObject cancelButton;
     [SerializeField] private Transform player;
+    [SerializeField] PigController pc;
     // Start is called before the first frame update
     void Start()
     {
@@ -161,7 +162,7 @@ public class BringQuest : MonoBehaviour
         isCarryingObject = true;
         carrySlotFull = true;
         anim.SetBool("isCarrying", true);
-
+        pc.currentState = PigController.AIState.Carried;
         //Make weapon a child of the camera and move it to default position
         objectToBring.transform.SetParent(carryPos);
         objectToBring.transform.localPosition = Vector3.zero;
@@ -198,7 +199,7 @@ public class BringQuest : MonoBehaviour
         coll.isTrigger = false;
 
         //Gun carries momentum of player
-        rb.velocity = player.GetComponent<Rigidbody>().velocity;
+        //rb.velocity = player.GetComponent<Rigidbody>().velocity;
 
         //AddForce
         //rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);

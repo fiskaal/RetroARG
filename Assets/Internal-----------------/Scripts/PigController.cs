@@ -31,10 +31,10 @@ public class PigController : MonoBehaviour
     //[Header("Running")]
     //[SerializeField] private float runRange;
 
-    [Header("Escaping")]
-    [SerializeField] private float escapeRange = 3f;
-    [SerializeField] private float escapeTime = 2f;
-    private float timeToEscape;
+    //[Header("Escaping")]
+    //[SerializeField] private float escapeRange = 3f;
+    //[SerializeField] private float escapeTime = 2f;
+    //private float timeToEscape;
 
     [Header("Sus")]
     [SerializeField] public float susTime = 0f;
@@ -43,6 +43,9 @@ public class PigController : MonoBehaviour
     [Header("Caried")]
     public float dieTime = .5f;
     private float dieCounter;
+    [SerializeField] private bool isCarried;
+    [SerializeField] private float carryRange;
+    public bool canCarry;
     [Header("Player")]
     [SerializeField] private GameObject player;
     private Vector3 lookTarget;
@@ -51,7 +54,7 @@ public class PigController : MonoBehaviour
     {
         waitCounter = waitAtPoint;
         //timeSinceLastSawplayer = susTime;
-        timeToEscape = escapeTime;
+        //timeToEscape = escapeTime;
     }
 
     // Update is called once per frame
@@ -64,16 +67,28 @@ public class PigController : MonoBehaviour
         switch (currentState)
         {
             case AIState.Idle:
-
-                pigAnim.SetBool("isIdle", true);
-               
-
-                if (distanceToPlayer <= escapeRange)
+                if (waitCounter > 0)
+                {
+                    waitCounter -= Time.deltaTime;
+                    pigAnim.Play("Idle");
+                    //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
+                }
+                else
                 {
                     currentState = AIState.Walking;
                     agent.SetDestination(waypoints.GetChild(currentWaypoint).position);
+                    //enemyAnim.Play("Bear_Walk");
                     pigAnim.CrossFadeInFixedTime("Run", .2f);
                 }
+
+                //if (distanceToPlayer <= carryRange)
+                //{
+                //    canCarry = true;
+                //    if(canCarry && Input.GetButtonDown("Triangle"))
+                //    {
+                //        currentState = AIState.Carried;
+                //    }
+                //}
                 break;
 
             case AIState.Walking:
@@ -89,18 +104,25 @@ public class PigController : MonoBehaviour
                     currentState = AIState.Idle;
                     waitCounter = waitAtPoint;
                     pigAnim.Play("Idle");
-                    
+                    //enemyAnim.CrossFadeInFixedTime("Bear_Idle", .2f);
                 }
-                if (distanceToPlayer > escapeRange)
-                {
-                    currentState = AIState.Idle;
-                    
-                    pigAnim.CrossFadeInFixedTime("Run", .2f);
-                }
+                //if (distanceToPlayer <= carryRange)
+                //{
+                //    canCarry = true;
+                //    if (canCarry && Input.GetButtonDown("Triangle"))
+                //    {
+                //        isCarried = true;
+                //        currentState = AIState.Carried;
+                //    }
+                //}
                 break;
-            
+
             case AIState.Carried:
                 pigAnim.SetBool("isIdle", true);
+                //if (Input.GetButtonDown("Triangle"))
+                //{
+                //    isCarried = false;
+                //}
                 break;
 
 
@@ -110,10 +132,15 @@ public class PigController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(pigEscape.position, escapeRange);
+        Gizmos.DrawWireSphere(pigEscape.position, carryRange);
         //Gizmos.color = Color.yellow;
         //Gizmos.DrawWireSphere(enemyChase.position, chaseRange);
 
+
+    }
+
+    public void Carry()
+    {
 
     }
 }

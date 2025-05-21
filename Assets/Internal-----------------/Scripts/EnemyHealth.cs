@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public string enemyQuestName;
     [SerializeField] private QuestManager qm;
     public Transform lootSpawnLocation;
+    public EnemyController enemyController;
     [Header("Loot")]
     public List<LootItem> LootTable = new List<LootItem>();
     // Start is called before the first frame update
@@ -25,15 +26,16 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             enemy.gameObject.SetActive(false);
+            enemyController.EnemyKill();
             // spawn item
 
-            foreach (LootItem lootItem in LootTable)
-            {
-                if (Random.Range(0f, 100f) <= lootItem.dropChance)
-                {
-                    InstantiateLoot(lootItem.itemPrefab);
-                }
-            }
+            //foreach (LootItem lootItem in LootTable)
+            //{
+            //    if (Random.Range(0f, 100f) <= lootItem.dropChance)
+            //    {
+            //        InstantiateLoot(lootItem.itemPrefab);
+            //    }
+            //}
         }
     }
 

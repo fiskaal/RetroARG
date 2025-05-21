@@ -37,7 +37,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Stiffness: 0.296
+  m_Stiffness: 0.843
   m_StiffnessCurve:
     serializedVersion: 2
     m_Curve:
@@ -62,7 +62,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Resistance: 0.281
+  m_Resistance: 0.912
   m_ResistanceCurve:
     serializedVersion: 2
     m_Curve:
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Slackness: 0.305
+  m_Slackness: 0
   m_SlacknessCurve:
     serializedVersion: 2
     m_Curve:

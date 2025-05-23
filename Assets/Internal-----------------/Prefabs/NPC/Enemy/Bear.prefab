@@ -1022,7 +1022,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1193982107107282993
+--- !u!114 &1193982107107282984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1031,46 +1031,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3900799175607052917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab16d6e684b38b74288844e249ccae96, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e0dedd1df07c8948a9e6216d4d4a443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnim: {fileID: 7748883336365107893}
-  enemy: {fileID: 0}
-  waypoints: {fileID: 1193982108685049845}
-  waitAtPoint: 2
-  enemyChase: {fileID: 4425275376616452303}
-  enemyAttack: {fileID: 4425275376616452303}
-  agent: {fileID: 1193982107107282995}
-  bugKill: {fileID: 0}
-  currentState: 0
-  chaseRange: 5
-  attackRange: 1.5
-  attackTime: 2
-  susTime: 0
-  dieTime: 0.5
-  player: {fileID: 0}
---- !u!195 &1193982107107282995
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3900799175607052917}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1.5
-  m_Acceleration: 4
-  avoidancePriority: 50
-  m_AngularSpeed: 180
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 8
-  m_ObstacleAvoidanceType: 3
+  ea: {fileID: 1193982107107282990}
 --- !u!114 &1193982107107282990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,10 +1073,11 @@ MonoBehaviour:
   enemyQuestName: EnemyBear
   qm: {fileID: 0}
   lootSpawnLocation: {fileID: 1193982108247359230}
+  enemyController: {fileID: 0}
   LootTable:
   - itemPrefab: {fileID: 164322763763490768, guid: 513a9670753c668428ae619a9b3d3ede, type: 3}
     dropChance: 50
---- !u!114 &1193982107107282984
+--- !u!114 &1193982107107282993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1121,10 +1086,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 3900799175607052917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e0dedd1df07c8948a9e6216d4d4a443, type: 3}
+  m_Script: {fileID: 11500000, guid: ab16d6e684b38b74288844e249ccae96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ea: {fileID: 1193982107107282990}
+  enemyAnim: {fileID: 7748883336365107893}
+  enemy: {fileID: 0}
+  waypoints: {fileID: 1193982108685049845}
+  waitAtPoint: 2
+  enemyChase: {fileID: 4425275376616452303}
+  enemyAttack: {fileID: 4425275376616452303}
+  agent: {fileID: 1193982107107282995}
+  bugKill: {fileID: 0}
+  currentState: 0
+  chaseRange: 5
+  attackRange: 1.5
+  attackTime: 2
+  susTime: 0
+  dieTime: 0.5
+  ps: {fileID: 0}
+  lootSpawnLocation: {fileID: 0}
+  LootTable: []
+  player: {fileID: 0}
+--- !u!195 &1193982107107282995
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900799175607052917}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 1.5
+  m_Acceleration: 4
+  avoidancePriority: 50
+  m_AngularSpeed: 180
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 8
+  m_ObstacleAvoidanceType: 3
 --- !u!4 &4425275376616452303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3312499663655723257, guid: c13bc1d4eeb22ff428e44a1ab4e03056, type: 3}

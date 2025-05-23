@@ -249,7 +249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5461
+  m_VersionIndex: 5467
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2473
+  m_VersionIndex: 2494
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5479
+  m_VersionIndex: 5485
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1253,9 +1253,17 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1151006217996667873, guid: 13ef5661ce61b4240914bf0452c208f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3062384237348882700, guid: 13ef5661ce61b4240914bf0452c208f8, type: 3}
       propertyPath: m_Name
       value: SpikesStatic (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062384237348882700, guid: 13ef5661ce61b4240914bf0452c208f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3062384237348882701, guid: 13ef5661ce61b4240914bf0452c208f8, type: 3}
       propertyPath: m_RootOrder
@@ -1327,7 +1335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9218098678105622858, guid: 13ef5661ce61b4240914bf0452c208f8, type: 3}
       propertyPath: m_VersionIndex
-      value: 1804
+      value: 1825
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ef5661ce61b4240914bf0452c208f8, type: 3}

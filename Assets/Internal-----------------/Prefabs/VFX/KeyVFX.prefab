@@ -1052,13 +1052,22 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0.051952623
         - serializedVersion: 3
-          time: 0.499956
+          time: 0.3921374
           value: 1
           inSlope: 0.020560432
           outSlope: 0.020560432
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.27637416
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.79977393
+          value: 1
+          inSlope: -0.049115717
+          outSlope: -0.049115717
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.31897187
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
@@ -1374,7 +1383,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 0, a: 1}
+        key0: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}

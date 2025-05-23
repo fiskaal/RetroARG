@@ -33,6 +33,7 @@ public class BringQuest : MonoBehaviour
     public int currentIndex;
     public bool isCollectTrigger = false;
     public GameObject collectQuestInfo;
+    public AudioSource pickUpPig;
     [Header("Player attack script")]
     public PlayerAttack pa;
 
@@ -54,8 +55,8 @@ public class BringQuest : MonoBehaviour
     [SerializeField] private GameObject actionButton;
     [SerializeField] private GameObject cancelButton;
     [SerializeField] private Transform player;
-    [SerializeField] PigController pc;
-    [SerializeField] EnemyMovement em;
+    //[SerializeField] PigController pc;
+    //[SerializeField] EnemyMovement em;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +65,7 @@ public class BringQuest : MonoBehaviour
         isCollectTrigger = false;
         collectQuestInfo.SetActive(false);
         questIcon.SetActive(false);
-        objectToBring.SetActive(true);
+        objectToBring.SetActive(false);
 
         //Setup
         if (!isCarryingObject)
@@ -163,8 +164,9 @@ public class BringQuest : MonoBehaviour
         isCarryingObject = true;
         carrySlotFull = true;
         anim.SetBool("isCarrying", true);
+        pickUpPig.Play();
         //pc.currentState = PigController.AIState.Carried;
-        em.currentState = EnemyMovement.EnemyState.carried;
+        //em.currentState = EnemyMovement.EnemyState.carried;
         //Make weapon a child of the camera and move it to default position
         objectToBring.transform.SetParent(carryPos);
         objectToBring.transform.localPosition = Vector3.zero;

@@ -159,8 +159,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: NPCIdle.001 (1)
-      takeName: NPCIdle.001
+      name: NPCTalk
+      takeName: NPCTalk
       internalID: 0
       firstFrame: 0
       lastFrame: 99

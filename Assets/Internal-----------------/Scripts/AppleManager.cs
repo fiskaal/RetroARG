@@ -17,7 +17,7 @@ public class AppleManager : MonoBehaviour
     private void Awake()
     {
         //portal.gameObject.SetActive(false);
-        appleCount = PlayerPrefs.GetInt("Apples");
+        //appleCount = PlayerPrefs.GetInt("Apples");
 
     }
 

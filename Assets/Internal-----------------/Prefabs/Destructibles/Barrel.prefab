@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6817137496199142900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 2, y: 2.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126,7 +126,7 @@ GameObject:
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -244,12 +244,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  barrel: {fileID: 0}
-  lootSpawnLocation: {fileID: 0}
+  barrel: {fileID: 6817137496218214346}
+  lootSpawnLocation: {fileID: 6817137496199142899}
   LootTable:
   - itemPrefab: {fileID: 164322763763490768, guid: 513a9670753c668428ae619a9b3d3ede, type: 3}
     dropChance: 75
-  - itemPrefab: {fileID: 4260400294410555324, guid: bd0a57bcf236ec845b2d0c6e76fc7253, type: 3}
+  - itemPrefab: {fileID: 1621465336144451624, guid: 03b82a149370af74985937900c250351, type: 3}
     dropChance: 25
 --- !u!4 &8010901417006720413 stripped
 Transform:
@@ -372,8 +372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  barrel: {fileID: 0}
-  lootSpawnLocation: {fileID: 0}
+  barrel: {fileID: 6817137496218214346}
+  lootSpawnLocation: {fileID: 6817137496199142899}
   LootTable:
   - itemPrefab: {fileID: 164322763763490768, guid: 513a9670753c668428ae619a9b3d3ede, type: 3}
     dropChance: 80

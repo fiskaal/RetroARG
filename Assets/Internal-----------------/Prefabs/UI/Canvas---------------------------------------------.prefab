@@ -7956,7 +7956,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'quest#3
+  m_text: 'Find a key
 
 '
   m_isRightToLeft: 0

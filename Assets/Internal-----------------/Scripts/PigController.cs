@@ -17,7 +17,7 @@ public class PigController : MonoBehaviour
     [SerializeField] private Transform pigChase;
     [SerializeField] private Transform pigEscape;
 
-    private int currentWaypoint;
+    public int currentWaypoint;
     private float waitCounter;
 
     [Header("Components")]
@@ -119,6 +119,9 @@ public class PigController : MonoBehaviour
 
             case AIState.Carried:
                 pigAnim.SetBool("isIdle", true);
+                //waypoints = null;
+                agent.SetDestination(bq.carryPos.position);
+                waypoints = bq.carryPos;
                 //if (Input.GetButtonDown("Triangle"))
                 //{
                 //    isCarried = false;
@@ -139,8 +142,5 @@ public class PigController : MonoBehaviour
 
     }
 
-    public void Carry()
-    {
-
-    }
+   
 }

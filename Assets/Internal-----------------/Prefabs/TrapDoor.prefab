@@ -249,7 +249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2917
+  m_VersionIndex: 2932
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2914
+  m_VersionIndex: 2926
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 4722489276468805200}
   m_Layer: 6
   m_Name: TrapDoor
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -714,7 +714,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4722489276468805202}
-  m_LocalRotation: {x: -0, y: -0, z: 0.00000004470348, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15, y: 6, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -815,6 +815,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FactoryPlat2
       objectReference: {fileID: 0}
+    - target: {fileID: 6385111142316183007, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385111142316183007, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
 --- !u!4 &1323511369483177026 stripped
@@ -835,7 +843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041482613587531621, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
       propertyPath: m_LocalScale.x
-      value: -95
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 6041482613587531621, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
       propertyPath: m_LocalScale.y
@@ -892,6 +900,14 @@ PrefabInstance:
     - target: {fileID: 6385111142316183007, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
       propertyPath: m_Name
       value: FactoryPlat2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385111142316183007, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385111142316183007, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ae87e56990207841a6028ac5786cde8, type: 3}

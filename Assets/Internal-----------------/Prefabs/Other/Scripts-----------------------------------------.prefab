@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  hoverSound: {fileID: 8300000, guid: 319ef415f64efd0459b726ab3b62a884, type: 3}
-  clickSound: {fileID: 8300000, guid: 7c00ec86bdf2f0f4c93b2481b51982ae, type: 3}
+  hoverSound: {fileID: 8300000, guid: 0ecb17bf437725b419fa6357b273eaed, type: 3}
+  clickSound: {fileID: 8300000, guid: 7bd87d9f85602314da932894ad96bf33, type: 3}
 --- !u!1 &3371285548825614205
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,4 +608,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a288b8d66c683e409afa0c542c2cf04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: 24
+  target: 20

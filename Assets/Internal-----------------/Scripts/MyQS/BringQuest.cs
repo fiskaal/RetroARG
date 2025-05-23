@@ -50,11 +50,12 @@ public class BringQuest : MonoBehaviour
     public bool carrySlotFull;
     [SerializeField]  private bool inTrigger;
     [SerializeField] private Animator anim;
-    [SerializeField] private Transform carryPos;
+    [SerializeField] public Transform carryPos;
     [SerializeField] private GameObject actionButton;
     [SerializeField] private GameObject cancelButton;
     [SerializeField] private Transform player;
     [SerializeField] PigController pc;
+    [SerializeField] EnemyMovement em;
     // Start is called before the first frame update
     void Start()
     {
@@ -162,7 +163,8 @@ public class BringQuest : MonoBehaviour
         isCarryingObject = true;
         carrySlotFull = true;
         anim.SetBool("isCarrying", true);
-        pc.currentState = PigController.AIState.Carried;
+        //pc.currentState = PigController.AIState.Carried;
+        em.currentState = EnemyMovement.EnemyState.carried;
         //Make weapon a child of the camera and move it to default position
         objectToBring.transform.SetParent(carryPos);
         objectToBring.transform.localPosition = Vector3.zero;

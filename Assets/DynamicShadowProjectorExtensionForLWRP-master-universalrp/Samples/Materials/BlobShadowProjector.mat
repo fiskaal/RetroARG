@@ -40,8 +40,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.75
-    - _Ambient: 0.1
+    - _Alpha: 1
+    - _Ambient: 0.01
     - _ClipScale: 100
     - _DSPCull: 2
     - _Offset: 0

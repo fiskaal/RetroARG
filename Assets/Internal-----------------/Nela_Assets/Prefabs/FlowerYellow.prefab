@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 6606567418573822910}
   - component: {fileID: 6606567418573822897}
   - component: {fileID: 6606567418573822896}
-  - component: {fileID: 6606567418573822899}
   - component: {fileID: 6606567418573822898}
   m_Layer: 0
   m_Name: Quad (5)
@@ -118,20 +117,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6606567418573822899
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6606567418573822901}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &6606567418573822898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e2d9b883639ab48b8d720e4eebcc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameras: {fileID: 0}
   target: {fileID: 0}
 --- !u!1 &6606567418936710683
 GameObject:
@@ -156,7 +142,6 @@ GameObject:
   - component: {fileID: 6606567418936710660}
   - component: {fileID: 6606567418936710663}
   - component: {fileID: 6606567418936710662}
-  - component: {fileID: 6606567418936710681}
   - component: {fileID: 6606567418936710680}
   m_Layer: 0
   m_Name: Quad (4)
@@ -230,20 +215,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6606567418936710681
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6606567418936710683}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &6606567418936710680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,4 +227,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e2d9b883639ab48b8d720e4eebcc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameras: {fileID: 0}
   target: {fileID: 0}

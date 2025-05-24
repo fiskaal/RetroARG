@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1943795360}
-  m_IndirectSpecularColor: {r: 0.08268494, g: 0.12303463, b: 0.28060457, a: 1}
+  m_IndirectSpecularColor: {r: 0.45985794, g: 0.53971684, b: 0.5001882, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3443,11 +3443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120662226328, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00097400084
+      value: 0.0009739839
       objectReference: {fileID: 0}
     - target: {fileID: 5659690120662226328, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0001580583
+      value: -0.00015805555
       objectReference: {fileID: 0}
     - target: {fileID: 5659690121224150334, guid: 7ac464a624537994c96247a91d08869e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4496,7 +4496,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 256
-    _typelessdata: 803998bf00000036b03303420000803f000000000000000000000000000000000000803f000080bf0000803f5c8f823e8716593e0000803fb033034000000034803998bf00000036a0965dc20000803f000000000000000000000000000000000000803f000080bf0000803f0000803f0000803f0000803fa0965dc000000034803998bf3f77f341b03303420000803f000000000000000000000000000000000000803f000080bf0000803f0000803f0000803f0000803fb03303403f77f33f803998bf3f77f341a0965dc20000803f000000000000000000000000000000000000803f000080bf00000000c3f5e83e23db593f0000803fa0965dc03f77f33f
+    _typelessdata: 803998bf00000036b03303420000803f000000000000000000000000000000000000803f000080bf0000803f5c8f823e8716593e0000803f9d03634100008034803998bf00000036a0965dc20000803f000000000000000000000000000000000000803f000080bf0000803f0000803f0000803f0000803f668dfbc000008034803998bf3f77f341b03303420000803f000000000000000000000000000000000000803f000080bf0000803f0000803f0000803f0000803f9d0363413e77f340803998bf3f77f341a0965dc20000803f000000000000000000000000000000000000803f000080bf00000000c3f5e83e23db593f0000803f668dfbc03e77f340
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -4555,7 +4555,7 @@ Mesh:
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 256
+  m_MeshMetrics[0]: 64
   m_MeshMetrics[1]: 1
   m_MeshOptimizationFlags: 1
   m_StreamData:
@@ -6428,8 +6428,8 @@ MonoBehaviour:
       m_FlipV: 0
       m_SwapUV: 0
       m_Fill: 1
-      m_Scale: {x: 0.0625, y: 0.0625}
-      m_Offset: {x: 0, y: 0}
+      m_Scale: {x: 0.25, y: 0.25}
+      m_Offset: {x: -5.988263, y: 0.00000023841858}
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 0}
@@ -6449,10 +6449,10 @@ MonoBehaviour:
   - {x: -1.1892548, y: 30.433226, z: 32.800476}
   - {x: -1.1892548, y: 30.433226, z: -55.397095}
   m_Textures0:
-  - {x: 2.0500298, y: 0.00000011920929}
-  - {x: -3.4623184, y: 0.00000011920929}
-  - {x: 2.0500298, y: 1.9020766}
-  - {x: -3.4623184, y: 1.9020766}
+  - {x: 14.188382, y: 0.00000023841858}
+  - {x: -7.8610106, y: 0.00000023841858}
+  - {x: 14.188382, y: 7.608306}
+  - {x: -7.8610106, y: 7.608306}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -6473,7 +6473,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 377444441}
-  m_VersionIndex: 2585
+  m_VersionIndex: 2603
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16900,15 +16900,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4700508495310620256, guid: a1babb02e307adb468cb2d516f00a194, type: 3}
       propertyPath: m_SelectedEdges.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4700508495310620256, guid: a1babb02e307adb468cb2d516f00a194, type: 3}
       propertyPath: m_SelectedFaces.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4700508495310620256, guid: a1babb02e307adb468cb2d516f00a194, type: 3}
       propertyPath: m_SelectedVertices.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4714706831978738303, guid: a1babb02e307adb468cb2d516f00a194, type: 3}
       propertyPath: m_Mesh
@@ -35241,6 +35241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 433173423347533492, guid: 9ef8570726eeb3c4487bdc140710c0a7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1622b7fb0528c404bb6498056c1bb459, type: 2}
     - target: {fileID: 4909089092268865415, guid: 9ef8570726eeb3c4487bdc140710c0a7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -35309,6 +35313,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2acbaef3676bef642b0637a7ac57d55c, type: 2}
+    - target: {fileID: 7896478446320997791, guid: 9ef8570726eeb3c4487bdc140710c0a7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1622b7fb0528c404bb6498056c1bb459, type: 2}
+    - target: {fileID: 8877381401149686113, guid: 9ef8570726eeb3c4487bdc140710c0a7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7230509c9b1b6da47a17cfb12d09166b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef8570726eeb3c4487bdc140710c0a7, type: 3}
 --- !u!43 &1937073490

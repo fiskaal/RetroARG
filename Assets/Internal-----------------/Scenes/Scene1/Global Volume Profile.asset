@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a1bd58dd7548198609eabd8ae2bb7d, type: 3}
   m_Name: Pixelation
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   widthPixelation:
     m_OverrideState: 1
     m_Value: 320
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_Value: -8
   saturation:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 25
 --- !u!114 &7555869423454240324
 MonoBehaviour:
   m_ObjectHideFlags: 3

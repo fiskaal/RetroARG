@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
 
     public string[] dialogueLines;
     public int currentLine;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,7 @@ public class DialogueManager : MonoBehaviour
     public void ShowWindow(string dialogue)
     {
         dialogueActive=true;
+        
         dialogueWindow.SetActive(true);
         dialogueIcon.SetActive(true);
         dialogueText.text = dialogue;
@@ -57,6 +59,7 @@ public class DialogueManager : MonoBehaviour
     public void HideWindow(string dialogue)
     {
         dialogueActive = false;
+        
         dialogueWindow.SetActive(false);
         dialogueIcon.SetActive(false);
         dialogueText.text = dialogue;

@@ -1550,6 +1550,7 @@ MonoBehaviour:
   currentIndex: 0
   isCollectTrigger: 0
   collectQuestInfo: {fileID: 0}
+  pickUpPig: {fileID: 0}
   pa: {fileID: 8975902021114453171}
   objectsToBring: 1
   objectsBrought: 0
@@ -1565,8 +1566,6 @@ MonoBehaviour:
   actionButton: {fileID: 0}
   cancelButton: {fileID: 0}
   player: {fileID: 8975902021114453176}
-  pc: {fileID: 0}
-  em: {fileID: 0}
 --- !u!1 &8975902021120960976
 GameObject:
   m_ObjectHideFlags: 0

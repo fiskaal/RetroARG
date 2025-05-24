@@ -93,7 +93,7 @@ Material:
     - Boolean_7165A49C: 1
     - Boolean_85059BBE: 1
     - Boolean_8BBF99CD: 0
-    - Boolean_D258FF8E: 1
+    - Boolean_D258FF8E: 0
     - Vector1_21C41D02: 256
     - Vector1_6F288C5B: 0
     - Vector1_B2CC132F: 32
@@ -127,7 +127,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
-    - _VertexColorOpacity: 1
+    - _VertexColorOpacity: 0
     - _WorkflowMode: 1
     - _ZTest: 4
     - _ZWrite: 1

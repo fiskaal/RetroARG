@@ -37,6 +37,14 @@ Material:
         m_Texture: {fileID: 8900000, guid: 8bb89d0ec016cd94a8894242362bd8e8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Day:
+        m_Texture: {fileID: 8900000, guid: 1b942d17cb2b2e440abc5930581e8788, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Night:
+        m_Texture: {fileID: 8900000, guid: d9d7c32830dfc544ea592ab36570c9a9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleCubemap_cfe05ca8968d4ad28d71616c4fd4cf60_Cube_1:
         m_Texture: {fileID: 8900000, guid: 8bb89d0ec016cd94a8894242362bd8e8, type: 3}
         m_Scale: {x: 1, y: 1}

@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6255557618876863428
 Transform:
@@ -52425,7 +52425,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 264
+  m_VersionIndex: 267
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -52448,7 +52448,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2389302736624588066
 Transform:
@@ -52972,7 +52972,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 46
+  m_VersionIndex: 49
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -52995,7 +52995,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1350798591786450650
 Transform:
@@ -56960,7 +56960,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 447
+  m_VersionIndex: 450
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -56997,7 +56997,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1350798592436401940
 Transform:
@@ -60794,7 +60794,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 284
+  m_VersionIndex: 287
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -60830,7 +60830,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6645531366986393996
 Transform:
@@ -61701,7 +61701,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 22
+  m_VersionIndex: 25
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -61729,7 +61729,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2197310183016041121}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.000013239682}
+  m_LocalRotation: {x: -0, y: -1, z: 0, w: -0.000017414575}
   m_LocalPosition: {x: 700.3, y: -55, z: 618.18384}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -61813,7 +61813,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4742236001872539126
 Transform:
@@ -62649,7 +62649,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 125
+  m_VersionIndex: 128
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -62672,7 +62672,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7990801187467430026
 Transform:
@@ -63231,7 +63231,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 37
+  m_VersionIndex: 40
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -63246,6 +63246,10 @@ PrefabInstance:
     - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_Name
       value: Box (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5682378469987711596, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_RootOrder
@@ -63317,9 +63321,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528331421720334363}
     m_Modifications:
+    - target: {fileID: 1410250654282749109, guid: c9fc102d340b7b04ebefe79d68b84800, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465091699401253318, guid: c9fc102d340b7b04ebefe79d68b84800, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2569821256835432932, guid: c9fc102d340b7b04ebefe79d68b84800, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5130348201342904286, guid: c9fc102d340b7b04ebefe79d68b84800, type: 3}
       propertyPath: m_Name
       value: Tree2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130348201342904286, guid: c9fc102d340b7b04ebefe79d68b84800, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578098223891091903, guid: c9fc102d340b7b04ebefe79d68b84800, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7508772857515677268, guid: c9fc102d340b7b04ebefe79d68b84800, type: 3}
       propertyPath: m_RootOrder
@@ -63450,6 +63474,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -63938,7 +63966,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 49
+  m_VersionIndex: 52
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -64013,6 +64041,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -64501,7 +64533,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 162
+  m_VersionIndex: 165
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -64513,6 +64545,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528331421720334363}
     m_Modifications:
+    - target: {fileID: 1832981871408844535, guid: ad3c20c44ac17fa43886de35ce3c0a13, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6247630985966029876, guid: ad3c20c44ac17fa43886de35ce3c0a13, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -64576,6 +64612,10 @@ PrefabInstance:
     - target: {fileID: 6534387647202138449, guid: ad3c20c44ac17fa43886de35ce3c0a13, type: 3}
       propertyPath: m_Name
       value: Rock2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534387647202138449, guid: ad3c20c44ac17fa43886de35ce3c0a13, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad3c20c44ac17fa43886de35ce3c0a13, type: 3}
@@ -64646,6 +64686,10 @@ PrefabInstance:
     - target: {fileID: 7893743512025493495, guid: fd5c6d0749960c341aa0935d1cd7a36c, type: 3}
       propertyPath: m_Name
       value: HouseDoor2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893743512025493495, guid: fd5c6d0749960c341aa0935d1cd7a36c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8542424241595567650, guid: fd5c6d0749960c341aa0935d1cd7a36c, type: 3}
       propertyPath: m_SelectedEditorRenderState
@@ -65138,7 +65182,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 21
+  m_VersionIndex: 24
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -65165,6 +65209,10 @@ PrefabInstance:
     - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_Name
       value: HouseLongRoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9029685288037899619, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_RootOrder
@@ -66040,7 +66088,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 22
+  m_VersionIndex: 25
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -66060,6 +66108,10 @@ PrefabInstance:
     - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_Name
       value: Box (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5682378469987711596, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_RootOrder
@@ -66198,6 +66250,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -66686,7 +66742,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 28
+  m_VersionIndex: 31
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -66753,6 +66809,10 @@ PrefabInstance:
     - target: {fileID: 3214303386665493676, guid: 4cb4a0810f2986e45a8d2756d9e2cf75, type: 3}
       propertyPath: m_Name
       value: Chimney (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214303386665493676, guid: 4cb4a0810f2986e45a8d2756d9e2cf75, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4006940975290615161, guid: 4cb4a0810f2986e45a8d2756d9e2cf75, type: 3}
       propertyPath: m_SelectedEditorRenderState
@@ -68301,7 +68361,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10
+  m_VersionIndex: 13
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -68324,6 +68384,10 @@ PrefabInstance:
     - target: {fileID: 8617654214239497624, guid: c6dabf040ef85fe48beb74ff66a97118, type: 3}
       propertyPath: m_Name
       value: HouseDoor3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617654214239497624, guid: c6dabf040ef85fe48beb74ff66a97118, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8994777478745880354, guid: c6dabf040ef85fe48beb74ff66a97118, type: 3}
       propertyPath: m_RootOrder
@@ -69251,7 +69315,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 7
+  m_VersionIndex: 10
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -69324,6 +69388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseWindow1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 602526895041699192, guid: d64e2b630f379f24d9373b31e7703821, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d64e2b630f379f24d9373b31e7703821, type: 3}
 --- !u!4 &1272349915598822434 stripped
@@ -69345,6 +69413,10 @@ PrefabInstance:
     - target: {fileID: 2317556666791265911, guid: 767d4da5c77dab244addf59e97694e59, type: 3}
       propertyPath: m_Name
       value: HouseDoor1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317556666791265911, guid: 767d4da5c77dab244addf59e97694e59, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3126145955412237517, guid: 767d4da5c77dab244addf59e97694e59, type: 3}
       propertyPath: m_RootOrder
@@ -69876,7 +69948,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 22
+  m_VersionIndex: 25
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -69960,6 +70032,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -70448,7 +70524,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 28
+  m_VersionIndex: 31
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -70467,6 +70543,10 @@ PrefabInstance:
     - target: {fileID: 1364767683714882588, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
       propertyPath: m_Name
       value: HouseRoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364767683714882588, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1854199189055096486, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
       propertyPath: m_RootOrder
@@ -71354,7 +71434,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 19
+  m_VersionIndex: 22
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -71435,6 +71515,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7695052345132760098, guid: 614afd26fff48d94588e43e8493707e8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022088601431412033, guid: 614afd26fff48d94588e43e8493707e8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 614afd26fff48d94588e43e8493707e8, type: 3}
 --- !u!4 &3204732613246672147 stripped
@@ -71468,6 +71556,10 @@ PrefabInstance:
     - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_Name
       value: HouseLongRoof (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9029685288037899619, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_RootOrder
@@ -72347,7 +72439,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 365
+  m_VersionIndex: 368
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -72412,6 +72504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseDoor2
       objectReference: {fileID: 0}
+    - target: {fileID: 7893743512025493495, guid: fd5c6d0749960c341aa0935d1cd7a36c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5c6d0749960c341aa0935d1cd7a36c, type: 3}
 --- !u!4 &8392710121217419956 stripped
@@ -72441,6 +72537,10 @@ PrefabInstance:
     - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_Name
       value: HouseLongRoof (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9029685288037899619, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_RootOrder
@@ -73320,7 +73420,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 31
+  m_VersionIndex: 34
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -73393,9 +73493,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2258595697040932143, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4258805264070240119, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
       propertyPath: m_Name
       value: Rock3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258805264070240119, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
@@ -73430,6 +73538,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528331421720334363}
     m_Modifications:
+    - target: {fileID: 1639220544755141628, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796744871873677490, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5002449589797312700, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -73478,6 +73594,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5002449589797312707, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081502244091925491, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308948687817452149, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
 --- !u!4 &6328478096122282575 stripped
@@ -73495,6 +73623,10 @@ PrefabInstance:
     - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_Name
       value: HouseWindow3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4184135125619993474, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_RootOrder
@@ -73561,6 +73693,10 @@ PrefabInstance:
     - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_Name
       value: HouseWindow3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4184135125619993474, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_RootOrder
@@ -73683,6 +73819,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -74171,7 +74311,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 68
+  m_VersionIndex: 71
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -74194,6 +74334,10 @@ PrefabInstance:
     - target: {fileID: 1364767683714882588, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
       propertyPath: m_Name
       value: HouseRoof (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364767683714882588, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1854199189055096486, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
       propertyPath: m_RootOrder
@@ -75081,7 +75225,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 13
+  m_VersionIndex: 16
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -75109,6 +75253,10 @@ PrefabInstance:
     - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_Name
       value: HouseWindow3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4184135125619993474, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_RootOrder
@@ -75636,7 +75784,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10
+  m_VersionIndex: 13
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -75697,9 +75845,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5551756371102068255, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7358459160270937617, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
       propertyPath: m_Name
       value: Fern (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358459160270937617, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
@@ -75781,6 +75937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseBalcony
       objectReference: {fileID: 0}
+    - target: {fileID: 8510386449366782011, guid: 470c8e0d684d30a4f88315dec3a1967b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9030042494200334977, guid: 470c8e0d684d30a4f88315dec3a1967b, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -75850,6 +76010,10 @@ PrefabInstance:
     - target: {fileID: 1364767683714882588, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
       propertyPath: m_Name
       value: HouseRoof (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364767683714882588, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1854199189055096486, guid: aa8a34b94f11eb7429e156ca7e446310, type: 3}
       propertyPath: m_RootOrder
@@ -76737,7 +76901,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 19
+  m_VersionIndex: 22
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -76757,6 +76921,10 @@ PrefabInstance:
     - target: {fileID: 6009854443078312324, guid: adf4637e417e30145b6d7c4cce70099a, type: 3}
       propertyPath: m_Name
       value: HouseWindow2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009854443078312324, guid: adf4637e417e30145b6d7c4cce70099a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6353622957151763262, guid: adf4637e417e30145b6d7c4cce70099a, type: 3}
       propertyPath: m_RootOrder
@@ -76926,9 +77094,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5551756371102068255, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7358459160270937617, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
       propertyPath: m_Name
       value: Fern
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358459160270937617, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
@@ -76947,6 +77123,10 @@ PrefabInstance:
     - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_Name
       value: HouseWindow3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3556392448863252792, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4184135125619993474, guid: a82dd8923163ba84692cdf6106229db0, type: 3}
       propertyPath: m_RootOrder
@@ -77065,6 +77245,10 @@ PrefabInstance:
     - target: {fileID: 3214303386665493676, guid: 4cb4a0810f2986e45a8d2756d9e2cf75, type: 3}
       propertyPath: m_Name
       value: Chimney
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214303386665493676, guid: 4cb4a0810f2986e45a8d2756d9e2cf75, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4006940975290615161, guid: 4cb4a0810f2986e45a8d2756d9e2cf75, type: 3}
       propertyPath: m_SelectedEditorRenderState
@@ -78613,7 +78797,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 581
+  m_VersionIndex: 584
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -78644,6 +78828,10 @@ PrefabInstance:
     - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_Name
       value: HouseLongRoof (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503977251163965401, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9029685288037899619, guid: a8e68397cbab98f49bcb9edfb39e209a, type: 3}
       propertyPath: m_RootOrder
@@ -79523,7 +79711,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 7
+  m_VersionIndex: 10
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -79543,6 +79731,10 @@ PrefabInstance:
     - target: {fileID: 6009854443078312324, guid: adf4637e417e30145b6d7c4cce70099a, type: 3}
       propertyPath: m_Name
       value: HouseWindow2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009854443078312324, guid: adf4637e417e30145b6d7c4cce70099a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6353622957151763262, guid: adf4637e417e30145b6d7c4cce70099a, type: 3}
       propertyPath: m_RootOrder
@@ -79613,6 +79805,10 @@ PrefabInstance:
     - target: {fileID: 1467318142291506029, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
       propertyPath: m_Name
       value: HouseCube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467318142291506029, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2240301941847828951, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
       propertyPath: m_RootOrder
@@ -79747,6 +79943,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -80235,7 +80435,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 190
+  m_VersionIndex: 193
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -80247,6 +80447,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528331421720334363}
     m_Modifications:
+    - target: {fileID: 1639220544755141628, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796744871873677490, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5002449589797312700, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
       propertyPath: m_RootOrder
       value: 49
@@ -80302,6 +80510,18 @@ PrefabInstance:
     - target: {fileID: 5002449589797312707, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
       propertyPath: m_Name
       value: Tree1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002449589797312707, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081502244091925491, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308948687817452149, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f3f6fd47adc444409fe657922931f04, type: 3}
@@ -80373,9 +80593,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2258595697040932143, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4258805264070240119, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
       propertyPath: m_Name
       value: Rock3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258805264070240119, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38f3fb9f797e5f84fab776155a30316f, type: 3}
@@ -80458,6 +80686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseWindow1
       objectReference: {fileID: 0}
+    - target: {fileID: 602526895041699192, guid: d64e2b630f379f24d9373b31e7703821, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d64e2b630f379f24d9373b31e7703821, type: 3}
 --- !u!4 &1272349915123746872 stripped
@@ -80531,6 +80763,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -81019,7 +81255,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 10
+  m_VersionIndex: 13
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -81034,6 +81270,10 @@ PrefabInstance:
     - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_Name
       value: Box (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5682378469987711596, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_RootOrder
@@ -81108,6 +81348,10 @@ PrefabInstance:
     - target: {fileID: 2317556666791265911, guid: 767d4da5c77dab244addf59e97694e59, type: 3}
       propertyPath: m_Name
       value: HouseDoor1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317556666791265911, guid: 767d4da5c77dab244addf59e97694e59, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3126145955412237517, guid: 767d4da5c77dab244addf59e97694e59, type: 3}
       propertyPath: m_RootOrder
@@ -81288,6 +81532,10 @@ PrefabInstance:
     - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
       propertyPath: m_Name
       value: HouseLong (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650221652343105163, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1488fcf7f69e5c9458f5068cf784ec08, type: 3}
@@ -81776,7 +82024,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 13
+  m_VersionIndex: 16
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -81832,9 +82080,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5551756371102068255, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7358459160270937617, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
       propertyPath: m_Name
       value: Fern (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358459160270937617, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa62b796d8dac2d428dd8452ed87dc99, type: 3}
@@ -81861,6 +82117,10 @@ PrefabInstance:
     - target: {fileID: 1467318142291506029, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
       propertyPath: m_Name
       value: HouseCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467318142291506029, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2240301941847828951, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
       propertyPath: m_RootOrder
@@ -82392,7 +82652,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 16
+  m_VersionIndex: 19
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -82412,6 +82672,10 @@ PrefabInstance:
     - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_Name
       value: Box (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012521435839701206, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5682378469987711596, guid: 9ce4f4c5f29184043bd6f7a26a12823b, type: 3}
       propertyPath: m_RootOrder
@@ -82571,6 +82835,10 @@ PrefabInstance:
     - target: {fileID: 1467318142291506029, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
       propertyPath: m_Name
       value: HouseCube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467318142291506029, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2240301941847828951, guid: 1a4348f3a2b219a45b75ba2e0514bc77, type: 3}
       propertyPath: m_RootOrder
@@ -83114,7 +83382,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 19
+  m_VersionIndex: 22
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

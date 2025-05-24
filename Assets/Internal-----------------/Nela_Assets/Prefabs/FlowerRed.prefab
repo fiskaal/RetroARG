@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 286540219883324843}
   - component: {fileID: 286540219883324842}
   - component: {fileID: 286540219883324841}
-  - component: {fileID: 286540219883324840}
   - component: {fileID: 286540219883324839}
   m_Layer: 0
   m_Name: Quad (2)
@@ -85,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &286540219883324840
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286540219883324838}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &286540219883324839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e2d9b883639ab48b8d720e4eebcc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameras: {fileID: 0}
   target: {fileID: 0}
 --- !u!1 &286540220493091613
 GameObject:
@@ -123,7 +109,6 @@ GameObject:
   - component: {fileID: 286540220493091586}
   - component: {fileID: 286540220493091585}
   - component: {fileID: 286540220493091584}
-  - component: {fileID: 286540220493091615}
   - component: {fileID: 286540220493091614}
   m_Layer: 0
   m_Name: Quad (3)
@@ -197,20 +182,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &286540220493091615
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286540220493091613}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &286540220493091614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e2d9b883639ab48b8d720e4eebcc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameras: {fileID: 0}
   target: {fileID: 0}
 --- !u!1 &3844725720334362768
 GameObject:

@@ -94,7 +94,7 @@ public class BringQuest : MonoBehaviour
                 case QuestState.NotTaken:
                     dm.dialogueLines = dialogueLinesStart;
                     notifText.text = notifStartedText;
-                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Triangle"))
+                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Square"))
                     {
                         Debug.Log("Collect quest started");
 
@@ -120,7 +120,7 @@ public class BringQuest : MonoBehaviour
                 case QuestState.Completed:
                     dm.dialogueLines = dialogueLinesCompleted;
                     notifText.text = notifStartedText;
-                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Triangle"))
+                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Square"))
                     {
                         Debug.Log("Collect quest complete");
                         objectToBring.SetActive(false);
@@ -145,14 +145,14 @@ public class BringQuest : MonoBehaviour
             
         }
 
-        if (inTrigger && Input.GetButtonDown("Triangle"))
+        if (inTrigger && Input.GetButtonDown("Square"))
         {
             Carry();
 
         }
 
         //Drop if isCarrying and "Circle" is pressed
-        if (isCarryingObject && Input.GetButtonDown("Circle"))
+        if (isCarryingObject && Input.GetButtonDown("Triangle"))
         {
             Drop();
 

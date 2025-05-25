@@ -11,10 +11,10 @@ public class PickUpController : MonoBehaviour
     public GameObject carryObject;
     public Animator anim;
     public GameObject actionButton;
-    public TMP_Text actionTMP;
+    //public TMP_Text actionTMP;
     public GameObject cancelButton;
-    public TMP_Text cancelTMP;
-    public string actionText, cancelText;
+    //public TMP_Text cancelTMP;
+    //public string actionText, cancelText;
 
 
     public float dropForwardForce, dropUpwardForce;
@@ -22,6 +22,7 @@ public class PickUpController : MonoBehaviour
     public bool isCarrying;
     public static bool slotFull;
     public bool inTrigger = false;
+    public string compareTag;
 
     private void Start()
     {
@@ -45,14 +46,14 @@ public class PickUpController : MonoBehaviour
     {
         
         
-        if (inTrigger && Input.GetButtonDown("Triangle"))
+        if (inTrigger && Input.GetButtonDown("Square"))
         {
             Carry();
             
         }
 
         //Drop if isCarrying and "Circle" is pressed
-        if (isCarrying && Input.GetButtonDown("Circle"))
+        if (isCarrying && Input.GetButtonDown("Triangle"))
         {
             Drop();
             
@@ -79,7 +80,7 @@ public class PickUpController : MonoBehaviour
         if (isCarrying)
         {
             cancelButton.SetActive(true);
-            cancelTMP.text = cancelText;
+            //cancelTMP.text = cancelText;
             actionButton.SetActive(false);
         }
         
@@ -104,8 +105,8 @@ public class PickUpController : MonoBehaviour
         //rb.velocity = player.GetComponent<Rigidbody>().velocity;
 
         //AddForce
-        //rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);
-        //rb.AddForce(fpsCam.up * dropUpwardForce, ForceMode.Impulse);
+        rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);
+        rb.AddForce(fpsCam.up * dropUpwardForce, ForceMode.Impulse);
         //Add random rotation
         float random = Random.Range(-1f, 1f);
         rb.AddTorque(new Vector3(random, random, random) * 10);
@@ -121,23 +122,25 @@ public class PickUpController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("CarryObject"))
+        if (other.gameObject.CompareTag(compareTag))
         {
+            rb.gameObject.GetComponent<Rigidbody>();
+            //coll.gameObject.GetComponent<Rigidbody>();
             actionButton.SetActive(true);
             cancelButton.SetActive(false);
-            actionTMP.text = actionText;
+            //actionTMP.text = actionText;
             inTrigger = true;
             if (isCarrying) 
             {
                 actionButton.SetActive(false);
                 cancelButton.SetActive(true);
-                cancelTMP.text = cancelText;
+                //cancelTMP.text = cancelText;
             }
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("CarryObject"))
+        if (other.gameObject.CompareTag(compareTag))
         {
             actionButton.SetActive(false);
             

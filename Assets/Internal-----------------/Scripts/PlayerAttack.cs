@@ -14,6 +14,8 @@ public class PlayerAttack : MonoBehaviour
     public int enemiesKilled;
     public int damage;
 
+    
+
     //[SerializeField] private GameObject ps;
     // Start is called before the first frame update
     void Start()

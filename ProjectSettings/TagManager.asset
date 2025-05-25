@@ -25,6 +25,7 @@ TagManager:
   - Pressure
   - CollectQuest
   - CollectObject
+  - CarryObject2
   layers:
   - Default
   - TransparentFX

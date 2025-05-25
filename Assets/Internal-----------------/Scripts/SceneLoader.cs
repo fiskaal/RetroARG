@@ -24,6 +24,8 @@ public class SceneLoader : MonoBehaviour
     public AudioSource travelSound;
     public AudioFadeOut audioFadeOut;
 
+
+
     //public GameObject textInfo;
    
     
@@ -42,13 +44,13 @@ public class SceneLoader : MonoBehaviour
         {
             notifText.text = km.keyCount + "/" + km.maxKeyCount + " keys found.";
 
-            if (Input.GetButtonDown("Triangle") && km.keyCount >= km.maxKeyCount)
+            if (Input.GetButtonDown("Square") && km.keyCount >= km.maxKeyCount)
             {
                 imageAnimator.Play("ImageFadeIn");
                 travelSound.Play();
                 StartCoroutine(WaitAndLoad(waitTime, sceneName));
                 audioFadeOut.FadeOut();
-            }else if (Input.GetButtonDown("Triangle") && km.keyCount < km.maxKeyCount)
+            }else if (Input.GetButtonDown("Square") && km.keyCount < km.maxKeyCount)
             {
                 notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                 alertSound.Play();

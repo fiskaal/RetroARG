@@ -64,7 +64,7 @@ public class KillQuest : MonoBehaviour
                 case QuestState.NotTaken:
                     dm.dialogueLines = dialogueLinesStart;
                     notifText.text = notifStartedText;
-                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Triangle"))
+                    if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Square"))
                     {
                         Debug.Log("Kill quest started");
                         
@@ -88,7 +88,7 @@ public class KillQuest : MonoBehaviour
                 case QuestState.Completed:
                     dm.dialogueLines = dialogueLinesCompleted;
                     notifText.text = notifStartedText;
-                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Triangle"))
+                    if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Square"))
                     {
                         Debug.Log("Kill quest complete");
                         currentState = QuestState.Default;

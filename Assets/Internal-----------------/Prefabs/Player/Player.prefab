@@ -1782,6 +1782,7 @@ MonoBehaviour:
   maxJumps: 2
   isJumping: 0
   isGrounded: 0
+  isControlable: 0
 --- !u!114 &2492367027506221289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,15 +1803,12 @@ MonoBehaviour:
   carryObject: {fileID: 0}
   anim: {fileID: 5637310992357692297}
   actionButton: {fileID: 0}
-  actionTMP: {fileID: 0}
   cancelButton: {fileID: 0}
-  cancelTMP: {fileID: 0}
-  actionText: CARRY
-  cancelText: DROP
   dropForwardForce: 1
   dropUpwardForce: 1
   isCarrying: 0
   inTrigger: 0
+  compareTag: 
 --- !u!81 &656765668806240398
 AudioListener:
   m_ObjectHideFlags: 0

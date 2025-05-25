@@ -26,6 +26,7 @@ namespace Ketra
         // Start is called before the first frame update
         void Start()
         {
+            isControlable = true;
             originalStepOffset = characterController.stepOffset;
         }
 

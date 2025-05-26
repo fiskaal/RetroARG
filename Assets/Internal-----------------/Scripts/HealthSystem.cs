@@ -49,7 +49,7 @@ public class HealthSystem : MonoBehaviour
         checkpoint = spawnpoint.position;
         PlayerDied();
         lifeText.text = currentHealth.ToString();
-        
+        currentHealth = PlayerPrefs.GetInt("Hearts", currentHealth);
 
     }
 
@@ -61,7 +61,7 @@ public class HealthSystem : MonoBehaviour
             //other.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
             DamagePlayer();
             StartCoroutine(PauseCoroutine());
-            //PlayerPrefs.SetInt("Hearts", currentHealth);
+            PlayerPrefs.SetInt("Hearts", currentHealth);
         }
 
         if (other.gameObject.tag == "Heal" && currentHealth < maxHealth)
@@ -74,7 +74,7 @@ public class HealthSystem : MonoBehaviour
             //other.gameObject.SetActive(false);
             other.transform.parent.gameObject.SetActive(false);
             healSound.Play();
-            //PlayerPrefs.SetInt("Hearts", currentHealth);
+            PlayerPrefs.SetInt("Hearts", currentHealth);
 
         }
     }

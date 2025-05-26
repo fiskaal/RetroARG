@@ -37,7 +37,7 @@ public class KillQuest : MonoBehaviour
 
     [Header("Quest Details")]
     [SerializeField] private int enemiesToKill;
-    [SerializeField] private int enemiesKilled;
+    [SerializeField] public int enemiesKilled;
     [SerializeField] private GameObject rewardItem;
     [SerializeField] private GameObject enemyToKill;
     // Start is called before the first frame update
@@ -55,6 +55,7 @@ public class KillQuest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemiesKilled = pa.enemiesKilled;
         if (isKillTrigger)
         {
             dm.dialogueIcon = killQuestIcon;

@@ -119,12 +119,13 @@ public class BringQuest : MonoBehaviour
 
                 case QuestState.Completed:
                     dm.dialogueLines = dialogueLinesCompleted;
-                    notifText.text = notifStartedText;
+                    notifText.text = notifCompleteText;
+                    anim.SetBool("isCarrying", false);
                     if ((dm.currentLine == dialogueLinesCompleted.Length - 1) && Input.GetButtonDown("Square"))
                     {
                         Debug.Log("Collect quest complete");
                         objectToBring.SetActive(false);
-                        anim.SetBool("isCarrying", false);
+                        
                         cancelButton.SetActive(false);
                         currentState = QuestState.Default;
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
@@ -145,7 +146,7 @@ public class BringQuest : MonoBehaviour
             
         }
 
-        if (inTrigger && Input.GetButtonDown("Square"))
+        if (inTrigger && !isCarryingObject && Input.GetButtonDown("Square"))
         {
             Carry();
 

@@ -1688,6 +1688,7 @@ MonoBehaviour:
   killSound: {fileID: 0}
   enemiesKilled: 0
   damage: 1
+  kq: {fileID: 0}
 --- !u!114 &8975902021114453168
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayVFX : MonoBehaviour
 {
-
+    public HealthSystem hs;
     [SerializeField] private GameObject ps;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hs = FindObjectOfType<HealthSystem>();
     }
 
     // Update is called once per frame
@@ -20,9 +20,12 @@ public class PlayVFX : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (hs.currentHealth < hs.maxHealth)
         {
-            Instantiate(ps, transform.position, transform.rotation);
+            if (other.gameObject.CompareTag("Player"))
+            {
+                Instantiate(ps, transform.position, transform.rotation);
+            }
         }
     }
 }

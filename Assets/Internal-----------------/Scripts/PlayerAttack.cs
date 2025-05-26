@@ -13,6 +13,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private AudioSource killSound;
     public int enemiesKilled;
     public int damage;
+    public KillQuest kq;
 
     
 
@@ -20,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        enemiesKilled = kq.enemiesKilled;
     }
 
     // Update is called once per frame

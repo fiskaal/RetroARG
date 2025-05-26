@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
     [Header("Components")]
     public NavMeshAgent agent;
     public AudioSource bugKill;
+    public PlayerAttack pa;
 
     [Header("AI States")]
     [SerializeField] private AIState currentState;
@@ -205,6 +206,7 @@ public class EnemyController : MonoBehaviour
     {
         enemy.SetActive(false);
         bugKill.Play();
+        pa.enemiesKilled++;
         //dieCounter = dieTime;
         Instantiate(ps, transform.position, transform.rotation);
         currentState = AIState.Killed;

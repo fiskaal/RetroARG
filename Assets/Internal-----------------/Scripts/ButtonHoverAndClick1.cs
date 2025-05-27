@@ -23,6 +23,12 @@ public class ButtonHoverAndClick1 : MonoBehaviour
 
     }
 
+    public void ResetProgress()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+    }
+
 
 
 }

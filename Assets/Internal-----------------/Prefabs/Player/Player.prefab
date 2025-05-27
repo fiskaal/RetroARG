@@ -1658,11 +1658,11 @@ MonoBehaviour:
   checkpoint: {x: 0, y: 0, z: 0}
   spawnpoint: {fileID: 0}
   healAmount: 1
-  animatorHeal: {fileID: 0}
   animatorIcon: {fileID: 0}
   healSound: {fileID: 0}
   damageSound: {fileID: 0}
   respawnTime: 1
+  pm: {fileID: 0}
 --- !u!114 &8975902021114453171
 MonoBehaviour:
   m_ObjectHideFlags: 0

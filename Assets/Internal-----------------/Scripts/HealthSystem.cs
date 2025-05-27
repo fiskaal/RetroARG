@@ -21,11 +21,12 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] public Vector3 checkpoint;
     public Transform spawnpoint;
     public int healAmount = 1;
-    [SerializeField] public Animator animatorHeal;
+    //[SerializeField] public Animator? animatorHeal = null;
     [SerializeField] public Animator animatorIcon;
     [SerializeField] private AudioSource healSound;
     [SerializeField] private AudioSource damageSound;
     public float respawnTime = 2f;
+    public PlayerMovement pm;
 
     // Start is called before the first frame update
     void Start()
@@ -69,7 +70,7 @@ public class HealthSystem : MonoBehaviour
 
             currentHealth += healAmount;
             Debug.Log("HEAL!");
-            animatorHeal.PlayInFixedTime("NotificationAnimation", -1, 0f);
+            //animatorHeal.PlayInFixedTime("NotificationAnimation", -1, 0f);
             animatorIcon.PlayInFixedTime("iconSizeUpDown", -1, 0f);
             //other.gameObject.SetActive(false);
             other.transform.parent.gameObject.SetActive(false);
@@ -81,8 +82,8 @@ public class HealthSystem : MonoBehaviour
 
     public void DamagePlayer()
     {
-        //player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
-        player.transform.position = spawnpoint.position;
+        player.gameObject.GetComponent<CharacterController>().Move(checkpoint - transform.position);
+        //player.transform.position = spawnpoint.position;
         currentHealth -= dealDamage;
         damageSound.Play();
         Debug.Log("HURT!");
@@ -103,11 +104,11 @@ public class HealthSystem : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            EventSystem.current.SetSelectedGameObject(selectedGameOverButton);
+            //EventSystem.current.SetSelectedGameObject(selectedGameOverButton);
 
             
 
-            EventSystem.current.firstSelectedGameObject = selectedGameOverButton;
+            //EventSystem.current.firstSelectedGameObject = selectedGameOverButton;
             isDead = true;
             Time.timeScale = 0;
             gameOverScreen.SetActive(true);
@@ -118,9 +119,11 @@ public class HealthSystem : MonoBehaviour
 
     private IEnumerator PauseCoroutine()
     {
-        Time.timeScale = 0f; // Pause the game
+        //Time.timeScale = 0f; // Pause the game
+        pm.isControlable = false;
         yield return new WaitForSecondsRealtime(respawnTime); // Wait for 2 seconds in real-time
-        Time.timeScale = 1f; // Resume the game
+       // Time.timeScale = 1f; // Resume the game
+       pm.isControlable = true;
     }
 
 

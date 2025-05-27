@@ -27,6 +27,8 @@ public class SceneLoaderSimple : MonoBehaviour
     }
     public void LoadSceneWithString(string sceneName)
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
         SceneManager.LoadScene(sceneName);
     }
 }

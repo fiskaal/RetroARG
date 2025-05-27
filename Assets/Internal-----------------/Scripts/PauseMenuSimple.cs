@@ -48,6 +48,8 @@ public class PauseMenuSimple : MonoBehaviour
 
     public void RestartLevel()
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

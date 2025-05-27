@@ -10,11 +10,12 @@ public class DialogueHolder : MonoBehaviour
     [SerializeField] private bool isDialogueOpen = false;
     [SerializeField] private bool inTrigger = false;
     [SerializeField] private GameObject openButton;
-    [SerializeField] private TMP_Text speakText;
+    [SerializeField] private TMP_Text? speakText;
     [SerializeField] private GameObject closeButton;
-    [SerializeField] private TMP_Text endDia;
-    public Animator npcAnim;
-
+    [SerializeField] private TMP_Text? endDia;
+    public Animator? npcAnim;
+    
+    [TextArea(5,10)]
     public string[] dialogueLines;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class DialogueHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
 

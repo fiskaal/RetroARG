@@ -23,6 +23,7 @@ public class SceneLoader : MonoBehaviour
     public AudioSource alertSound;
     public AudioSource travelSound;
     public AudioFadeOut audioFadeOut;
+    public HealthSystem hs;
 
 
 
@@ -46,6 +47,8 @@ public class SceneLoader : MonoBehaviour
 
             if (Input.GetButtonDown("Square") && km.keyCount >= km.maxKeyCount)
             {
+                PlayerPrefs.SetInt("Hearts", hs.currentHealth);
+                PlayerPrefs.Save();
                 imageAnimator.Play("ImageFadeIn");
                 travelSound.Play();
                 StartCoroutine(WaitAndLoad(waitTime, sceneName));

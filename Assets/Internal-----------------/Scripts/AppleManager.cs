@@ -5,7 +5,7 @@ public class AppleManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text appleText;
     [SerializeField] private int appleCount = 0;
-    [SerializeField] private int maxAppleCount = 3;
+    [SerializeField] private int maxAppleCount = 10;
     [SerializeField] private AudioSource appleSound;
     //[SerializeField] private ParticleSystem ps;
     //[SerializeField] private GameObject portal;

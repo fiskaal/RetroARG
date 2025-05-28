@@ -40,7 +40,7 @@ public class HealthSystem : MonoBehaviour
     {
         //currentHealth = PlayerPrefs.GetInt("Hearts", 3);
         //maxHealth = PlayerPrefs.GetInt("maxHealth", 5);
-        //currentHealth = PlayerPrefs.GetInt("Hearts", currentHealth);
+        currentHealth = PlayerPrefs.GetInt("Hearts", currentHealth);
         
 
     }

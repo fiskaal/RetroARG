@@ -47,8 +47,7 @@ public class SceneLoader : MonoBehaviour
 
             if (Input.GetButtonDown("Square") && km.keyCount >= km.maxKeyCount)
             {
-                PlayerPrefs.SetInt("Hearts", hs.currentHealth);
-                PlayerPrefs.Save();
+                
                 imageAnimator.Play("ImageFadeIn");
                 travelSound.Play();
                 StartCoroutine(WaitAndLoad(waitTime, sceneName));
@@ -117,7 +116,8 @@ public class SceneLoader : MonoBehaviour
         {
             actionButton.SetActive(true);
             //textInfo.SetActive(true);
-            
+            PlayerPrefs.SetInt("Hearts", hs.currentHealth);
+            PlayerPrefs.Save();
             inTrigger = true;
             
         }

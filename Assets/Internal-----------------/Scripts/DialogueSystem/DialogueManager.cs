@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject defaultIcon;
 
     public bool dialogueActive = false;
-
+    [TextArea(5, 10)]
     public string[] dialogueLines;
     public int currentLine;
     public Animator anim;

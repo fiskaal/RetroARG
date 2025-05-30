@@ -24,9 +24,13 @@ public class KillQuest : MonoBehaviour
     [SerializeField] private GameObject killQuestIcon;
     [SerializeField]private DialogueManager dm;
     public string[] dialogueLines;
+    [TextArea(5, 10)]
     public string[] dialogueLinesStart;
+    [TextArea(5, 10)]
     public string[] dialogueLinesActive;
+    [TextArea(5, 10)]
     public string[] dialogueLinesCompleted;
+    [TextArea(5, 10)]
     public string[] dialogueLinesDefault;
     public int arrayLenght;
     public int currentIndex;

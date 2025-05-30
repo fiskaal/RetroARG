@@ -25,9 +25,13 @@ public class BringQuest : MonoBehaviour
     [SerializeField] private GameObject questIcon;
     [SerializeField] private DialogueManager dm;
     public string[] dialogueLines;
+    [TextArea(5, 10)]
     public string[] dialogueLinesStart;
+    [TextArea(5, 10)]
     public string[] dialogueLinesActive;
+    [TextArea(5, 10)]
     public string[] dialogueLinesCompleted;
+    [TextArea(5, 10)]
     public string[] dialogueLinesDefault;
     public int arrayLenght;
     public int currentIndex;
@@ -97,7 +101,7 @@ public class BringQuest : MonoBehaviour
                     if ((dm.currentLine == dialogueLinesStart.Length - 1) && Input.GetButtonDown("Square"))
                     {
                         Debug.Log("Collect quest started");
-
+                        notifText.text = notifStartedText;
                         notifAnim.PlayInFixedTime("NotificationAnimation", -1, 0f);
                         questStart.Play();
                         collectQuestInfo.SetActive(true);
